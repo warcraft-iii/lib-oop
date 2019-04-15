@@ -14,7 +14,7 @@ local FogModifier = class('FogModifier', Agent)
 ---@param afterUnits boolean
 ---@return FogModifier
 function FogModifier:createRect(forWhichPlayer, state, where, useSharedVision, afterUnits)
-    return FogModifier:fromUd(CreateFogModifierRect(forWhichPlayer:getUd(), state, where:getUd(), useSharedVision, afterUnits))
+    return FogModifier:fromUd(CreateFogModifierRect(getUd(forWhichPlayer), state, getUd(where), useSharedVision, afterUnits))
 end
 
 ---<static> createRadius
@@ -27,7 +27,7 @@ end
 ---@param afterUnits boolean
 ---@return FogModifier
 function FogModifier:createRadius(forWhichPlayer, state, centerX, centerY, radius, useSharedVision, afterUnits)
-    return FogModifier:fromUd(CreateFogModifierRadius(forWhichPlayer:getUd(), state, centerX, centerY, radius, useSharedVision, afterUnits))
+    return FogModifier:fromUd(CreateFogModifierRadius(getUd(forWhichPlayer), state, centerX, centerY, radius, useSharedVision, afterUnits))
 end
 
 ---<static> createRadiusLoc
@@ -39,23 +39,23 @@ end
 ---@param afterUnits boolean
 ---@return FogModifier
 function FogModifier:createRadiusLoc(forWhichPlayer, state, center, radius, useSharedVision, afterUnits)
-    return FogModifier:fromUd(CreateFogModifierRadiusLoc(forWhichPlayer:getUd(), state, center:getUd(), radius, useSharedVision, afterUnits))
+    return FogModifier:fromUd(CreateFogModifierRadiusLoc(getUd(forWhichPlayer), state, getUd(center), radius, useSharedVision, afterUnits))
 end
 
 ---destroy
 ---@return void
 function FogModifier:destroy()
-    return DestroyFogModifier(self:getUd())
+    return DestroyFogModifier(getUd(self))
 end
 
 ---start
 ---@return void
 function FogModifier:start()
-    return FogModifierStart(self:getUd())
+    return FogModifierStart(getUd(self))
 end
 
 ---stop
 ---@return void
 function FogModifier:stop()
-    return FogModifierStop(self:getUd())
+    return FogModifierStop(getUd(self))
 end

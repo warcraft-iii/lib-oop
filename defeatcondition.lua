@@ -15,12 +15,12 @@ end
 ---destroy
 ---@return void
 function DefeatCondition:destroy()
-    return DestroyDefeatCondition(self:getUd())
+    return DestroyDefeatCondition(getUd(self))
 end
 
 ---setDescription
 ---@param description string
 ---@return void
 function DefeatCondition:setDescription(description)
-    return DefeatConditionSetDescription(self:getUd(), description)
+    return DefeatConditionSetDescription(getUd(self), description)
 end

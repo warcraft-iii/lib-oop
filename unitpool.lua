@@ -15,7 +15,7 @@ end
 ---destroy
 ---@return void
 function UnitPool:destroy()
-    return DestroyUnitPool(self:getUd())
+    return DestroyUnitPool(getUd(self))
 end
 
 ---addUnitType
@@ -23,14 +23,14 @@ end
 ---@param weight float
 ---@return void
 function UnitPool:addUnitType(unitId, weight)
-    return UnitPoolAddUnitType(self:getUd(), unitId, weight)
+    return UnitPoolAddUnitType(getUd(self), unitId, weight)
 end
 
 ---removeUnitType
 ---@param unitId integer
 ---@return void
 function UnitPool:removeUnitType(unitId)
-    return UnitPoolRemoveUnitType(self:getUd(), unitId)
+    return UnitPoolRemoveUnitType(getUd(self), unitId)
 end
 
 ---placeRandomUnit
@@ -40,5 +40,5 @@ end
 ---@param facing float
 ---@return Unit
 function UnitPool:placeRandomUnit(forWhichPlayer, x, y, facing)
-    return Unit:fromUd(PlaceRandomUnit(self:getUd(), forWhichPlayer:getUd(), x, y, facing))
+    return Unit:fromUd(PlaceRandomUnit(getUd(self), getUd(forWhichPlayer), x, y, facing))
 end

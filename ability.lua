@@ -10,28 +10,28 @@ local Ability = class('Ability', Agent)
 ---@param field AbilityBooleanField
 ---@return boolean
 function Ability:getBooleanField(field)
-    return BlzGetAbilityBooleanField(self:getUd(), field)
+    return BlzGetAbilityBooleanField(getUd(self), field)
 end
 
 ---getIntegerField
 ---@param field AbilityIntegerField
 ---@return integer
 function Ability:getIntegerField(field)
-    return BlzGetAbilityIntegerField(self:getUd(), field)
+    return BlzGetAbilityIntegerField(getUd(self), field)
 end
 
 ---getRealField
 ---@param field AbilityRealField
 ---@return float
 function Ability:getRealField(field)
-    return BlzGetAbilityRealField(self:getUd(), field)
+    return BlzGetAbilityRealField(getUd(self), field)
 end
 
 ---getStringField
 ---@param field AbilityStringField
 ---@return string
 function Ability:getStringField(field)
-    return BlzGetAbilityStringField(self:getUd(), field)
+    return BlzGetAbilityStringField(getUd(self), field)
 end
 
 ---getBooleanLevelField
@@ -39,7 +39,7 @@ end
 ---@param level integer
 ---@return boolean
 function Ability:getBooleanLevelField(field, level)
-    return BlzGetAbilityBooleanLevelField(self:getUd(), field, level)
+    return BlzGetAbilityBooleanLevelField(getUd(self), field, level)
 end
 
 ---getIntegerLevelField
@@ -47,7 +47,7 @@ end
 ---@param level integer
 ---@return integer
 function Ability:getIntegerLevelField(field, level)
-    return BlzGetAbilityIntegerLevelField(self:getUd(), field, level)
+    return BlzGetAbilityIntegerLevelField(getUd(self), field, level)
 end
 
 ---getRealLevelField
@@ -55,7 +55,7 @@ end
 ---@param level integer
 ---@return float
 function Ability:getRealLevelField(field, level)
-    return BlzGetAbilityRealLevelField(self:getUd(), field, level)
+    return BlzGetAbilityRealLevelField(getUd(self), field, level)
 end
 
 ---getStringLevelField
@@ -63,7 +63,7 @@ end
 ---@param level integer
 ---@return string
 function Ability:getStringLevelField(field, level)
-    return BlzGetAbilityStringLevelField(self:getUd(), field, level)
+    return BlzGetAbilityStringLevelField(getUd(self), field, level)
 end
 
 ---getBooleanLevelArrayField
@@ -72,7 +72,7 @@ end
 ---@param index integer
 ---@return boolean
 function Ability:getBooleanLevelArrayField(field, level, index)
-    return BlzGetAbilityBooleanLevelArrayField(self:getUd(), field, level, index)
+    return BlzGetAbilityBooleanLevelArrayField(getUd(self), field, level, index)
 end
 
 ---getIntegerLevelArrayField
@@ -81,7 +81,7 @@ end
 ---@param index integer
 ---@return integer
 function Ability:getIntegerLevelArrayField(field, level, index)
-    return BlzGetAbilityIntegerLevelArrayField(self:getUd(), field, level, index)
+    return BlzGetAbilityIntegerLevelArrayField(getUd(self), field, level, index)
 end
 
 ---getRealLevelArrayField
@@ -90,7 +90,7 @@ end
 ---@param index integer
 ---@return float
 function Ability:getRealLevelArrayField(field, level, index)
-    return BlzGetAbilityRealLevelArrayField(self:getUd(), field, level, index)
+    return BlzGetAbilityRealLevelArrayField(getUd(self), field, level, index)
 end
 
 ---getStringLevelArrayField
@@ -99,7 +99,7 @@ end
 ---@param index integer
 ---@return string
 function Ability:getStringLevelArrayField(field, level, index)
-    return BlzGetAbilityStringLevelArrayField(self:getUd(), field, level, index)
+    return BlzGetAbilityStringLevelArrayField(getUd(self), field, level, index)
 end
 
 ---setBooleanField
@@ -107,7 +107,7 @@ end
 ---@param value boolean
 ---@return boolean
 function Ability:setBooleanField(field, value)
-    return BlzSetAbilityBooleanField(self:getUd(), field, value)
+    return BlzSetAbilityBooleanField(getUd(self), field, value)
 end
 
 ---setIntegerField
@@ -115,7 +115,7 @@ end
 ---@param value integer
 ---@return boolean
 function Ability:setIntegerField(field, value)
-    return BlzSetAbilityIntegerField(self:getUd(), field, value)
+    return BlzSetAbilityIntegerField(getUd(self), field, value)
 end
 
 ---setRealField
@@ -123,7 +123,7 @@ end
 ---@param value float
 ---@return boolean
 function Ability:setRealField(field, value)
-    return BlzSetAbilityRealField(self:getUd(), field, value)
+    return BlzSetAbilityRealField(getUd(self), field, value)
 end
 
 ---setStringField
@@ -131,7 +131,7 @@ end
 ---@param value string
 ---@return boolean
 function Ability:setStringField(field, value)
-    return BlzSetAbilityStringField(self:getUd(), field, value)
+    return BlzSetAbilityStringField(getUd(self), field, value)
 end
 
 ---setBooleanLevelField
@@ -140,7 +140,7 @@ end
 ---@param value boolean
 ---@return boolean
 function Ability:setBooleanLevelField(field, level, value)
-    return BlzSetAbilityBooleanLevelField(self:getUd(), field, level, value)
+    return BlzSetAbilityBooleanLevelField(getUd(self), field, level, value)
 end
 
 ---setIntegerLevelField
@@ -149,7 +149,7 @@ end
 ---@param value integer
 ---@return boolean
 function Ability:setIntegerLevelField(field, level, value)
-    return BlzSetAbilityIntegerLevelField(self:getUd(), field, level, value)
+    return BlzSetAbilityIntegerLevelField(getUd(self), field, level, value)
 end
 
 ---setRealLevelField
@@ -158,7 +158,7 @@ end
 ---@param value float
 ---@return boolean
 function Ability:setRealLevelField(field, level, value)
-    return BlzSetAbilityRealLevelField(self:getUd(), field, level, value)
+    return BlzSetAbilityRealLevelField(getUd(self), field, level, value)
 end
 
 ---setStringLevelField
@@ -167,7 +167,7 @@ end
 ---@param value string
 ---@return boolean
 function Ability:setStringLevelField(field, level, value)
-    return BlzSetAbilityStringLevelField(self:getUd(), field, level, value)
+    return BlzSetAbilityStringLevelField(getUd(self), field, level, value)
 end
 
 ---setBooleanLevelArrayField
@@ -177,7 +177,7 @@ end
 ---@param value boolean
 ---@return boolean
 function Ability:setBooleanLevelArrayField(field, level, index, value)
-    return BlzSetAbilityBooleanLevelArrayField(self:getUd(), field, level, index, value)
+    return BlzSetAbilityBooleanLevelArrayField(getUd(self), field, level, index, value)
 end
 
 ---setIntegerLevelArrayField
@@ -187,7 +187,7 @@ end
 ---@param value integer
 ---@return boolean
 function Ability:setIntegerLevelArrayField(field, level, index, value)
-    return BlzSetAbilityIntegerLevelArrayField(self:getUd(), field, level, index, value)
+    return BlzSetAbilityIntegerLevelArrayField(getUd(self), field, level, index, value)
 end
 
 ---setRealLevelArrayField
@@ -197,7 +197,7 @@ end
 ---@param value float
 ---@return boolean
 function Ability:setRealLevelArrayField(field, level, index, value)
-    return BlzSetAbilityRealLevelArrayField(self:getUd(), field, level, index, value)
+    return BlzSetAbilityRealLevelArrayField(getUd(self), field, level, index, value)
 end
 
 ---setStringLevelArrayField
@@ -207,7 +207,7 @@ end
 ---@param value string
 ---@return boolean
 function Ability:setStringLevelArrayField(field, level, index, value)
-    return BlzSetAbilityStringLevelArrayField(self:getUd(), field, level, index, value)
+    return BlzSetAbilityStringLevelArrayField(getUd(self), field, level, index, value)
 end
 
 ---addBooleanLevelArrayField
@@ -216,7 +216,7 @@ end
 ---@param value boolean
 ---@return boolean
 function Ability:addBooleanLevelArrayField(field, level, value)
-    return BlzAddAbilityBooleanLevelArrayField(self:getUd(), field, level, value)
+    return BlzAddAbilityBooleanLevelArrayField(getUd(self), field, level, value)
 end
 
 ---addIntegerLevelArrayField
@@ -225,7 +225,7 @@ end
 ---@param value integer
 ---@return boolean
 function Ability:addIntegerLevelArrayField(field, level, value)
-    return BlzAddAbilityIntegerLevelArrayField(self:getUd(), field, level, value)
+    return BlzAddAbilityIntegerLevelArrayField(getUd(self), field, level, value)
 end
 
 ---addRealLevelArrayField
@@ -234,7 +234,7 @@ end
 ---@param value float
 ---@return boolean
 function Ability:addRealLevelArrayField(field, level, value)
-    return BlzAddAbilityRealLevelArrayField(self:getUd(), field, level, value)
+    return BlzAddAbilityRealLevelArrayField(getUd(self), field, level, value)
 end
 
 ---addStringLevelArrayField
@@ -243,7 +243,7 @@ end
 ---@param value string
 ---@return boolean
 function Ability:addStringLevelArrayField(field, level, value)
-    return BlzAddAbilityStringLevelArrayField(self:getUd(), field, level, value)
+    return BlzAddAbilityStringLevelArrayField(getUd(self), field, level, value)
 end
 
 ---removeBooleanLevelArrayField
@@ -252,7 +252,7 @@ end
 ---@param value boolean
 ---@return boolean
 function Ability:removeBooleanLevelArrayField(field, level, value)
-    return BlzRemoveAbilityBooleanLevelArrayField(self:getUd(), field, level, value)
+    return BlzRemoveAbilityBooleanLevelArrayField(getUd(self), field, level, value)
 end
 
 ---removeIntegerLevelArrayField
@@ -261,7 +261,7 @@ end
 ---@param value integer
 ---@return boolean
 function Ability:removeIntegerLevelArrayField(field, level, value)
-    return BlzRemoveAbilityIntegerLevelArrayField(self:getUd(), field, level, value)
+    return BlzRemoveAbilityIntegerLevelArrayField(getUd(self), field, level, value)
 end
 
 ---removeRealLevelArrayField
@@ -270,7 +270,7 @@ end
 ---@param value float
 ---@return boolean
 function Ability:removeRealLevelArrayField(field, level, value)
-    return BlzRemoveAbilityRealLevelArrayField(self:getUd(), field, level, value)
+    return BlzRemoveAbilityRealLevelArrayField(getUd(self), field, level, value)
 end
 
 ---removeStringLevelArrayField
@@ -279,5 +279,5 @@ end
 ---@param value string
 ---@return boolean
 function Ability:removeStringLevelArrayField(field, level, value)
-    return BlzRemoveAbilityStringLevelArrayField(self:getUd(), field, level, value)
+    return BlzRemoveAbilityStringLevelArrayField(getUd(self), field, level, value)
 end

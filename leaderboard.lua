@@ -15,33 +15,33 @@ end
 ---destroyLeaderboard
 ---@return void
 function LeaderBoard:destroyLeaderboard()
-    return DestroyLeaderboard(self:getUd())
+    return DestroyLeaderboard(getUd(self))
 end
 
 ---leaderboardDisplay
 ---@param show boolean
 ---@return void
 function LeaderBoard:leaderboardDisplay(show)
-    return LeaderboardDisplay(self:getUd(), show)
+    return LeaderboardDisplay(getUd(self), show)
 end
 
 ---isLeaderboardDisplayed
 ---@return boolean
 function LeaderBoard:isLeaderboardDisplayed()
-    return IsLeaderboardDisplayed(self:getUd())
+    return IsLeaderboardDisplayed(getUd(self))
 end
 
 ---leaderboardGetItemCount
 ---@return integer
 function LeaderBoard:leaderboardGetItemCount()
-    return LeaderboardGetItemCount(self:getUd())
+    return LeaderboardGetItemCount(getUd(self))
 end
 
 ---leaderboardSetSizeByItemCount
 ---@param count integer
 ---@return void
 function LeaderBoard:leaderboardSetSizeByItemCount(count)
-    return LeaderboardSetSizeByItemCount(self:getUd(), count)
+    return LeaderboardSetSizeByItemCount(getUd(self), count)
 end
 
 ---leaderboardAddItem
@@ -50,75 +50,75 @@ end
 ---@param p Player
 ---@return void
 function LeaderBoard:leaderboardAddItem(label, value, p)
-    return LeaderboardAddItem(self:getUd(), label, value, p:getUd())
+    return LeaderboardAddItem(getUd(self), label, value, getUd(p))
 end
 
 ---leaderboardRemoveItem
 ---@param index integer
 ---@return void
 function LeaderBoard:leaderboardRemoveItem(index)
-    return LeaderboardRemoveItem(self:getUd(), index)
+    return LeaderboardRemoveItem(getUd(self), index)
 end
 
 ---leaderboardRemovePlayerItem
 ---@param p Player
 ---@return void
 function LeaderBoard:leaderboardRemovePlayerItem(p)
-    return LeaderboardRemovePlayerItem(self:getUd(), p:getUd())
+    return LeaderboardRemovePlayerItem(getUd(self), getUd(p))
 end
 
 ---leaderboardClear
 ---@return void
 function LeaderBoard:leaderboardClear()
-    return LeaderboardClear(self:getUd())
+    return LeaderboardClear(getUd(self))
 end
 
 ---leaderboardSortItemsByValue
 ---@param ascending boolean
 ---@return void
 function LeaderBoard:leaderboardSortItemsByValue(ascending)
-    return LeaderboardSortItemsByValue(self:getUd(), ascending)
+    return LeaderboardSortItemsByValue(getUd(self), ascending)
 end
 
 ---leaderboardSortItemsByPlayer
 ---@param ascending boolean
 ---@return void
 function LeaderBoard:leaderboardSortItemsByPlayer(ascending)
-    return LeaderboardSortItemsByPlayer(self:getUd(), ascending)
+    return LeaderboardSortItemsByPlayer(getUd(self), ascending)
 end
 
 ---leaderboardSortItemsByLabel
 ---@param ascending boolean
 ---@return void
 function LeaderBoard:leaderboardSortItemsByLabel(ascending)
-    return LeaderboardSortItemsByLabel(self:getUd(), ascending)
+    return LeaderboardSortItemsByLabel(getUd(self), ascending)
 end
 
 ---leaderboardHasPlayerItem
 ---@param p Player
 ---@return boolean
 function LeaderBoard:leaderboardHasPlayerItem(p)
-    return LeaderboardHasPlayerItem(self:getUd(), p:getUd())
+    return LeaderboardHasPlayerItem(getUd(self), getUd(p))
 end
 
 ---leaderboardGetPlayerIndex
 ---@param p Player
 ---@return integer
 function LeaderBoard:leaderboardGetPlayerIndex(p)
-    return LeaderboardGetPlayerIndex(self:getUd(), p:getUd())
+    return LeaderboardGetPlayerIndex(getUd(self), getUd(p))
 end
 
 ---leaderboardSetLabel
 ---@param label string
 ---@return void
 function LeaderBoard:leaderboardSetLabel(label)
-    return LeaderboardSetLabel(self:getUd(), label)
+    return LeaderboardSetLabel(getUd(self), label)
 end
 
 ---leaderboardGetLabelText
 ---@return string
 function LeaderBoard:leaderboardGetLabelText()
-    return LeaderboardGetLabelText(self:getUd())
+    return LeaderboardGetLabelText(getUd(self))
 end
 
 ---leaderboardSetLabelColor
@@ -128,7 +128,7 @@ end
 ---@param alpha integer
 ---@return void
 function LeaderBoard:leaderboardSetLabelColor(red, green, blue, alpha)
-    return LeaderboardSetLabelColor(self:getUd(), red, green, blue, alpha)
+    return LeaderboardSetLabelColor(getUd(self), red, green, blue, alpha)
 end
 
 ---leaderboardSetValueColor
@@ -138,7 +138,7 @@ end
 ---@param alpha integer
 ---@return void
 function LeaderBoard:leaderboardSetValueColor(red, green, blue, alpha)
-    return LeaderboardSetValueColor(self:getUd(), red, green, blue, alpha)
+    return LeaderboardSetValueColor(getUd(self), red, green, blue, alpha)
 end
 
 ---leaderboardSetStyle
@@ -148,7 +148,7 @@ end
 ---@param showIcons boolean
 ---@return void
 function LeaderBoard:leaderboardSetStyle(showLabel, showNames, showValues, showIcons)
-    return LeaderboardSetStyle(self:getUd(), showLabel, showNames, showValues, showIcons)
+    return LeaderboardSetStyle(getUd(self), showLabel, showNames, showValues, showIcons)
 end
 
 ---leaderboardSetItemValue
@@ -156,7 +156,7 @@ end
 ---@param val integer
 ---@return void
 function LeaderBoard:leaderboardSetItemValue(item, val)
-    return LeaderboardSetItemValue(self:getUd(), item, val)
+    return LeaderboardSetItemValue(getUd(self), item, val)
 end
 
 ---leaderboardSetItemLabel
@@ -164,7 +164,7 @@ end
 ---@param val string
 ---@return void
 function LeaderBoard:leaderboardSetItemLabel(item, val)
-    return LeaderboardSetItemLabel(self:getUd(), item, val)
+    return LeaderboardSetItemLabel(getUd(self), item, val)
 end
 
 ---leaderboardSetItemStyle
@@ -174,7 +174,7 @@ end
 ---@param showIcon boolean
 ---@return void
 function LeaderBoard:leaderboardSetItemStyle(item, showLabel, showValue, showIcon)
-    return LeaderboardSetItemStyle(self:getUd(), item, showLabel, showValue, showIcon)
+    return LeaderboardSetItemStyle(getUd(self), item, showLabel, showValue, showIcon)
 end
 
 ---leaderboardSetItemLabelColor
@@ -185,7 +185,7 @@ end
 ---@param alpha integer
 ---@return void
 function LeaderBoard:leaderboardSetItemLabelColor(item, red, green, blue, alpha)
-    return LeaderboardSetItemLabelColor(self:getUd(), item, red, green, blue, alpha)
+    return LeaderboardSetItemLabelColor(getUd(self), item, red, green, blue, alpha)
 end
 
 ---leaderboardSetItemValueColor
@@ -196,5 +196,5 @@ end
 ---@param alpha integer
 ---@return void
 function LeaderBoard:leaderboardSetItemValueColor(item, red, green, blue, alpha)
-    return LeaderboardSetItemValueColor(self:getUd(), item, red, green, blue, alpha)
+    return LeaderboardSetItemValueColor(getUd(self), item, red, green, blue, alpha)
 end

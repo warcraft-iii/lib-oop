@@ -22,13 +22,13 @@ end
 ---@param max Location
 ---@return Rect
 function Rect:fromLoc(min, max)
-    return Rect:fromUd(RectFromLoc(min:getUd(), max:getUd()))
+    return Rect:fromUd(RectFromLoc(getUd(min), getUd(max)))
 end
 
 ---remove
 ---@return void
 function Rect:remove()
-    return RemoveRect(self:getUd())
+    return RemoveRect(getUd(self))
 end
 
 ---set
@@ -38,7 +38,7 @@ end
 ---@param maxY float
 ---@return void
 function Rect:set(minX, minY, maxX, maxY)
-    return SetRect(self:getUd(), minX, minY, maxX, maxY)
+    return SetRect(getUd(self), minX, minY, maxX, maxY)
 end
 
 ---setFromLoc
@@ -46,7 +46,7 @@ end
 ---@param max Location
 ---@return void
 function Rect:setFromLoc(min, max)
-    return SetRectFromLoc(self:getUd(), min:getUd(), max:getUd())
+    return SetRectFromLoc(getUd(self), getUd(min), getUd(max))
 end
 
 ---moveTo
@@ -54,50 +54,50 @@ end
 ---@param centerY float
 ---@return void
 function Rect:moveTo(centerX, centerY)
-    return MoveRectTo(self:getUd(), centerX, centerY)
+    return MoveRectTo(getUd(self), centerX, centerY)
 end
 
 ---moveToLoc
 ---@param centerLoc Location
 ---@return void
 function Rect:moveToLoc(centerLoc)
-    return MoveRectToLoc(self:getUd(), centerLoc:getUd())
+    return MoveRectToLoc(getUd(self), getUd(centerLoc))
 end
 
 ---getCenterX
 ---@return float
 function Rect:getCenterX()
-    return GetRectCenterX(self:getUd())
+    return GetRectCenterX(getUd(self))
 end
 
 ---getCenterY
 ---@return float
 function Rect:getCenterY()
-    return GetRectCenterY(self:getUd())
+    return GetRectCenterY(getUd(self))
 end
 
 ---getMinX
 ---@return float
 function Rect:getMinX()
-    return GetRectMinX(self:getUd())
+    return GetRectMinX(getUd(self))
 end
 
 ---getMinY
 ---@return float
 function Rect:getMinY()
-    return GetRectMinY(self:getUd())
+    return GetRectMinY(getUd(self))
 end
 
 ---getMaxX
 ---@return float
 function Rect:getMaxX()
-    return GetRectMaxX(self:getUd())
+    return GetRectMaxX(getUd(self))
 end
 
 ---getMaxY
 ---@return float
 function Rect:getMaxY()
-    return GetRectMaxY(self:getUd())
+    return GetRectMaxY(getUd(self))
 end
 
 ---enumDestructablesIn
@@ -107,7 +107,7 @@ end
 function Rect:enumDestructablesIn(filter, actionFunc)
     filter = Filter:createDestructableFilter(filter)
     actionFunc = Function:createDestructableCallback(actionFunc)
-    EnumDestructablesInRect(self:getUd(), filter:getUd(), actionFunc)
+    EnumDestructablesInRect(getUd(self), getUd(filter), actionFunc)
     filter:destroy()
 end
 
@@ -118,7 +118,7 @@ end
 function Rect:enumItemsIn(filter, actionFunc)
     filter = Filter:createItemFilter(filter)
     actionFunc = Function:createItemCallback(actionFunc)
-    EnumItemsInRect(self:getUd(), filter:getUd(), actionFunc)
+    EnumItemsInRect(getUd(self), getUd(filter), actionFunc)
     filter:destroy()
 end
 
@@ -126,7 +126,7 @@ end
 ---@param effectID integer
 ---@return WeatherEffect
 function Rect:addWeatherEffect(effectID)
-    return WeatherEffect:fromUd(AddWeatherEffect(self:getUd(), effectID))
+    return WeatherEffect:fromUd(AddWeatherEffect(getUd(self), effectID))
 end
 
 ---setDoodadAnimation
@@ -135,5 +135,5 @@ end
 ---@param animRandom boolean
 ---@return void
 function Rect:setDoodadAnimation(doodadID, animName, animRandom)
-    return SetDoodadAnimationRect(self:getUd(), doodadID, animName, animRandom)
+    return SetDoodadAnimationRect(getUd(self), doodadID, animName, animRandom)
 end

@@ -9,12 +9,12 @@ local WeatherEffect = class('WeatherEffect', Handle)
 ---remove
 ---@return void
 function WeatherEffect:remove()
-    return RemoveWeatherEffect(self:getUd())
+    return RemoveWeatherEffect(getUd(self))
 end
 
 ---enable
 ---@param enable boolean
 ---@return void
 function WeatherEffect:enable(enable)
-    return EnableWeatherEffect(self:getUd(), enable)
+    return EnableWeatherEffect(getUd(self), enable)
 end

@@ -15,20 +15,20 @@ end
 ---destroy
 ---@return void
 function Dialog:destroy()
-    return DialogDestroy(self:getUd())
+    return DialogDestroy(getUd(self))
 end
 
 ---clear
 ---@return void
 function Dialog:clear()
-    return DialogClear(self:getUd())
+    return DialogClear(getUd(self))
 end
 
 ---setMessage
 ---@param messageText string
 ---@return void
 function Dialog:setMessage(messageText)
-    return DialogSetMessage(self:getUd(), messageText)
+    return DialogSetMessage(getUd(self), messageText)
 end
 
 ---addButton
@@ -36,7 +36,7 @@ end
 ---@param hotkey integer
 ---@return Button
 function Dialog:addButton(buttonText, hotkey)
-    return Button:fromUd(DialogAddButton(self:getUd(), buttonText, hotkey))
+    return Button:fromUd(DialogAddButton(getUd(self), buttonText, hotkey))
 end
 
 ---addQuitButton
@@ -45,5 +45,5 @@ end
 ---@param hotkey integer
 ---@return Button
 function Dialog:addQuitButton(doScoreScreen, buttonText, hotkey)
-    return Button:fromUd(DialogAddQuitButton(self:getUd(), doScoreScreen, buttonText, hotkey))
+    return Button:fromUd(DialogAddQuitButton(getUd(self), doScoreScreen, buttonText, hotkey))
 end

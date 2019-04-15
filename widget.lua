@@ -9,26 +9,26 @@ local Widget = class('Widget', Agent)
 ---getLife
 ---@return float
 function Widget:getLife()
-    return GetWidgetLife(self:getUd())
+    return GetWidgetLife(getUd(self))
 end
 
 ---setLife
 ---@param life float
 ---@return void
 function Widget:setLife(life)
-    return SetWidgetLife(self:getUd(), life)
+    return SetWidgetLife(getUd(self), life)
 end
 
 ---getX
 ---@return float
 function Widget:getX()
-    return GetWidgetX(self:getUd())
+    return GetWidgetX(getUd(self))
 end
 
 ---getY
 ---@return float
 function Widget:getY()
-    return GetWidgetY(self:getUd())
+    return GetWidgetY(getUd(self))
 end
 
 ---addIndicator
@@ -38,5 +38,5 @@ end
 ---@param alpha integer
 ---@return void
 function Widget:addIndicator(red, green, blue, alpha)
-    return AddIndicator(self:getUd(), red, green, blue, alpha)
+    return AddIndicator(getUd(self), red, green, blue, alpha)
 end

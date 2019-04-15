@@ -9,7 +9,7 @@ local Lightning = class('Lightning', Handle)
 ---destroy
 ---@return boolean
 function Lightning:destroy()
-    return DestroyLightning(self:getUd())
+    return DestroyLightning(getUd(self))
 end
 
 ---move
@@ -20,7 +20,7 @@ end
 ---@param y2 float
 ---@return boolean
 function Lightning:move(checkVisibility, x1, y1, x2, y2)
-    return MoveLightning(self:getUd(), checkVisibility, x1, y1, x2, y2)
+    return MoveLightning(getUd(self), checkVisibility, x1, y1, x2, y2)
 end
 
 ---moveEx
@@ -33,31 +33,31 @@ end
 ---@param z2 float
 ---@return boolean
 function Lightning:moveEx(checkVisibility, x1, y1, z1, x2, y2, z2)
-    return MoveLightningEx(self:getUd(), checkVisibility, x1, y1, z1, x2, y2, z2)
+    return MoveLightningEx(getUd(self), checkVisibility, x1, y1, z1, x2, y2, z2)
 end
 
 ---getColorA
 ---@return float
 function Lightning:getColorA()
-    return GetLightningColorA(self:getUd())
+    return GetLightningColorA(getUd(self))
 end
 
 ---getColorR
 ---@return float
 function Lightning:getColorR()
-    return GetLightningColorR(self:getUd())
+    return GetLightningColorR(getUd(self))
 end
 
 ---getColorG
 ---@return float
 function Lightning:getColorG()
-    return GetLightningColorG(self:getUd())
+    return GetLightningColorG(getUd(self))
 end
 
 ---getColorB
 ---@return float
 function Lightning:getColorB()
-    return GetLightningColorB(self:getUd())
+    return GetLightningColorB(getUd(self))
 end
 
 ---setColor
@@ -67,5 +67,5 @@ end
 ---@param a float
 ---@return boolean
 function Lightning:setColor(r, g, b, a)
-    return SetLightningColor(self:getUd(), r, g, b, a)
+    return SetLightningColor(getUd(self), r, g, b, a)
 end

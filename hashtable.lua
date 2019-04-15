@@ -18,7 +18,7 @@ end
 ---@param value integer
 ---@return void
 function Hashtable:saveInteger(parentKey, childKey, value)
-    return SaveInteger(self:getUd(), parentKey, childKey, value)
+    return SaveInteger(getUd(self), parentKey, childKey, value)
 end
 
 ---saveReal
@@ -27,7 +27,7 @@ end
 ---@param value float
 ---@return void
 function Hashtable:saveReal(parentKey, childKey, value)
-    return SaveReal(self:getUd(), parentKey, childKey, value)
+    return SaveReal(getUd(self), parentKey, childKey, value)
 end
 
 ---saveBoolean
@@ -36,7 +36,7 @@ end
 ---@param value boolean
 ---@return void
 function Hashtable:saveBoolean(parentKey, childKey, value)
-    return SaveBoolean(self:getUd(), parentKey, childKey, value)
+    return SaveBoolean(getUd(self), parentKey, childKey, value)
 end
 
 ---saveStr
@@ -45,7 +45,7 @@ end
 ---@param value string
 ---@return boolean
 function Hashtable:saveStr(parentKey, childKey, value)
-    return SaveStr(self:getUd(), parentKey, childKey, value)
+    return SaveStr(getUd(self), parentKey, childKey, value)
 end
 
 ---savePlayerHandle
@@ -54,7 +54,7 @@ end
 ---@param player Player
 ---@return boolean
 function Hashtable:savePlayerHandle(parentKey, childKey, player)
-    return SavePlayerHandle(self:getUd(), parentKey, childKey, player:getUd())
+    return SavePlayerHandle(getUd(self), parentKey, childKey, getUd(player))
 end
 
 ---saveWidgetHandle
@@ -63,7 +63,7 @@ end
 ---@param widget Widget
 ---@return boolean
 function Hashtable:saveWidgetHandle(parentKey, childKey, widget)
-    return SaveWidgetHandle(self:getUd(), parentKey, childKey, widget:getUd())
+    return SaveWidgetHandle(getUd(self), parentKey, childKey, getUd(widget))
 end
 
 ---saveDestructableHandle
@@ -72,7 +72,7 @@ end
 ---@param destructable Destructable
 ---@return boolean
 function Hashtable:saveDestructableHandle(parentKey, childKey, destructable)
-    return SaveDestructableHandle(self:getUd(), parentKey, childKey, destructable:getUd())
+    return SaveDestructableHandle(getUd(self), parentKey, childKey, getUd(destructable))
 end
 
 ---saveItemHandle
@@ -81,7 +81,7 @@ end
 ---@param item Item
 ---@return boolean
 function Hashtable:saveItemHandle(parentKey, childKey, item)
-    return SaveItemHandle(self:getUd(), parentKey, childKey, item:getUd())
+    return SaveItemHandle(getUd(self), parentKey, childKey, getUd(item))
 end
 
 ---saveUnitHandle
@@ -90,7 +90,7 @@ end
 ---@param unit Unit
 ---@return boolean
 function Hashtable:saveUnitHandle(parentKey, childKey, unit)
-    return SaveUnitHandle(self:getUd(), parentKey, childKey, unit:getUd())
+    return SaveUnitHandle(getUd(self), parentKey, childKey, getUd(unit))
 end
 
 ---saveAbilityHandle
@@ -99,7 +99,7 @@ end
 ---@param ability Ability
 ---@return boolean
 function Hashtable:saveAbilityHandle(parentKey, childKey, ability)
-    return SaveAbilityHandle(self:getUd(), parentKey, childKey, ability:getUd())
+    return SaveAbilityHandle(getUd(self), parentKey, childKey, getUd(ability))
 end
 
 ---saveTimerHandle
@@ -108,7 +108,7 @@ end
 ---@param timer Timer
 ---@return boolean
 function Hashtable:saveTimerHandle(parentKey, childKey, timer)
-    return SaveTimerHandle(self:getUd(), parentKey, childKey, timer:getUd())
+    return SaveTimerHandle(getUd(self), parentKey, childKey, getUd(timer))
 end
 
 ---saveTriggerHandle
@@ -117,7 +117,7 @@ end
 ---@param trigger Trigger
 ---@return boolean
 function Hashtable:saveTriggerHandle(parentKey, childKey, trigger)
-    return SaveTriggerHandle(self:getUd(), parentKey, childKey, trigger:getUd())
+    return SaveTriggerHandle(getUd(self), parentKey, childKey, getUd(trigger))
 end
 
 ---saveTriggerConditionHandle
@@ -126,7 +126,7 @@ end
 ---@param triggercondition TriggerCondition
 ---@return boolean
 function Hashtable:saveTriggerConditionHandle(parentKey, childKey, triggercondition)
-    return SaveTriggerConditionHandle(self:getUd(), parentKey, childKey, triggercondition:getUd())
+    return SaveTriggerConditionHandle(getUd(self), parentKey, childKey, getUd(triggercondition))
 end
 
 ---saveTriggerActionHandle
@@ -135,7 +135,7 @@ end
 ---@param triggeraction TriggerAction
 ---@return boolean
 function Hashtable:saveTriggerActionHandle(parentKey, childKey, triggeraction)
-    return SaveTriggerActionHandle(self:getUd(), parentKey, childKey, triggeraction)
+    return SaveTriggerActionHandle(getUd(self), parentKey, childKey, triggeraction)
 end
 
 ---saveTriggerEventHandle
@@ -144,7 +144,7 @@ end
 ---@param event Event
 ---@return boolean
 function Hashtable:saveTriggerEventHandle(parentKey, childKey, event)
-    return SaveTriggerEventHandle(self:getUd(), parentKey, childKey, event:getUd())
+    return SaveTriggerEventHandle(getUd(self), parentKey, childKey, getUd(event))
 end
 
 ---saveForceHandle
@@ -153,7 +153,7 @@ end
 ---@param force Force
 ---@return boolean
 function Hashtable:saveForceHandle(parentKey, childKey, force)
-    return SaveForceHandle(self:getUd(), parentKey, childKey, force:getUd())
+    return SaveForceHandle(getUd(self), parentKey, childKey, getUd(force))
 end
 
 ---saveGroupHandle
@@ -162,7 +162,7 @@ end
 ---@param group Group
 ---@return boolean
 function Hashtable:saveGroupHandle(parentKey, childKey, group)
-    return SaveGroupHandle(self:getUd(), parentKey, childKey, group:getUd())
+    return SaveGroupHandle(getUd(self), parentKey, childKey, getUd(group))
 end
 
 ---saveLocationHandle
@@ -171,7 +171,7 @@ end
 ---@param loc Location
 ---@return boolean
 function Hashtable:saveLocationHandle(parentKey, childKey, loc)
-    return SaveLocationHandle(self:getUd(), parentKey, childKey, loc:getUd())
+    return SaveLocationHandle(getUd(self), parentKey, childKey, getUd(loc))
 end
 
 ---saveRectHandle
@@ -180,7 +180,7 @@ end
 ---@param rect Rect
 ---@return boolean
 function Hashtable:saveRectHandle(parentKey, childKey, rect)
-    return SaveRectHandle(self:getUd(), parentKey, childKey, rect:getUd())
+    return SaveRectHandle(getUd(self), parentKey, childKey, getUd(rect))
 end
 
 ---saveBooleanExprHandle
@@ -189,7 +189,7 @@ end
 ---@param boolexpr BoolExpr
 ---@return boolean
 function Hashtable:saveBooleanExprHandle(parentKey, childKey, boolexpr)
-    return SaveBooleanExprHandle(self:getUd(), parentKey, childKey, boolexpr:getUd())
+    return SaveBooleanExprHandle(getUd(self), parentKey, childKey, getUd(boolexpr))
 end
 
 ---saveSoundHandle
@@ -198,7 +198,7 @@ end
 ---@param sound Sound
 ---@return boolean
 function Hashtable:saveSoundHandle(parentKey, childKey, sound)
-    return SaveSoundHandle(self:getUd(), parentKey, childKey, sound:getUd())
+    return SaveSoundHandle(getUd(self), parentKey, childKey, getUd(sound))
 end
 
 ---saveEffectHandle
@@ -207,7 +207,7 @@ end
 ---@param effect Effect
 ---@return boolean
 function Hashtable:saveEffectHandle(parentKey, childKey, effect)
-    return SaveEffectHandle(self:getUd(), parentKey, childKey, effect:getUd())
+    return SaveEffectHandle(getUd(self), parentKey, childKey, getUd(effect))
 end
 
 ---saveUnitPoolHandle
@@ -216,7 +216,7 @@ end
 ---@param unitpool UnitPool
 ---@return boolean
 function Hashtable:saveUnitPoolHandle(parentKey, childKey, unitpool)
-    return SaveUnitPoolHandle(self:getUd(), parentKey, childKey, unitpool:getUd())
+    return SaveUnitPoolHandle(getUd(self), parentKey, childKey, getUd(unitpool))
 end
 
 ---saveItemPoolHandle
@@ -225,7 +225,7 @@ end
 ---@param itempool ItemPool
 ---@return boolean
 function Hashtable:saveItemPoolHandle(parentKey, childKey, itempool)
-    return SaveItemPoolHandle(self:getUd(), parentKey, childKey, itempool:getUd())
+    return SaveItemPoolHandle(getUd(self), parentKey, childKey, getUd(itempool))
 end
 
 ---saveQuestHandle
@@ -234,7 +234,7 @@ end
 ---@param quest Quest
 ---@return boolean
 function Hashtable:saveQuestHandle(parentKey, childKey, quest)
-    return SaveQuestHandle(self:getUd(), parentKey, childKey, quest:getUd())
+    return SaveQuestHandle(getUd(self), parentKey, childKey, getUd(quest))
 end
 
 ---saveQuestItemHandle
@@ -243,7 +243,7 @@ end
 ---@param questitem QuestItem
 ---@return boolean
 function Hashtable:saveQuestItemHandle(parentKey, childKey, questitem)
-    return SaveQuestItemHandle(self:getUd(), parentKey, childKey, questitem:getUd())
+    return SaveQuestItemHandle(getUd(self), parentKey, childKey, getUd(questitem))
 end
 
 ---saveDefeatConditionHandle
@@ -252,7 +252,7 @@ end
 ---@param defeatcondition DefeatCondition
 ---@return boolean
 function Hashtable:saveDefeatConditionHandle(parentKey, childKey, defeatcondition)
-    return SaveDefeatConditionHandle(self:getUd(), parentKey, childKey, defeatcondition:getUd())
+    return SaveDefeatConditionHandle(getUd(self), parentKey, childKey, getUd(defeatcondition))
 end
 
 ---saveTimerDialogHandle
@@ -261,7 +261,7 @@ end
 ---@param timerdialog TimerDialog
 ---@return boolean
 function Hashtable:saveTimerDialogHandle(parentKey, childKey, timerdialog)
-    return SaveTimerDialogHandle(self:getUd(), parentKey, childKey, timerdialog:getUd())
+    return SaveTimerDialogHandle(getUd(self), parentKey, childKey, getUd(timerdialog))
 end
 
 ---saveLeaderboardHandle
@@ -270,7 +270,7 @@ end
 ---@param leaderboard LeaderBoard
 ---@return boolean
 function Hashtable:saveLeaderboardHandle(parentKey, childKey, leaderboard)
-    return SaveLeaderboardHandle(self:getUd(), parentKey, childKey, leaderboard:getUd())
+    return SaveLeaderboardHandle(getUd(self), parentKey, childKey, getUd(leaderboard))
 end
 
 ---saveMultiboardHandle
@@ -279,7 +279,7 @@ end
 ---@param multiboard MultiBoard
 ---@return boolean
 function Hashtable:saveMultiboardHandle(parentKey, childKey, multiboard)
-    return SaveMultiboardHandle(self:getUd(), parentKey, childKey, multiboard:getUd())
+    return SaveMultiboardHandle(getUd(self), parentKey, childKey, getUd(multiboard))
 end
 
 ---saveMultiboardItemHandle
@@ -288,7 +288,7 @@ end
 ---@param multiboarditem MultiBoardItem
 ---@return boolean
 function Hashtable:saveMultiboardItemHandle(parentKey, childKey, multiboarditem)
-    return SaveMultiboardItemHandle(self:getUd(), parentKey, childKey, multiboarditem:getUd())
+    return SaveMultiboardItemHandle(getUd(self), parentKey, childKey, getUd(multiboarditem))
 end
 
 ---saveTrackableHandle
@@ -297,7 +297,7 @@ end
 ---@param trackable Trackable
 ---@return boolean
 function Hashtable:saveTrackableHandle(parentKey, childKey, trackable)
-    return SaveTrackableHandle(self:getUd(), parentKey, childKey, trackable:getUd())
+    return SaveTrackableHandle(getUd(self), parentKey, childKey, getUd(trackable))
 end
 
 ---saveDialogHandle
@@ -306,7 +306,7 @@ end
 ---@param dialog Dialog
 ---@return boolean
 function Hashtable:saveDialogHandle(parentKey, childKey, dialog)
-    return SaveDialogHandle(self:getUd(), parentKey, childKey, dialog:getUd())
+    return SaveDialogHandle(getUd(self), parentKey, childKey, getUd(dialog))
 end
 
 ---saveButtonHandle
@@ -315,7 +315,7 @@ end
 ---@param button Button
 ---@return boolean
 function Hashtable:saveButtonHandle(parentKey, childKey, button)
-    return SaveButtonHandle(self:getUd(), parentKey, childKey, button:getUd())
+    return SaveButtonHandle(getUd(self), parentKey, childKey, getUd(button))
 end
 
 ---saveTextTagHandle
@@ -324,7 +324,7 @@ end
 ---@param texttag TextTag
 ---@return boolean
 function Hashtable:saveTextTagHandle(parentKey, childKey, texttag)
-    return SaveTextTagHandle(self:getUd(), parentKey, childKey, texttag:getUd())
+    return SaveTextTagHandle(getUd(self), parentKey, childKey, getUd(texttag))
 end
 
 ---saveLightningHandle
@@ -333,7 +333,7 @@ end
 ---@param lightning Lightning
 ---@return boolean
 function Hashtable:saveLightningHandle(parentKey, childKey, lightning)
-    return SaveLightningHandle(self:getUd(), parentKey, childKey, lightning:getUd())
+    return SaveLightningHandle(getUd(self), parentKey, childKey, getUd(lightning))
 end
 
 ---saveImageHandle
@@ -342,7 +342,7 @@ end
 ---@param image Image
 ---@return boolean
 function Hashtable:saveImageHandle(parentKey, childKey, image)
-    return SaveImageHandle(self:getUd(), parentKey, childKey, image:getUd())
+    return SaveImageHandle(getUd(self), parentKey, childKey, getUd(image))
 end
 
 ---saveUbersplatHandle
@@ -351,7 +351,7 @@ end
 ---@param ubersplat Ubersplat
 ---@return boolean
 function Hashtable:saveUbersplatHandle(parentKey, childKey, ubersplat)
-    return SaveUbersplatHandle(self:getUd(), parentKey, childKey, ubersplat:getUd())
+    return SaveUbersplatHandle(getUd(self), parentKey, childKey, getUd(ubersplat))
 end
 
 ---saveRegionHandle
@@ -360,7 +360,7 @@ end
 ---@param region Region
 ---@return boolean
 function Hashtable:saveRegionHandle(parentKey, childKey, region)
-    return SaveRegionHandle(self:getUd(), parentKey, childKey, region:getUd())
+    return SaveRegionHandle(getUd(self), parentKey, childKey, getUd(region))
 end
 
 ---saveFogStateHandle
@@ -369,7 +369,7 @@ end
 ---@param fogState FogState
 ---@return boolean
 function Hashtable:saveFogStateHandle(parentKey, childKey, fogState)
-    return SaveFogStateHandle(self:getUd(), parentKey, childKey, fogState)
+    return SaveFogStateHandle(getUd(self), parentKey, childKey, fogState)
 end
 
 ---saveFogModifierHandle
@@ -378,7 +378,7 @@ end
 ---@param fogModifier FogModifier
 ---@return boolean
 function Hashtable:saveFogModifierHandle(parentKey, childKey, fogModifier)
-    return SaveFogModifierHandle(self:getUd(), parentKey, childKey, fogModifier:getUd())
+    return SaveFogModifierHandle(getUd(self), parentKey, childKey, getUd(fogModifier))
 end
 
 ---saveAgentHandle
@@ -387,7 +387,7 @@ end
 ---@param agent Agent
 ---@return boolean
 function Hashtable:saveAgentHandle(parentKey, childKey, agent)
-    return SaveAgentHandle(self:getUd(), parentKey, childKey, agent:getUd())
+    return SaveAgentHandle(getUd(self), parentKey, childKey, getUd(agent))
 end
 
 ---saveHandle
@@ -396,7 +396,7 @@ end
 ---@param hashtable Hashtable
 ---@return boolean
 function Hashtable:saveHandle(parentKey, childKey, hashtable)
-    return SaveHashtableHandle(self:getUd(), parentKey, childKey, hashtable:getUd())
+    return SaveHashtableHandle(getUd(self), parentKey, childKey, getUd(hashtable))
 end
 
 ---saveFrameHandle
@@ -405,7 +405,7 @@ end
 ---@param frameHandle Frame
 ---@return boolean
 function Hashtable:saveFrameHandle(parentKey, childKey, frameHandle)
-    return SaveFrameHandle(self:getUd(), parentKey, childKey, frameHandle:getUd())
+    return SaveFrameHandle(getUd(self), parentKey, childKey, getUd(frameHandle))
 end
 
 ---loadInteger
@@ -413,7 +413,7 @@ end
 ---@param childKey integer
 ---@return integer
 function Hashtable:loadInteger(parentKey, childKey)
-    return LoadInteger(self:getUd(), parentKey, childKey)
+    return LoadInteger(getUd(self), parentKey, childKey)
 end
 
 ---loadReal
@@ -421,7 +421,7 @@ end
 ---@param childKey integer
 ---@return float
 function Hashtable:loadReal(parentKey, childKey)
-    return LoadReal(self:getUd(), parentKey, childKey)
+    return LoadReal(getUd(self), parentKey, childKey)
 end
 
 ---loadBoolean
@@ -429,7 +429,7 @@ end
 ---@param childKey integer
 ---@return boolean
 function Hashtable:loadBoolean(parentKey, childKey)
-    return LoadBoolean(self:getUd(), parentKey, childKey)
+    return LoadBoolean(getUd(self), parentKey, childKey)
 end
 
 ---loadStr
@@ -437,7 +437,7 @@ end
 ---@param childKey integer
 ---@return string
 function Hashtable:loadStr(parentKey, childKey)
-    return LoadStr(self:getUd(), parentKey, childKey)
+    return LoadStr(getUd(self), parentKey, childKey)
 end
 
 ---loadPlayerHandle
@@ -445,7 +445,7 @@ end
 ---@param childKey integer
 ---@return Player
 function Hashtable:loadPlayerHandle(parentKey, childKey)
-    return Player:fromUd(LoadPlayerHandle(self:getUd(), parentKey, childKey))
+    return Player:fromUd(LoadPlayerHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadWidgetHandle
@@ -453,7 +453,7 @@ end
 ---@param childKey integer
 ---@return Widget
 function Hashtable:loadWidgetHandle(parentKey, childKey)
-    return Widget:fromUd(LoadWidgetHandle(self:getUd(), parentKey, childKey))
+    return Widget:fromUd(LoadWidgetHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadDestructableHandle
@@ -461,7 +461,7 @@ end
 ---@param childKey integer
 ---@return Destructable
 function Hashtable:loadDestructableHandle(parentKey, childKey)
-    return Destructable:fromUd(LoadDestructableHandle(self:getUd(), parentKey, childKey))
+    return Destructable:fromUd(LoadDestructableHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadItemHandle
@@ -469,7 +469,7 @@ end
 ---@param childKey integer
 ---@return Item
 function Hashtable:loadItemHandle(parentKey, childKey)
-    return Item:fromUd(LoadItemHandle(self:getUd(), parentKey, childKey))
+    return Item:fromUd(LoadItemHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadUnitHandle
@@ -477,7 +477,7 @@ end
 ---@param childKey integer
 ---@return Unit
 function Hashtable:loadUnitHandle(parentKey, childKey)
-    return Unit:fromUd(LoadUnitHandle(self:getUd(), parentKey, childKey))
+    return Unit:fromUd(LoadUnitHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadAbilityHandle
@@ -485,7 +485,7 @@ end
 ---@param childKey integer
 ---@return Ability
 function Hashtable:loadAbilityHandle(parentKey, childKey)
-    return Ability:fromUd(LoadAbilityHandle(self:getUd(), parentKey, childKey))
+    return Ability:fromUd(LoadAbilityHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadTimerHandle
@@ -493,7 +493,7 @@ end
 ---@param childKey integer
 ---@return Timer
 function Hashtable:loadTimerHandle(parentKey, childKey)
-    return Timer:fromUd(LoadTimerHandle(self:getUd(), parentKey, childKey))
+    return Timer:fromUd(LoadTimerHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadTriggerHandle
@@ -501,7 +501,7 @@ end
 ---@param childKey integer
 ---@return Trigger
 function Hashtable:loadTriggerHandle(parentKey, childKey)
-    return Trigger:fromUd(LoadTriggerHandle(self:getUd(), parentKey, childKey))
+    return Trigger:fromUd(LoadTriggerHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadTriggerConditionHandle
@@ -509,7 +509,7 @@ end
 ---@param childKey integer
 ---@return TriggerCondition
 function Hashtable:loadTriggerConditionHandle(parentKey, childKey)
-    return TriggerCondition:fromUd(LoadTriggerConditionHandle(self:getUd(), parentKey, childKey))
+    return TriggerCondition:fromUd(LoadTriggerConditionHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadTriggerActionHandle
@@ -517,7 +517,7 @@ end
 ---@param childKey integer
 ---@return TriggerAction
 function Hashtable:loadTriggerActionHandle(parentKey, childKey)
-    return LoadTriggerActionHandle(self:getUd(), parentKey, childKey)
+    return LoadTriggerActionHandle(getUd(self), parentKey, childKey)
 end
 
 ---loadTriggerEventHandle
@@ -525,7 +525,7 @@ end
 ---@param childKey integer
 ---@return Event
 function Hashtable:loadTriggerEventHandle(parentKey, childKey)
-    return Event:fromUd(LoadTriggerEventHandle(self:getUd(), parentKey, childKey))
+    return Event:fromUd(LoadTriggerEventHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadForceHandle
@@ -533,7 +533,7 @@ end
 ---@param childKey integer
 ---@return Force
 function Hashtable:loadForceHandle(parentKey, childKey)
-    return Force:fromUd(LoadForceHandle(self:getUd(), parentKey, childKey))
+    return Force:fromUd(LoadForceHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadGroupHandle
@@ -541,7 +541,7 @@ end
 ---@param childKey integer
 ---@return Group
 function Hashtable:loadGroupHandle(parentKey, childKey)
-    return Group:fromUd(LoadGroupHandle(self:getUd(), parentKey, childKey))
+    return Group:fromUd(LoadGroupHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadLocationHandle
@@ -549,7 +549,7 @@ end
 ---@param childKey integer
 ---@return Location
 function Hashtable:loadLocationHandle(parentKey, childKey)
-    return Location:fromUd(LoadLocationHandle(self:getUd(), parentKey, childKey))
+    return Location:fromUd(LoadLocationHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadRectHandle
@@ -557,7 +557,7 @@ end
 ---@param childKey integer
 ---@return Rect
 function Hashtable:loadRectHandle(parentKey, childKey)
-    return Rect:fromUd(LoadRectHandle(self:getUd(), parentKey, childKey))
+    return Rect:fromUd(LoadRectHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadBooleanExprHandle
@@ -565,7 +565,7 @@ end
 ---@param childKey integer
 ---@return BoolExpr
 function Hashtable:loadBooleanExprHandle(parentKey, childKey)
-    return BoolExpr:fromUd(LoadBooleanExprHandle(self:getUd(), parentKey, childKey))
+    return BoolExpr:fromUd(LoadBooleanExprHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadSoundHandle
@@ -573,7 +573,7 @@ end
 ---@param childKey integer
 ---@return Sound
 function Hashtable:loadSoundHandle(parentKey, childKey)
-    return Sound:fromUd(LoadSoundHandle(self:getUd(), parentKey, childKey))
+    return Sound:fromUd(LoadSoundHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadEffectHandle
@@ -581,7 +581,7 @@ end
 ---@param childKey integer
 ---@return Effect
 function Hashtable:loadEffectHandle(parentKey, childKey)
-    return Effect:fromUd(LoadEffectHandle(self:getUd(), parentKey, childKey))
+    return Effect:fromUd(LoadEffectHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadUnitPoolHandle
@@ -589,7 +589,7 @@ end
 ---@param childKey integer
 ---@return UnitPool
 function Hashtable:loadUnitPoolHandle(parentKey, childKey)
-    return UnitPool:fromUd(LoadUnitPoolHandle(self:getUd(), parentKey, childKey))
+    return UnitPool:fromUd(LoadUnitPoolHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadItemPoolHandle
@@ -597,7 +597,7 @@ end
 ---@param childKey integer
 ---@return ItemPool
 function Hashtable:loadItemPoolHandle(parentKey, childKey)
-    return ItemPool:fromUd(LoadItemPoolHandle(self:getUd(), parentKey, childKey))
+    return ItemPool:fromUd(LoadItemPoolHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadQuestHandle
@@ -605,7 +605,7 @@ end
 ---@param childKey integer
 ---@return Quest
 function Hashtable:loadQuestHandle(parentKey, childKey)
-    return Quest:fromUd(LoadQuestHandle(self:getUd(), parentKey, childKey))
+    return Quest:fromUd(LoadQuestHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadQuestItemHandle
@@ -613,7 +613,7 @@ end
 ---@param childKey integer
 ---@return QuestItem
 function Hashtable:loadQuestItemHandle(parentKey, childKey)
-    return QuestItem:fromUd(LoadQuestItemHandle(self:getUd(), parentKey, childKey))
+    return QuestItem:fromUd(LoadQuestItemHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadDefeatConditionHandle
@@ -621,7 +621,7 @@ end
 ---@param childKey integer
 ---@return DefeatCondition
 function Hashtable:loadDefeatConditionHandle(parentKey, childKey)
-    return DefeatCondition:fromUd(LoadDefeatConditionHandle(self:getUd(), parentKey, childKey))
+    return DefeatCondition:fromUd(LoadDefeatConditionHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadTimerDialogHandle
@@ -629,7 +629,7 @@ end
 ---@param childKey integer
 ---@return TimerDialog
 function Hashtable:loadTimerDialogHandle(parentKey, childKey)
-    return TimerDialog:fromUd(LoadTimerDialogHandle(self:getUd(), parentKey, childKey))
+    return TimerDialog:fromUd(LoadTimerDialogHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadLeaderboardHandle
@@ -637,7 +637,7 @@ end
 ---@param childKey integer
 ---@return LeaderBoard
 function Hashtable:loadLeaderboardHandle(parentKey, childKey)
-    return LeaderBoard:fromUd(LoadLeaderboardHandle(self:getUd(), parentKey, childKey))
+    return LeaderBoard:fromUd(LoadLeaderboardHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadMultiboardHandle
@@ -645,7 +645,7 @@ end
 ---@param childKey integer
 ---@return MultiBoard
 function Hashtable:loadMultiboardHandle(parentKey, childKey)
-    return MultiBoard:fromUd(LoadMultiboardHandle(self:getUd(), parentKey, childKey))
+    return MultiBoard:fromUd(LoadMultiboardHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadMultiboardItemHandle
@@ -653,7 +653,7 @@ end
 ---@param childKey integer
 ---@return MultiBoardItem
 function Hashtable:loadMultiboardItemHandle(parentKey, childKey)
-    return MultiBoardItem:fromUd(LoadMultiboardItemHandle(self:getUd(), parentKey, childKey))
+    return MultiBoardItem:fromUd(LoadMultiboardItemHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadTrackableHandle
@@ -661,7 +661,7 @@ end
 ---@param childKey integer
 ---@return Trackable
 function Hashtable:loadTrackableHandle(parentKey, childKey)
-    return Trackable:fromUd(LoadTrackableHandle(self:getUd(), parentKey, childKey))
+    return Trackable:fromUd(LoadTrackableHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadDialogHandle
@@ -669,7 +669,7 @@ end
 ---@param childKey integer
 ---@return Dialog
 function Hashtable:loadDialogHandle(parentKey, childKey)
-    return Dialog:fromUd(LoadDialogHandle(self:getUd(), parentKey, childKey))
+    return Dialog:fromUd(LoadDialogHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadButtonHandle
@@ -677,7 +677,7 @@ end
 ---@param childKey integer
 ---@return Button
 function Hashtable:loadButtonHandle(parentKey, childKey)
-    return Button:fromUd(LoadButtonHandle(self:getUd(), parentKey, childKey))
+    return Button:fromUd(LoadButtonHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadTextTagHandle
@@ -685,7 +685,7 @@ end
 ---@param childKey integer
 ---@return TextTag
 function Hashtable:loadTextTagHandle(parentKey, childKey)
-    return TextTag:fromUd(LoadTextTagHandle(self:getUd(), parentKey, childKey))
+    return TextTag:fromUd(LoadTextTagHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadLightningHandle
@@ -693,7 +693,7 @@ end
 ---@param childKey integer
 ---@return Lightning
 function Hashtable:loadLightningHandle(parentKey, childKey)
-    return Lightning:fromUd(LoadLightningHandle(self:getUd(), parentKey, childKey))
+    return Lightning:fromUd(LoadLightningHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadImageHandle
@@ -701,7 +701,7 @@ end
 ---@param childKey integer
 ---@return Image
 function Hashtable:loadImageHandle(parentKey, childKey)
-    return Image:fromUd(LoadImageHandle(self:getUd(), parentKey, childKey))
+    return Image:fromUd(LoadImageHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadUbersplatHandle
@@ -709,7 +709,7 @@ end
 ---@param childKey integer
 ---@return Ubersplat
 function Hashtable:loadUbersplatHandle(parentKey, childKey)
-    return Ubersplat:fromUd(LoadUbersplatHandle(self:getUd(), parentKey, childKey))
+    return Ubersplat:fromUd(LoadUbersplatHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadRegionHandle
@@ -717,7 +717,7 @@ end
 ---@param childKey integer
 ---@return Region
 function Hashtable:loadRegionHandle(parentKey, childKey)
-    return Region:fromUd(LoadRegionHandle(self:getUd(), parentKey, childKey))
+    return Region:fromUd(LoadRegionHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadFogStateHandle
@@ -725,7 +725,7 @@ end
 ---@param childKey integer
 ---@return FogState
 function Hashtable:loadFogStateHandle(parentKey, childKey)
-    return LoadFogStateHandle(self:getUd(), parentKey, childKey)
+    return LoadFogStateHandle(getUd(self), parentKey, childKey)
 end
 
 ---loadFogModifierHandle
@@ -733,7 +733,7 @@ end
 ---@param childKey integer
 ---@return FogModifier
 function Hashtable:loadFogModifierHandle(parentKey, childKey)
-    return FogModifier:fromUd(LoadFogModifierHandle(self:getUd(), parentKey, childKey))
+    return FogModifier:fromUd(LoadFogModifierHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadHandle
@@ -741,7 +741,7 @@ end
 ---@param childKey integer
 ---@return Hashtable
 function Hashtable:loadHandle(parentKey, childKey)
-    return Hashtable:fromUd(LoadHashtableHandle(self:getUd(), parentKey, childKey))
+    return Hashtable:fromUd(LoadHashtableHandle(getUd(self), parentKey, childKey))
 end
 
 ---loadFrameHandle
@@ -749,7 +749,7 @@ end
 ---@param childKey integer
 ---@return Frame
 function Hashtable:loadFrameHandle(parentKey, childKey)
-    return Frame:fromUd(LoadFrameHandle(self:getUd(), parentKey, childKey))
+    return Frame:fromUd(LoadFrameHandle(getUd(self), parentKey, childKey))
 end
 
 ---haveSavedInteger
@@ -757,7 +757,7 @@ end
 ---@param childKey integer
 ---@return boolean
 function Hashtable:haveSavedInteger(parentKey, childKey)
-    return HaveSavedInteger(self:getUd(), parentKey, childKey)
+    return HaveSavedInteger(getUd(self), parentKey, childKey)
 end
 
 ---haveSavedReal
@@ -765,7 +765,7 @@ end
 ---@param childKey integer
 ---@return boolean
 function Hashtable:haveSavedReal(parentKey, childKey)
-    return HaveSavedReal(self:getUd(), parentKey, childKey)
+    return HaveSavedReal(getUd(self), parentKey, childKey)
 end
 
 ---haveSavedBoolean
@@ -773,7 +773,7 @@ end
 ---@param childKey integer
 ---@return boolean
 function Hashtable:haveSavedBoolean(parentKey, childKey)
-    return HaveSavedBoolean(self:getUd(), parentKey, childKey)
+    return HaveSavedBoolean(getUd(self), parentKey, childKey)
 end
 
 ---haveSavedString
@@ -781,7 +781,7 @@ end
 ---@param childKey integer
 ---@return boolean
 function Hashtable:haveSavedString(parentKey, childKey)
-    return HaveSavedString(self:getUd(), parentKey, childKey)
+    return HaveSavedString(getUd(self), parentKey, childKey)
 end
 
 ---haveSavedHandle
@@ -789,7 +789,7 @@ end
 ---@param childKey integer
 ---@return boolean
 function Hashtable:haveSavedHandle(parentKey, childKey)
-    return HaveSavedHandle(self:getUd(), parentKey, childKey)
+    return HaveSavedHandle(getUd(self), parentKey, childKey)
 end
 
 ---removeSavedInteger
@@ -797,7 +797,7 @@ end
 ---@param childKey integer
 ---@return void
 function Hashtable:removeSavedInteger(parentKey, childKey)
-    return RemoveSavedInteger(self:getUd(), parentKey, childKey)
+    return RemoveSavedInteger(getUd(self), parentKey, childKey)
 end
 
 ---removeSavedReal
@@ -805,7 +805,7 @@ end
 ---@param childKey integer
 ---@return void
 function Hashtable:removeSavedReal(parentKey, childKey)
-    return RemoveSavedReal(self:getUd(), parentKey, childKey)
+    return RemoveSavedReal(getUd(self), parentKey, childKey)
 end
 
 ---removeSavedBoolean
@@ -813,7 +813,7 @@ end
 ---@param childKey integer
 ---@return void
 function Hashtable:removeSavedBoolean(parentKey, childKey)
-    return RemoveSavedBoolean(self:getUd(), parentKey, childKey)
+    return RemoveSavedBoolean(getUd(self), parentKey, childKey)
 end
 
 ---removeSavedString
@@ -821,7 +821,7 @@ end
 ---@param childKey integer
 ---@return void
 function Hashtable:removeSavedString(parentKey, childKey)
-    return RemoveSavedString(self:getUd(), parentKey, childKey)
+    return RemoveSavedString(getUd(self), parentKey, childKey)
 end
 
 ---removeSavedHandle
@@ -829,18 +829,18 @@ end
 ---@param childKey integer
 ---@return void
 function Hashtable:removeSavedHandle(parentKey, childKey)
-    return RemoveSavedHandle(self:getUd(), parentKey, childKey)
+    return RemoveSavedHandle(getUd(self), parentKey, childKey)
 end
 
 ---flushParent
 ---@return void
 function Hashtable:flushParent()
-    return FlushParentHashtable(self:getUd())
+    return FlushParentHashtable(getUd(self))
 end
 
 ---flushChild
 ---@param parentKey integer
 ---@return void
 function Hashtable:flushChild(parentKey)
-    return FlushChildHashtable(self:getUd(), parentKey)
+    return FlushChildHashtable(getUd(self), parentKey)
 end

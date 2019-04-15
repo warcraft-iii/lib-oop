@@ -9,7 +9,7 @@ local Group = class('Group', Agent)
 ---destructor
 ---@return void
 function Group:destructor()
-    return DestroyGroup(self:getUd())
+    return DestroyGroup(getUd(self))
 end
 
 ---<static> create
@@ -22,47 +22,47 @@ end
 ---@param unit Unit
 ---@return boolean
 function Group:addUnit(unit)
-    return GroupAddUnit(self:getUd(), unit:getUd())
+    return GroupAddUnit(getUd(self), getUd(unit))
 end
 
 ---removeUnit
 ---@param unit Unit
 ---@return boolean
 function Group:removeUnit(unit)
-    return GroupRemoveUnit(self:getUd(), unit:getUd())
+    return GroupRemoveUnit(getUd(self), getUd(unit))
 end
 
 ---addGroupFast
 ---@param addGroup Group
 ---@return integer
 function Group:addGroupFast(addGroup)
-    return BlzGroupAddGroupFast(self:getUd(), addGroup:getUd())
+    return BlzGroupAddGroupFast(getUd(self), getUd(addGroup))
 end
 
 ---removeGroupFast
 ---@param removeGroup Group
 ---@return integer
 function Group:removeGroupFast(removeGroup)
-    return BlzGroupRemoveGroupFast(self:getUd(), removeGroup:getUd())
+    return BlzGroupRemoveGroupFast(getUd(self), getUd(removeGroup))
 end
 
 ---clear
 ---@return void
 function Group:clear()
-    return GroupClear(self:getUd())
+    return GroupClear(getUd(self))
 end
 
 ---getSize
 ---@return integer
 function Group:getSize()
-    return BlzGroupGetSize(self:getUd())
+    return BlzGroupGetSize(getUd(self))
 end
 
 ---unitAt
 ---@param index integer
 ---@return Unit
 function Group:unitAt(index)
-    return Unit:fromUd(BlzGroupUnitAt(self:getUd(), index))
+    return Unit:fromUd(BlzGroupUnitAt(getUd(self), index))
 end
 
 ---enumUnitsOfType
@@ -71,7 +71,7 @@ end
 ---@return void
 function Group:enumUnitsOfType(unitName, filter)
     filter = Filter:createUnitFilter(filter)
-    GroupEnumUnitsOfType(self:getUd(), unitName, filter:getUd())
+    GroupEnumUnitsOfType(getUd(self), unitName, getUd(filter))
     filter:destroy()
 end
 
@@ -81,7 +81,7 @@ end
 ---@return void
 function Group:enumUnitsOfPlayer(player, filter)
     filter = Filter:createUnitFilter(filter)
-    GroupEnumUnitsOfPlayer(self:getUd(), player:getUd(), filter:getUd())
+    GroupEnumUnitsOfPlayer(getUd(self), getUd(player), getUd(filter))
     filter:destroy()
 end
 
@@ -92,7 +92,7 @@ end
 ---@return void
 function Group:enumUnitsOfTypeCounted(unitName, countLimit, filter)
     filter = Filter:createUnitFilter(filter)
-    GroupEnumUnitsOfTypeCounted(self:getUd(), unitName, filter:getUd(), countLimit)
+    GroupEnumUnitsOfTypeCounted(getUd(self), unitName, getUd(filter), countLimit)
     filter:destroy()
 end
 
@@ -102,7 +102,7 @@ end
 ---@return void
 function Group:enumUnitsInRect(r, filter)
     filter = Filter:createUnitFilter(filter)
-    GroupEnumUnitsInRect(self:getUd(), r:getUd(), filter:getUd())
+    GroupEnumUnitsInRect(getUd(self), getUd(r), getUd(filter))
     filter:destroy()
 end
 
@@ -113,7 +113,7 @@ end
 ---@return void
 function Group:enumUnitsInRectCounted(r, countLimit, filter)
     filter = Filter:createUnitFilter(filter)
-    GroupEnumUnitsInRectCounted(self:getUd(), r:getUd(), filter:getUd(), countLimit)
+    GroupEnumUnitsInRectCounted(getUd(self), getUd(r), getUd(filter), countLimit)
     filter:destroy()
 end
 
@@ -125,7 +125,7 @@ end
 ---@return void
 function Group:enumUnitsInRange(x, y, radius, filter)
     filter = Filter:createUnitFilter(filter)
-    GroupEnumUnitsInRange(self:getUd(), x, y, radius, filter:getUd())
+    GroupEnumUnitsInRange(getUd(self), x, y, radius, getUd(filter))
     filter:destroy()
 end
 
@@ -136,7 +136,7 @@ end
 ---@return void
 function Group:enumUnitsInRangeOfLoc(loc, radius, filter)
     filter = Filter:createUnitFilter(filter)
-    GroupEnumUnitsInRangeOfLoc(self:getUd(), loc:getUd(), radius, filter:getUd())
+    GroupEnumUnitsInRangeOfLoc(getUd(self), getUd(loc), radius, getUd(filter))
     filter:destroy()
 end
 
@@ -149,7 +149,7 @@ end
 ---@return void
 function Group:enumUnitsInRangeCounted(x, y, radius, countLimit, filter)
     filter = Filter:createUnitFilter(filter)
-    GroupEnumUnitsInRangeCounted(self:getUd(), x, y, radius, filter:getUd(), countLimit)
+    GroupEnumUnitsInRangeCounted(getUd(self), x, y, radius, getUd(filter), countLimit)
     filter:destroy()
 end
 
@@ -161,7 +161,7 @@ end
 ---@return void
 function Group:enumUnitsInRangeOfLocCounted(loc, radius, countLimit, filter)
     filter = Filter:createUnitFilter(filter)
-    GroupEnumUnitsInRangeOfLocCounted(self:getUd(), loc:getUd(), radius, filter:getUd(), countLimit)
+    GroupEnumUnitsInRangeOfLocCounted(getUd(self), getUd(loc), radius, getUd(filter), countLimit)
     filter:destroy()
 end
 
@@ -171,7 +171,7 @@ end
 ---@return void
 function Group:enumUnitsSelected(player, filter)
     filter = Filter:createUnitFilter(filter)
-    GroupEnumUnitsSelected(self:getUd(), player:getUd(), filter:getUd())
+    GroupEnumUnitsSelected(getUd(self), getUd(player), getUd(filter))
     filter:destroy()
 end
 
@@ -179,14 +179,14 @@ end
 ---@param order string
 ---@return boolean
 function Group:immediateOrder(order)
-    return GroupImmediateOrder(self:getUd(), order)
+    return GroupImmediateOrder(getUd(self), order)
 end
 
 ---immediateOrderById
 ---@param order integer
 ---@return boolean
 function Group:immediateOrderById(order)
-    return GroupImmediateOrderById(self:getUd(), order)
+    return GroupImmediateOrderById(getUd(self), order)
 end
 
 ---pointOrder
@@ -195,7 +195,7 @@ end
 ---@param y float
 ---@return boolean
 function Group:pointOrder(order, x, y)
-    return GroupPointOrder(self:getUd(), order, x, y)
+    return GroupPointOrder(getUd(self), order, x, y)
 end
 
 ---pointOrderLoc
@@ -203,7 +203,7 @@ end
 ---@param loc Location
 ---@return boolean
 function Group:pointOrderLoc(order, loc)
-    return GroupPointOrderLoc(self:getUd(), order, loc:getUd())
+    return GroupPointOrderLoc(getUd(self), order, getUd(loc))
 end
 
 ---pointOrderById
@@ -212,7 +212,7 @@ end
 ---@param y float
 ---@return boolean
 function Group:pointOrderById(order, x, y)
-    return GroupPointOrderById(self:getUd(), order, x, y)
+    return GroupPointOrderById(getUd(self), order, x, y)
 end
 
 ---pointOrderByIdLoc
@@ -220,7 +220,7 @@ end
 ---@param loc Location
 ---@return boolean
 function Group:pointOrderByIdLoc(order, loc)
-    return GroupPointOrderByIdLoc(self:getUd(), order, loc:getUd())
+    return GroupPointOrderByIdLoc(getUd(self), order, getUd(loc))
 end
 
 ---targetOrder
@@ -228,7 +228,7 @@ end
 ---@param targetWidget Widget
 ---@return boolean
 function Group:targetOrder(order, targetWidget)
-    return GroupTargetOrder(self:getUd(), order, targetWidget:getUd())
+    return GroupTargetOrder(getUd(self), order, getUd(targetWidget))
 end
 
 ---targetOrderById
@@ -236,7 +236,7 @@ end
 ---@param targetWidget Widget
 ---@return boolean
 function Group:targetOrderById(order, targetWidget)
-    return GroupTargetOrderById(self:getUd(), order, targetWidget:getUd())
+    return GroupTargetOrderById(getUd(self), order, getUd(targetWidget))
 end
 
 ---forEach
@@ -244,11 +244,11 @@ end
 ---@return void
 function Group:forEach(callback)
     callback = Function:createUnitCallback(callback)
-    return ForGroup(self:getUd(), callback)
+    return ForGroup(getUd(self), callback)
 end
 
 ---firstOf
 ---@return Unit
 function Group:firstOf()
-    return Unit:fromUd(FirstOfGroup(self:getUd()))
+    return Unit:fromUd(FirstOfGroup(getUd(self)))
 end

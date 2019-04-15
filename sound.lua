@@ -57,49 +57,49 @@ end
 ---@param offset float
 ---@return void
 function Sound:triggerWaitFor(offset)
-    return TriggerWaitForSound(self:getUd(), offset)
+    return TriggerWaitForSound(getUd(self), offset)
 end
 
 ---setParamsFromLabel
 ---@param soundLabel string
 ---@return void
 function Sound:setParamsFromLabel(soundLabel)
-    return SetSoundParamsFromLabel(self:getUd(), soundLabel)
+    return SetSoundParamsFromLabel(getUd(self), soundLabel)
 end
 
 ---setDistanceCutoff
 ---@param cutoff float
 ---@return void
 function Sound:setDistanceCutoff(cutoff)
-    return SetSoundDistanceCutoff(self:getUd(), cutoff)
+    return SetSoundDistanceCutoff(getUd(self), cutoff)
 end
 
 ---setChannel
 ---@param channel integer
 ---@return void
 function Sound:setChannel(channel)
-    return SetSoundChannel(self:getUd(), channel)
+    return SetSoundChannel(getUd(self), channel)
 end
 
 ---setVolume
 ---@param volume integer
 ---@return void
 function Sound:setVolume(volume)
-    return SetSoundVolume(self:getUd(), volume)
+    return SetSoundVolume(getUd(self), volume)
 end
 
 ---setPitch
 ---@param pitch float
 ---@return void
 function Sound:setPitch(pitch)
-    return SetSoundPitch(self:getUd(), pitch)
+    return SetSoundPitch(getUd(self), pitch)
 end
 
 ---setPlayPosition
 ---@param milliSecs integer
 ---@return void
 function Sound:setPlayPosition(milliSecs)
-    return SetSoundPlayPosition(self:getUd(), milliSecs)
+    return SetSoundPlayPosition(getUd(self), milliSecs)
 end
 
 ---setDistances
@@ -107,7 +107,7 @@ end
 ---@param maxDist float
 ---@return void
 function Sound:setDistances(minDist, maxDist)
-    return SetSoundDistances(self:getUd(), minDist, maxDist)
+    return SetSoundDistances(getUd(self), minDist, maxDist)
 end
 
 ---setConeAngles
@@ -116,7 +116,7 @@ end
 ---@param outsideVolume integer
 ---@return void
 function Sound:setConeAngles(inside, outside, outsideVolume)
-    return SetSoundConeAngles(self:getUd(), inside, outside, outsideVolume)
+    return SetSoundConeAngles(getUd(self), inside, outside, outsideVolume)
 end
 
 ---setConeOrientation
@@ -125,7 +125,7 @@ end
 ---@param z float
 ---@return void
 function Sound:setConeOrientation(x, y, z)
-    return SetSoundConeOrientation(self:getUd(), x, y, z)
+    return SetSoundConeOrientation(getUd(self), x, y, z)
 end
 
 ---setPosition
@@ -134,7 +134,7 @@ end
 ---@param z float
 ---@return void
 function Sound:setPosition(x, y, z)
-    return SetSoundPosition(self:getUd(), x, y, z)
+    return SetSoundPosition(getUd(self), x, y, z)
 end
 
 ---setVelocity
@@ -143,20 +143,20 @@ end
 ---@param z float
 ---@return void
 function Sound:setVelocity(x, y, z)
-    return SetSoundVelocity(self:getUd(), x, y, z)
+    return SetSoundVelocity(getUd(self), x, y, z)
 end
 
 ---attachToUnit
 ---@param unit Unit
 ---@return void
 function Sound:attachToUnit(unit)
-    return AttachSoundToUnit(self:getUd(), unit:getUd())
+    return AttachSoundToUnit(getUd(self), getUd(unit))
 end
 
 ---start
 ---@return void
 function Sound:start()
-    return StartSound(self:getUd())
+    return StartSound(getUd(self))
 end
 
 ---stop
@@ -164,38 +164,38 @@ end
 ---@param fadeOut boolean
 ---@return void
 function Sound:stop(killWhenDone, fadeOut)
-    return StopSound(self:getUd(), killWhenDone, fadeOut)
+    return StopSound(getUd(self), killWhenDone, fadeOut)
 end
 
 ---killWhenDone
 ---@return void
 function Sound:killWhenDone()
-    return KillSoundWhenDone(self:getUd())
+    return KillSoundWhenDone(getUd(self))
 end
 
 ---setDuration
 ---@param duration integer
 ---@return void
 function Sound:setDuration(duration)
-    return SetSoundDuration(self:getUd(), duration)
+    return SetSoundDuration(getUd(self), duration)
 end
 
 ---getDuration
 ---@return integer
 function Sound:getDuration()
-    return GetSoundDuration(self:getUd())
+    return GetSoundDuration(getUd(self))
 end
 
 ---getIsPlaying
 ---@return boolean
 function Sound:getIsPlaying()
-    return GetSoundIsPlaying(self:getUd())
+    return GetSoundIsPlaying(getUd(self))
 end
 
 ---getIsLoading
 ---@return boolean
 function Sound:getIsLoading()
-    return GetSoundIsLoading(self:getUd())
+    return GetSoundIsLoading(getUd(self))
 end
 
 ---registerStacked
@@ -204,7 +204,7 @@ end
 ---@param rectHeight float
 ---@return void
 function Sound:registerStacked(byPosition, rectWidth, rectHeight)
-    return RegisterStackedSound(self:getUd(), byPosition, rectWidth, rectHeight)
+    return RegisterStackedSound(getUd(self), byPosition, rectWidth, rectHeight)
 end
 
 ---unregisterStacked
@@ -213,5 +213,5 @@ end
 ---@param rectHeight float
 ---@return void
 function Sound:unregisterStacked(byPosition, rectWidth, rectHeight)
-    return UnregisterStackedSound(self:getUd(), byPosition, rectWidth, rectHeight)
+    return UnregisterStackedSound(getUd(self), byPosition, rectWidth, rectHeight)
 end

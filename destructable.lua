@@ -59,70 +59,70 @@ end
 ---remove
 ---@return void
 function Destructable:remove()
-    return RemoveDestructable(self:getUd())
+    return RemoveDestructable(getUd(self))
 end
 
 ---kill
 ---@return void
 function Destructable:kill()
-    return KillDestructable(self:getUd())
+    return KillDestructable(getUd(self))
 end
 
 ---setInvulnerable
 ---@param flag boolean
 ---@return void
 function Destructable:setInvulnerable(flag)
-    return SetDestructableInvulnerable(self:getUd(), flag)
+    return SetDestructableInvulnerable(getUd(self), flag)
 end
 
 ---isInvulnerable
 ---@return boolean
 function Destructable:isInvulnerable()
-    return IsDestructableInvulnerable(self:getUd())
+    return IsDestructableInvulnerable(getUd(self))
 end
 
 ---getTypeId
 ---@return integer
 function Destructable:getTypeId()
-    return GetDestructableTypeId(self:getUd())
+    return GetDestructableTypeId(getUd(self))
 end
 
 ---getX
 ---@return float
 function Destructable:getX()
-    return GetDestructableX(self:getUd())
+    return GetDestructableX(getUd(self))
 end
 
 ---getY
 ---@return float
 function Destructable:getY()
-    return GetDestructableY(self:getUd())
+    return GetDestructableY(getUd(self))
 end
 
 ---setLife
 ---@param life float
 ---@return void
 function Destructable:setLife(life)
-    return SetDestructableLife(self:getUd(), life)
+    return SetDestructableLife(getUd(self), life)
 end
 
 ---getLife
 ---@return float
 function Destructable:getLife()
-    return GetDestructableLife(self:getUd())
+    return GetDestructableLife(getUd(self))
 end
 
 ---setMaxLife
 ---@param max float
 ---@return void
 function Destructable:setMaxLife(max)
-    return SetDestructableMaxLife(self:getUd(), max)
+    return SetDestructableMaxLife(getUd(self), max)
 end
 
 ---getMaxLife
 ---@return float
 function Destructable:getMaxLife()
-    return GetDestructableMaxLife(self:getUd())
+    return GetDestructableMaxLife(getUd(self))
 end
 
 ---restoreLife
@@ -130,52 +130,52 @@ end
 ---@param birth boolean
 ---@return void
 function Destructable:restoreLife(life, birth)
-    return DestructableRestoreLife(self:getUd(), life, birth)
+    return DestructableRestoreLife(getUd(self), life, birth)
 end
 
 ---queueAnimation
 ---@param animation string
 ---@return void
 function Destructable:queueAnimation(animation)
-    return QueueDestructableAnimation(self:getUd(), animation)
+    return QueueDestructableAnimation(getUd(self), animation)
 end
 
 ---setAnimation
 ---@param animation string
 ---@return void
 function Destructable:setAnimation(animation)
-    return SetDestructableAnimation(self:getUd(), animation)
+    return SetDestructableAnimation(getUd(self), animation)
 end
 
 ---setAnimationSpeed
 ---@param speedFactor float
 ---@return void
 function Destructable:setAnimationSpeed(speedFactor)
-    return SetDestructableAnimationSpeed(self:getUd(), speedFactor)
+    return SetDestructableAnimationSpeed(getUd(self), speedFactor)
 end
 
 ---show
 ---@param flag boolean
 ---@return void
 function Destructable:show(flag)
-    return ShowDestructable(self:getUd(), flag)
+    return ShowDestructable(getUd(self), flag)
 end
 
 ---getOccluderHeight
 ---@return float
 function Destructable:getOccluderHeight()
-    return GetDestructableOccluderHeight(self:getUd())
+    return GetDestructableOccluderHeight(getUd(self))
 end
 
 ---setOccluderHeight
 ---@param height float
 ---@return void
 function Destructable:setOccluderHeight(height)
-    return SetDestructableOccluderHeight(self:getUd(), height)
+    return SetDestructableOccluderHeight(getUd(self), height)
 end
 
 ---getName
 ---@return string
 function Destructable:getName()
-    return GetDestructableName(self:getUd())
+    return GetDestructableName(getUd(self))
 end

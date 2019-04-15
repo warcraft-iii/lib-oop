@@ -67,5 +67,5 @@ end
 ---@param duration integer
 ---@return void
 function TerrainDeform:stop(duration)
-    return TerrainDeformStop(self:getUd(), duration)
+    return TerrainDeformStop(getUd(self), duration)
 end

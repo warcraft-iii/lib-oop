@@ -15,7 +15,7 @@ end
 ---destroy
 ---@return void
 function TextTag:destroy()
-    return DestroyTextTag(self:getUd())
+    return DestroyTextTag(getUd(self))
 end
 
 ---setText
@@ -23,7 +23,7 @@ end
 ---@param height float
 ---@return void
 function TextTag:setText(s, height)
-    return SetTextTagText(self:getUd(), s, height)
+    return SetTextTagText(getUd(self), s, height)
 end
 
 ---setPos
@@ -32,7 +32,7 @@ end
 ---@param heightOffset float
 ---@return void
 function TextTag:setPos(x, y, heightOffset)
-    return SetTextTagPos(self:getUd(), x, y, heightOffset)
+    return SetTextTagPos(getUd(self), x, y, heightOffset)
 end
 
 ---setPosUnit
@@ -40,7 +40,7 @@ end
 ---@param heightOffset float
 ---@return void
 function TextTag:setPosUnit(unit, heightOffset)
-    return SetTextTagPosUnit(self:getUd(), unit:getUd(), heightOffset)
+    return SetTextTagPosUnit(getUd(self), getUd(unit), heightOffset)
 end
 
 ---setColor
@@ -50,7 +50,7 @@ end
 ---@param alpha integer
 ---@return void
 function TextTag:setColor(red, green, blue, alpha)
-    return SetTextTagColor(self:getUd(), red, green, blue, alpha)
+    return SetTextTagColor(getUd(self), red, green, blue, alpha)
 end
 
 ---setVelocity
@@ -58,47 +58,47 @@ end
 ---@param yVel float
 ---@return void
 function TextTag:setVelocity(xVel, yVel)
-    return SetTextTagVelocity(self:getUd(), xVel, yVel)
+    return SetTextTagVelocity(getUd(self), xVel, yVel)
 end
 
 ---setVisibility
 ---@param flag boolean
 ---@return void
 function TextTag:setVisibility(flag)
-    return SetTextTagVisibility(self:getUd(), flag)
+    return SetTextTagVisibility(getUd(self), flag)
 end
 
 ---setSuspended
 ---@param flag boolean
 ---@return void
 function TextTag:setSuspended(flag)
-    return SetTextTagSuspended(self:getUd(), flag)
+    return SetTextTagSuspended(getUd(self), flag)
 end
 
 ---setPermanent
 ---@param flag boolean
 ---@return void
 function TextTag:setPermanent(flag)
-    return SetTextTagPermanent(self:getUd(), flag)
+    return SetTextTagPermanent(getUd(self), flag)
 end
 
 ---setAge
 ---@param age float
 ---@return void
 function TextTag:setAge(age)
-    return SetTextTagAge(self:getUd(), age)
+    return SetTextTagAge(getUd(self), age)
 end
 
 ---setLifespan
 ---@param lifespan float
 ---@return void
 function TextTag:setLifespan(lifespan)
-    return SetTextTagLifespan(self:getUd(), lifespan)
+    return SetTextTagLifespan(getUd(self), lifespan)
 end
 
 ---setFadepoint
 ---@param fadepoint float
 ---@return void
 function TextTag:setFadepoint(fadepoint)
-    return SetTextTagFadepoint(self:getUd(), fadepoint)
+    return SetTextTagFadepoint(getUd(self), fadepoint)
 end

@@ -15,97 +15,97 @@ end
 ---destroy
 ---@return void
 function Quest:destroy()
-    return DestroyQuest(self:getUd())
+    return DestroyQuest(getUd(self))
 end
 
 ---setTitle
 ---@param title string
 ---@return void
 function Quest:setTitle(title)
-    return QuestSetTitle(self:getUd(), title)
+    return QuestSetTitle(getUd(self), title)
 end
 
 ---setDescription
 ---@param description string
 ---@return void
 function Quest:setDescription(description)
-    return QuestSetDescription(self:getUd(), description)
+    return QuestSetDescription(getUd(self), description)
 end
 
 ---setIconPath
 ---@param iconPath string
 ---@return void
 function Quest:setIconPath(iconPath)
-    return QuestSetIconPath(self:getUd(), iconPath)
+    return QuestSetIconPath(getUd(self), iconPath)
 end
 
 ---setRequired
 ---@param required boolean
 ---@return void
 function Quest:setRequired(required)
-    return QuestSetRequired(self:getUd(), required)
+    return QuestSetRequired(getUd(self), required)
 end
 
 ---setCompleted
 ---@param completed boolean
 ---@return void
 function Quest:setCompleted(completed)
-    return QuestSetCompleted(self:getUd(), completed)
+    return QuestSetCompleted(getUd(self), completed)
 end
 
 ---setDiscovered
 ---@param discovered boolean
 ---@return void
 function Quest:setDiscovered(discovered)
-    return QuestSetDiscovered(self:getUd(), discovered)
+    return QuestSetDiscovered(getUd(self), discovered)
 end
 
 ---setFailed
 ---@param failed boolean
 ---@return void
 function Quest:setFailed(failed)
-    return QuestSetFailed(self:getUd(), failed)
+    return QuestSetFailed(getUd(self), failed)
 end
 
 ---setEnabled
 ---@param enabled boolean
 ---@return void
 function Quest:setEnabled(enabled)
-    return QuestSetEnabled(self:getUd(), enabled)
+    return QuestSetEnabled(getUd(self), enabled)
 end
 
 ---isRequired
 ---@return boolean
 function Quest:isRequired()
-    return IsQuestRequired(self:getUd())
+    return IsQuestRequired(getUd(self))
 end
 
 ---isCompleted
 ---@return boolean
 function Quest:isCompleted()
-    return IsQuestCompleted(self:getUd())
+    return IsQuestCompleted(getUd(self))
 end
 
 ---isDiscovered
 ---@return boolean
 function Quest:isDiscovered()
-    return IsQuestDiscovered(self:getUd())
+    return IsQuestDiscovered(getUd(self))
 end
 
 ---isFailed
 ---@return boolean
 function Quest:isFailed()
-    return IsQuestFailed(self:getUd())
+    return IsQuestFailed(getUd(self))
 end
 
 ---isEnabled
 ---@return boolean
 function Quest:isEnabled()
-    return IsQuestEnabled(self:getUd())
+    return IsQuestEnabled(getUd(self))
 end
 
 ---createItem
 ---@return QuestItem
 function Quest:createItem()
-    return QuestItem:fromUd(QuestCreateItem(self:getUd()))
+    return QuestItem:fromUd(QuestCreateItem(getUd(self)))
 end

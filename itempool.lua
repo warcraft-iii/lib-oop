@@ -15,7 +15,7 @@ end
 ---destroy
 ---@return void
 function ItemPool:destroy()
-    return DestroyItemPool(self:getUd())
+    return DestroyItemPool(getUd(self))
 end
 
 ---addItemType
@@ -23,14 +23,14 @@ end
 ---@param weight float
 ---@return void
 function ItemPool:addItemType(itemId, weight)
-    return ItemPoolAddItemType(self:getUd(), itemId, weight)
+    return ItemPoolAddItemType(getUd(self), itemId, weight)
 end
 
 ---removeItemType
 ---@param itemId integer
 ---@return void
 function ItemPool:removeItemType(itemId)
-    return ItemPoolRemoveItemType(self:getUd(), itemId)
+    return ItemPoolRemoveItemType(getUd(self), itemId)
 end
 
 ---placeRandomItem
@@ -38,5 +38,5 @@ end
 ---@param y float
 ---@return Item
 function ItemPool:placeRandomItem(x, y)
-    return Item:fromUd(PlaceRandomItem(self:getUd(), x, y))
+    return Item:fromUd(PlaceRandomItem(getUd(self), x, y))
 end

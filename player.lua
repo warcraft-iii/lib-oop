@@ -18,28 +18,28 @@ end
 ---@param team integer
 ---@return void
 function Player:setTeam(team)
-    return SetPlayerTeam(self:getUd(), team)
+    return SetPlayerTeam(getUd(self), team)
 end
 
 ---setStartLocation
 ---@param startLocIndex integer
 ---@return void
 function Player:setStartLocation(startLocIndex)
-    return SetPlayerStartLocation(self:getUd(), startLocIndex)
+    return SetPlayerStartLocation(getUd(self), startLocIndex)
 end
 
 ---forceStartLocation
 ---@param startLocIndex integer
 ---@return void
 function Player:forceStartLocation(startLocIndex)
-    return ForcePlayerStartLocation(self:getUd(), startLocIndex)
+    return ForcePlayerStartLocation(getUd(self), startLocIndex)
 end
 
 ---setColor
 ---@param color PlayerColor
 ---@return void
 function Player:setColor(color)
-    return SetPlayerColor(self:getUd(), color)
+    return SetPlayerColor(getUd(self), color)
 end
 
 ---setAlliance
@@ -48,7 +48,7 @@ end
 ---@param value boolean
 ---@return void
 function Player:setAlliance(otherPlayer, allianceSetting, value)
-    return SetPlayerAlliance(self:getUd(), otherPlayer:getUd(), allianceSetting, value)
+    return SetPlayerAlliance(getUd(self), getUd(otherPlayer), allianceSetting, value)
 end
 
 ---setTaxRate
@@ -57,78 +57,78 @@ end
 ---@param rate integer
 ---@return void
 function Player:setTaxRate(otherPlayer, resource, rate)
-    return SetPlayerTaxRate(self:getUd(), otherPlayer:getUd(), resource, rate)
+    return SetPlayerTaxRate(getUd(self), getUd(otherPlayer), resource, rate)
 end
 
 ---setRacePreference
 ---@param racePreference RacePreference
 ---@return void
 function Player:setRacePreference(racePreference)
-    return SetPlayerRacePreference(self:getUd(), racePreference)
+    return SetPlayerRacePreference(getUd(self), racePreference)
 end
 
 ---setRaceSelectable
 ---@param value boolean
 ---@return void
 function Player:setRaceSelectable(value)
-    return SetPlayerRaceSelectable(self:getUd(), value)
+    return SetPlayerRaceSelectable(getUd(self), value)
 end
 
 ---setController
 ---@param controlType MapControl
 ---@return void
 function Player:setController(controlType)
-    return SetPlayerController(self:getUd(), controlType)
+    return SetPlayerController(getUd(self), controlType)
 end
 
 ---setName
 ---@param name string
 ---@return void
 function Player:setName(name)
-    return SetPlayerName(self:getUd(), name)
+    return SetPlayerName(getUd(self), name)
 end
 
 ---setOnScoreScreen
 ---@param flag boolean
 ---@return void
 function Player:setOnScoreScreen(flag)
-    return SetPlayerOnScoreScreen(self:getUd(), flag)
+    return SetPlayerOnScoreScreen(getUd(self), flag)
 end
 
 ---getTeam
 ---@return integer
 function Player:getTeam()
-    return GetPlayerTeam(self:getUd())
+    return GetPlayerTeam(getUd(self))
 end
 
 ---getStartLocation
 ---@return integer
 function Player:getStartLocation()
-    return GetPlayerStartLocation(self:getUd())
+    return GetPlayerStartLocation(getUd(self))
 end
 
 ---getColor
 ---@return PlayerColor
 function Player:getColor()
-    return GetPlayerColor(self:getUd())
+    return GetPlayerColor(getUd(self))
 end
 
 ---getSelectable
 ---@return boolean
 function Player:getSelectable()
-    return GetPlayerSelectable(self:getUd())
+    return GetPlayerSelectable(getUd(self))
 end
 
 ---getController
 ---@return MapControl
 function Player:getController()
-    return GetPlayerController(self:getUd())
+    return GetPlayerController(getUd(self))
 end
 
 ---getSlotState
 ---@return PlayerSlotState
 function Player:getSlotState()
-    return GetPlayerSlotState(self:getUd())
+    return GetPlayerSlotState(getUd(self))
 end
 
 ---getTaxRate
@@ -136,26 +136,26 @@ end
 ---@param resource PlayerState
 ---@return integer
 function Player:getTaxRate(otherPlayer, resource)
-    return GetPlayerTaxRate(self:getUd(), otherPlayer:getUd(), resource)
+    return GetPlayerTaxRate(getUd(self), getUd(otherPlayer), resource)
 end
 
 ---isRacePrefSet
 ---@param pref RacePreference
 ---@return boolean
 function Player:isRacePrefSet(pref)
-    return IsPlayerRacePrefSet(self:getUd(), pref)
+    return IsPlayerRacePrefSet(getUd(self), pref)
 end
 
 ---getName
 ---@return string
 function Player:getName()
-    return GetPlayerName(self:getUd())
+    return GetPlayerName(getUd(self))
 end
 
 ---getTournamentScore
 ---@return integer
 function Player:getTournamentScore()
-    return GetTournamentScore(self:getUd())
+    return GetTournamentScore(getUd(self))
 end
 
 ---issueNeutralImmediateOrder
@@ -163,7 +163,7 @@ end
 ---@param unitToBuild string
 ---@return boolean
 function Player:issueNeutralImmediateOrder(neutralStructure, unitToBuild)
-    return IssueNeutralImmediateOrder(self:getUd(), neutralStructure:getUd(), unitToBuild)
+    return IssueNeutralImmediateOrder(getUd(self), getUd(neutralStructure), unitToBuild)
 end
 
 ---issueNeutralImmediateOrderById
@@ -171,7 +171,7 @@ end
 ---@param unitId integer
 ---@return boolean
 function Player:issueNeutralImmediateOrderById(neutralStructure, unitId)
-    return IssueNeutralImmediateOrderById(self:getUd(), neutralStructure:getUd(), unitId)
+    return IssueNeutralImmediateOrderById(getUd(self), getUd(neutralStructure), unitId)
 end
 
 ---issueNeutralPointOrder
@@ -181,7 +181,7 @@ end
 ---@param y float
 ---@return boolean
 function Player:issueNeutralPointOrder(neutralStructure, unitToBuild, x, y)
-    return IssueNeutralPointOrder(self:getUd(), neutralStructure:getUd(), unitToBuild, x, y)
+    return IssueNeutralPointOrder(getUd(self), getUd(neutralStructure), unitToBuild, x, y)
 end
 
 ---issueNeutralPointOrderById
@@ -191,7 +191,7 @@ end
 ---@param y float
 ---@return boolean
 function Player:issueNeutralPointOrderById(neutralStructure, unitId, x, y)
-    return IssueNeutralPointOrderById(self:getUd(), neutralStructure:getUd(), unitId, x, y)
+    return IssueNeutralPointOrderById(getUd(self), getUd(neutralStructure), unitId, x, y)
 end
 
 ---issueNeutralTargetOrder
@@ -200,7 +200,7 @@ end
 ---@param target Widget
 ---@return boolean
 function Player:issueNeutralTargetOrder(neutralStructure, unitToBuild, target)
-    return IssueNeutralTargetOrder(self:getUd(), neutralStructure:getUd(), unitToBuild, target:getUd())
+    return IssueNeutralTargetOrder(getUd(self), getUd(neutralStructure), unitToBuild, getUd(target))
 end
 
 ---issueNeutralTargetOrderById
@@ -209,53 +209,53 @@ end
 ---@param target Widget
 ---@return boolean
 function Player:issueNeutralTargetOrderById(neutralStructure, unitId, target)
-    return IssueNeutralTargetOrderById(self:getUd(), neutralStructure:getUd(), unitId, target:getUd())
+    return IssueNeutralTargetOrderById(getUd(self), getUd(neutralStructure), unitId, getUd(target))
 end
 
 ---isAlly
 ---@param otherPlayer Player
 ---@return boolean
 function Player:isAlly(otherPlayer)
-    return IsPlayerAlly(self:getUd(), otherPlayer:getUd())
+    return IsPlayerAlly(getUd(self), getUd(otherPlayer))
 end
 
 ---isEnemy
 ---@param otherPlayer Player
 ---@return boolean
 function Player:isEnemy(otherPlayer)
-    return IsPlayerEnemy(self:getUd(), otherPlayer:getUd())
+    return IsPlayerEnemy(getUd(self), getUd(otherPlayer))
 end
 
 ---isInForce
 ---@param force Force
 ---@return boolean
 function Player:isInForce(force)
-    return IsPlayerInForce(self:getUd(), force:getUd())
+    return IsPlayerInForce(getUd(self), getUd(force))
 end
 
 ---isObserver
 ---@return boolean
 function Player:isObserver()
-    return IsPlayerObserver(self:getUd())
+    return IsPlayerObserver(getUd(self))
 end
 
 ---getRace
 ---@return Race
 function Player:getRace()
-    return GetPlayerRace(self:getUd())
+    return GetPlayerRace(getUd(self))
 end
 
 ---getId
 ---@return integer
 function Player:getId()
-    return GetPlayerId(self:getUd())
+    return GetPlayerId(getUd(self))
 end
 
 ---getUnitCount
 ---@param includeIncomplete boolean
 ---@return integer
 function Player:getUnitCount(includeIncomplete)
-    return GetPlayerUnitCount(self:getUd(), includeIncomplete)
+    return GetPlayerUnitCount(getUd(self), includeIncomplete)
 end
 
 ---getTypedUnitCount
@@ -264,28 +264,28 @@ end
 ---@param includeUpgrades boolean
 ---@return integer
 function Player:getTypedUnitCount(unitName, includeIncomplete, includeUpgrades)
-    return GetPlayerTypedUnitCount(self:getUd(), unitName, includeIncomplete, includeUpgrades)
+    return GetPlayerTypedUnitCount(getUd(self), unitName, includeIncomplete, includeUpgrades)
 end
 
 ---getStructureCount
 ---@param includeIncomplete boolean
 ---@return integer
 function Player:getStructureCount(includeIncomplete)
-    return GetPlayerStructureCount(self:getUd(), includeIncomplete)
+    return GetPlayerStructureCount(getUd(self), includeIncomplete)
 end
 
 ---getState
 ---@param playerState PlayerState
 ---@return integer
 function Player:getState(playerState)
-    return GetPlayerState(self:getUd(), playerState)
+    return GetPlayerState(getUd(self), playerState)
 end
 
 ---getScore
 ---@param playerScore PlayerScore
 ---@return integer
 function Player:getScore(playerScore)
-    return GetPlayerScore(self:getUd(), playerScore)
+    return GetPlayerScore(getUd(self), playerScore)
 end
 
 ---getAlliance
@@ -293,33 +293,33 @@ end
 ---@param allianceSetting AllianceType
 ---@return boolean
 function Player:getAlliance(otherPlayer, allianceSetting)
-    return GetPlayerAlliance(self:getUd(), otherPlayer:getUd(), allianceSetting)
+    return GetPlayerAlliance(getUd(self), getUd(otherPlayer), allianceSetting)
 end
 
 ---getHandicap
 ---@return float
 function Player:getHandicap()
-    return GetPlayerHandicap(self:getUd())
+    return GetPlayerHandicap(getUd(self))
 end
 
 ---getHandicapXP
 ---@return float
 function Player:getHandicapXP()
-    return GetPlayerHandicapXP(self:getUd())
+    return GetPlayerHandicapXP(getUd(self))
 end
 
 ---setHandicap
 ---@param handicap float
 ---@return void
 function Player:setHandicap(handicap)
-    return SetPlayerHandicap(self:getUd(), handicap)
+    return SetPlayerHandicap(getUd(self), handicap)
 end
 
 ---setHandicapXP
 ---@param handicap float
 ---@return void
 function Player:setHandicapXP(handicap)
-    return SetPlayerHandicapXP(self:getUd(), handicap)
+    return SetPlayerHandicapXP(getUd(self), handicap)
 end
 
 ---setTechMaxAllowed
@@ -327,14 +327,14 @@ end
 ---@param maximum integer
 ---@return void
 function Player:setTechMaxAllowed(techId, maximum)
-    return SetPlayerTechMaxAllowed(self:getUd(), techId, maximum)
+    return SetPlayerTechMaxAllowed(getUd(self), techId, maximum)
 end
 
 ---getTechMaxAllowed
 ---@param techId integer
 ---@return integer
 function Player:getTechMaxAllowed(techId)
-    return GetPlayerTechMaxAllowed(self:getUd(), techId)
+    return GetPlayerTechMaxAllowed(getUd(self), techId)
 end
 
 ---addTechResearched
@@ -342,7 +342,7 @@ end
 ---@param levels integer
 ---@return void
 function Player:addTechResearched(techId, levels)
-    return AddPlayerTechResearched(self:getUd(), techId, levels)
+    return AddPlayerTechResearched(getUd(self), techId, levels)
 end
 
 ---setTechResearched
@@ -350,7 +350,7 @@ end
 ---@param setToLevel integer
 ---@return void
 function Player:setTechResearched(techId, setToLevel)
-    return SetPlayerTechResearched(self:getUd(), techId, setToLevel)
+    return SetPlayerTechResearched(getUd(self), techId, setToLevel)
 end
 
 ---getTechResearched
@@ -358,7 +358,7 @@ end
 ---@param specificOnly boolean
 ---@return boolean
 function Player:getTechResearched(techId, specificOnly)
-    return GetPlayerTechResearched(self:getUd(), techId, specificOnly)
+    return GetPlayerTechResearched(getUd(self), techId, specificOnly)
 end
 
 ---getTechCount
@@ -366,14 +366,14 @@ end
 ---@param specificOnly boolean
 ---@return integer
 function Player:getTechCount(techId, specificOnly)
-    return GetPlayerTechCount(self:getUd(), techId, specificOnly)
+    return GetPlayerTechCount(getUd(self), techId, specificOnly)
 end
 
 ---setUnitsOwner
 ---@param owner integer
 ---@return void
 function Player:setUnitsOwner(owner)
-    return SetPlayerUnitsOwner(self:getUd(), owner)
+    return SetPlayerUnitsOwner(getUd(self), owner)
 end
 
 ---cripple
@@ -381,7 +381,7 @@ end
 ---@param flag boolean
 ---@return void
 function Player:cripple(toWhichPlayers, flag)
-    return CripplePlayer(self:getUd(), toWhichPlayers:getUd(), flag)
+    return CripplePlayer(getUd(self), getUd(toWhichPlayers), flag)
 end
 
 ---setAbilityAvailable
@@ -389,7 +389,7 @@ end
 ---@param avail boolean
 ---@return void
 function Player:setAbilityAvailable(abilityId, avail)
-    return SetPlayerAbilityAvailable(self:getUd(), abilityId, avail)
+    return SetPlayerAbilityAvailable(getUd(self), abilityId, avail)
 end
 
 ---setState
@@ -397,20 +397,20 @@ end
 ---@param value integer
 ---@return void
 function Player:setState(playerState, value)
-    return SetPlayerState(self:getUd(), playerState, value)
+    return SetPlayerState(getUd(self), playerState, value)
 end
 
 ---remove
 ---@param gameResult PlayerGameresult
 ---@return void
 function Player:remove(gameResult)
-    return RemovePlayer(self:getUd(), gameResult)
+    return RemovePlayer(getUd(self), gameResult)
 end
 
 ---cacheHeroData
 ---@return void
 function Player:cacheHeroData()
-    return CachePlayerHeroData(self:getUd())
+    return CachePlayerHeroData(getUd(self))
 end
 
 ---setFogStateRect
@@ -419,7 +419,7 @@ end
 ---@param useSharedVision boolean
 ---@return void
 function Player:setFogStateRect(state, where, useSharedVision)
-    return SetFogStateRect(self:getUd(), state, where:getUd(), useSharedVision)
+    return SetFogStateRect(getUd(self), state, getUd(where), useSharedVision)
 end
 
 ---setFogStateRadius
@@ -430,7 +430,7 @@ end
 ---@param useSharedVision boolean
 ---@return void
 function Player:setFogStateRadius(state, centerX, centerY, radius, useSharedVision)
-    return SetFogStateRadius(self:getUd(), state, centerX, centerY, radius, useSharedVision)
+    return SetFogStateRadius(getUd(self), state, centerX, centerY, radius, useSharedVision)
 end
 
 ---setFogStateRadiusLoc
@@ -440,7 +440,7 @@ end
 ---@param useSharedVision boolean
 ---@return void
 function Player:setFogStateRadiusLoc(state, center, radius, useSharedVision)
-    return SetFogStateRadiusLoc(self:getUd(), state, center:getUd(), radius, useSharedVision)
+    return SetFogStateRadiusLoc(getUd(self), state, getUd(center), radius, useSharedVision)
 end
 
 ---dialogDisplay
@@ -448,7 +448,7 @@ end
 ---@param flag boolean
 ---@return void
 function Player:dialogDisplay(dialog, flag)
-    return DialogDisplay(self:getUd(), dialog:getUd(), flag)
+    return DialogDisplay(getUd(self), getUd(dialog), flag)
 end
 
 ---displayTextTo
@@ -457,7 +457,7 @@ end
 ---@param message string
 ---@return void
 function Player:displayTextTo(x, y, message)
-    return DisplayTextToPlayer(self:getUd(), x, y, message)
+    return DisplayTextToPlayer(getUd(self), x, y, message)
 end
 
 ---displayTimedTextTo
@@ -467,7 +467,7 @@ end
 ---@param message string
 ---@return void
 function Player:displayTimedTextTo(x, y, duration, message)
-    return DisplayTimedTextToPlayer(self:getUd(), x, y, duration, message)
+    return DisplayTimedTextToPlayer(getUd(self), x, y, duration, message)
 end
 
 ---displayTimedTextFrom
@@ -477,20 +477,20 @@ end
 ---@param message string
 ---@return void
 function Player:displayTimedTextFrom(x, y, duration, message)
-    return DisplayTimedTextFromPlayer(self:getUd(), x, y, duration, message)
+    return DisplayTimedTextFromPlayer(getUd(self), x, y, duration, message)
 end
 
 ---setLeaderboard
 ---@param lb LeaderBoard
 ---@return void
 function Player:setLeaderboard(lb)
-    return PlayerSetLeaderboard(self:getUd(), lb:getUd())
+    return PlayerSetLeaderboard(getUd(self), getUd(lb))
 end
 
 ---getLeaderboard
 ---@return LeaderBoard
 function Player:getLeaderboard()
-    return LeaderBoard:fromUd(PlayerGetLeaderboard(self:getUd()))
+    return LeaderBoard:fromUd(PlayerGetLeaderboard(getUd(self)))
 end
 
 ---setBlight
@@ -500,7 +500,7 @@ end
 ---@param addBlight boolean
 ---@return void
 function Player:setBlight(x, y, radius, addBlight)
-    return SetBlight(self:getUd(), x, y, radius, addBlight)
+    return SetBlight(getUd(self), x, y, radius, addBlight)
 end
 
 ---setBlightRect
@@ -508,7 +508,7 @@ end
 ---@param addBlight boolean
 ---@return void
 function Player:setBlightRect(r, addBlight)
-    return SetBlightRect(self:getUd(), r:getUd(), addBlight)
+    return SetBlightRect(getUd(self), getUd(r), addBlight)
 end
 
 ---setBlightPoint
@@ -517,7 +517,7 @@ end
 ---@param addBlight boolean
 ---@return void
 function Player:setBlightPoint(x, y, addBlight)
-    return SetBlightPoint(self:getUd(), x, y, addBlight)
+    return SetBlightPoint(getUd(self), x, y, addBlight)
 end
 
 ---setBlightLoc
@@ -526,21 +526,21 @@ end
 ---@param addBlight boolean
 ---@return void
 function Player:setBlightLoc(loc, radius, addBlight)
-    return SetBlightLoc(self:getUd(), loc:getUd(), radius, addBlight)
+    return SetBlightLoc(getUd(self), getUd(loc), radius, addBlight)
 end
 
 ---startMeleeAI
 ---@param script string
 ---@return void
 function Player:startMeleeAI(script)
-    return StartMeleeAI(self:getUd(), script)
+    return StartMeleeAI(getUd(self), script)
 end
 
 ---startCampaignAI
 ---@param script string
 ---@return void
 function Player:startCampaignAI(script)
-    return StartCampaignAI(self:getUd(), script)
+    return StartCampaignAI(getUd(self), script)
 end
 
 ---commandAI
@@ -548,26 +548,26 @@ end
 ---@param data integer
 ---@return void
 function Player:commandAI(command, data)
-    return CommandAI(self:getUd(), command, data)
+    return CommandAI(getUd(self), command, data)
 end
 
 ---pauseCompAI
 ---@param pause boolean
 ---@return void
 function Player:pauseCompAI(pause)
-    return PauseCompAI(self:getUd(), pause)
+    return PauseCompAI(getUd(self), pause)
 end
 
 ---getAIDifficulty
 ---@return AiDifficulty
 function Player:getAIDifficulty()
-    return GetAIDifficulty(self:getUd())
+    return GetAIDifficulty(getUd(self))
 end
 
 ---removeAllGuardPositions
 ---@return void
 function Player:removeAllGuardPositions()
-    return RemoveAllGuardPositions(self:getUd())
+    return RemoveAllGuardPositions(getUd(self))
 end
 
 ---decTechResearched
@@ -575,7 +575,7 @@ end
 ---@param levels integer
 ---@return void
 function Player:decTechResearched(techId, levels)
-    return BlzDecPlayerTechResearched(self:getUd(), techId, levels)
+    return BlzDecPlayerTechResearched(getUd(self), techId, levels)
 end
 
 ---displayChatMessage
@@ -583,5 +583,5 @@ end
 ---@param message string
 ---@return void
 function Player:displayChatMessage(recipient, message)
-    return BlzDisplayChatMessage(self:getUd(), recipient, message)
+    return BlzDisplayChatMessage(getUd(self), recipient, message)
 end

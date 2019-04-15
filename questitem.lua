@@ -10,18 +10,18 @@ local QuestItem = class('QuestItem', Agent)
 ---@param description string
 ---@return void
 function QuestItem:setDescription(description)
-    return QuestItemSetDescription(self:getUd(), description)
+    return QuestItemSetDescription(getUd(self), description)
 end
 
 ---setCompleted
 ---@param completed boolean
 ---@return void
 function QuestItem:setCompleted(completed)
-    return QuestItemSetCompleted(self:getUd(), completed)
+    return QuestItemSetCompleted(getUd(self), completed)
 end
 
 ---isCompleted
 ---@return boolean
 function QuestItem:isCompleted()
-    return IsQuestItemCompleted(self:getUd())
+    return IsQuestItemCompleted(getUd(self))
 end

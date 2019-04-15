@@ -26,14 +26,14 @@ end
 ---destroy
 ---@return void
 function Image:destroy()
-    return DestroyImage(self:getUd())
+    return DestroyImage(getUd(self))
 end
 
 ---show
 ---@param flag boolean
 ---@return void
 function Image:show(flag)
-    return ShowImage(self:getUd(), flag)
+    return ShowImage(getUd(self), flag)
 end
 
 ---setConstantHeight
@@ -41,7 +41,7 @@ end
 ---@param height float
 ---@return void
 function Image:setConstantHeight(flag, height)
-    return SetImageConstantHeight(self:getUd(), flag, height)
+    return SetImageConstantHeight(getUd(self), flag, height)
 end
 
 ---setPosition
@@ -50,7 +50,7 @@ end
 ---@param z float
 ---@return void
 function Image:setPosition(x, y, z)
-    return SetImagePosition(self:getUd(), x, y, z)
+    return SetImagePosition(getUd(self), x, y, z)
 end
 
 ---setColor
@@ -60,21 +60,21 @@ end
 ---@param alpha integer
 ---@return void
 function Image:setColor(red, green, blue, alpha)
-    return SetImageColor(self:getUd(), red, green, blue, alpha)
+    return SetImageColor(getUd(self), red, green, blue, alpha)
 end
 
 ---setRender
 ---@param flag boolean
 ---@return void
 function Image:setRender(flag)
-    return SetImageRender(self:getUd(), flag)
+    return SetImageRender(getUd(self), flag)
 end
 
 ---setRenderAlways
 ---@param flag boolean
 ---@return void
 function Image:setRenderAlways(flag)
-    return SetImageRenderAlways(self:getUd(), flag)
+    return SetImageRenderAlways(getUd(self), flag)
 end
 
 ---setAboveWater
@@ -82,12 +82,12 @@ end
 ---@param useWaterAlpha boolean
 ---@return void
 function Image:setAboveWater(flag, useWaterAlpha)
-    return SetImageAboveWater(self:getUd(), flag, useWaterAlpha)
+    return SetImageAboveWater(getUd(self), flag, useWaterAlpha)
 end
 
 ---setType
 ---@param imageType integer
 ---@return void
 function Image:setType(imageType)
-    return SetImageType(self:getUd(), imageType)
+    return SetImageType(getUd(self), imageType)
 end

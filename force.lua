@@ -9,7 +9,7 @@ local Force = class('Force', Agent)
 ---destructor
 ---@return void
 function Force:destructor()
-    return DestroyForce(self:getUd())
+    return DestroyForce(getUd(self))
 end
 
 ---<static> create
@@ -22,20 +22,20 @@ end
 ---@param player Player
 ---@return void
 function Force:addPlayer(player)
-    return ForceAddPlayer(self:getUd(), player:getUd())
+    return ForceAddPlayer(getUd(self), getUd(player))
 end
 
 ---removePlayer
 ---@param player Player
 ---@return void
 function Force:removePlayer(player)
-    return ForceRemovePlayer(self:getUd(), player:getUd())
+    return ForceRemovePlayer(getUd(self), getUd(player))
 end
 
 ---clear
 ---@return void
 function Force:clear()
-    return ForceClear(self:getUd())
+    return ForceClear(getUd(self))
 end
 
 ---enumPlayers
@@ -43,7 +43,7 @@ end
 ---@return void
 function Force:enumPlayers(filter)
     filter = Filter:createPlayerFilter(filter)
-    ForceEnumPlayers(self:getUd(), filter:getUd())
+    ForceEnumPlayers(getUd(self), getUd(filter))
     filter:destroy()
 end
 
@@ -53,7 +53,7 @@ end
 ---@return void
 function Force:enumPlayersCounted(countLimit, filter)
     filter = Filter:createPlayerFilter(filter)
-    ForceEnumPlayersCounted(self:getUd(), filter:getUd(), countLimit)
+    ForceEnumPlayersCounted(getUd(self), getUd(filter), countLimit)
     filter:destroy()
 end
 
@@ -63,7 +63,7 @@ end
 ---@return void
 function Force:enumAllies(player, filter)
     filter = Filter:createPlayerFilter(filter)
-    ForceEnumAllies(self:getUd(), player:getUd(), filter:getUd())
+    ForceEnumAllies(getUd(self), getUd(player), getUd(filter))
     filter:destroy()
 end
 
@@ -73,7 +73,7 @@ end
 ---@return void
 function Force:enumEnemies(player, filter)
     filter = Filter:createPlayerFilter(filter)
-    ForceEnumEnemies(self:getUd(), player:getUd(), filter:getUd())
+    ForceEnumEnemies(getUd(self), getUd(player), getUd(filter))
     filter:destroy()
 end
 
@@ -82,5 +82,5 @@ end
 ---@return void
 function Force:forEach(callback)
     callback = Function:createPlayerCallback(callback)
-    return ForForce(self:getUd(), callback)
+    return ForForce(getUd(self), callback)
 end

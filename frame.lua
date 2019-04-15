@@ -13,7 +13,7 @@ local Frame = class('Frame', Handle)
 ---@param createContext integer
 ---@return Frame
 function Frame:create(name, owner, priority, createContext)
-    return Frame:fromUd(BlzCreateFrame(name, owner:getUd(), priority, createContext))
+    return Frame:fromUd(BlzCreateFrame(name, getUd(owner), priority, createContext))
 end
 
 ---<static> createSimple
@@ -22,7 +22,7 @@ end
 ---@param createContext integer
 ---@return Frame
 function Frame:createSimple(name, owner, createContext)
-    return Frame:fromUd(BlzCreateSimpleFrame(name, owner:getUd(), createContext))
+    return Frame:fromUd(BlzCreateSimpleFrame(name, getUd(owner), createContext))
 end
 
 ---<static> createByType
@@ -33,13 +33,13 @@ end
 ---@param createContext integer
 ---@return Frame
 function Frame:createByType(typeName, name, owner, inherits, createContext)
-    return Frame:fromUd(BlzCreateFrameByType(typeName, name, owner:getUd(), inherits, createContext))
+    return Frame:fromUd(BlzCreateFrameByType(typeName, name, getUd(owner), inherits, createContext))
 end
 
 ---destroy
 ---@return void
 function Frame:destroy()
-    return BlzDestroyFrame(self:getUd())
+    return BlzDestroyFrame(getUd(self))
 end
 
 ---setPoint
@@ -50,7 +50,7 @@ end
 ---@param y float
 ---@return void
 function Frame:setPoint(point, relative, relativePoint, x, y)
-    return BlzFrameSetPoint(self:getUd(), point, relative:getUd(), relativePoint, x, y)
+    return BlzFrameSetPoint(getUd(self), point, getUd(relative), relativePoint, x, y)
 end
 
 ---setAbsPoint
@@ -59,85 +59,85 @@ end
 ---@param y float
 ---@return void
 function Frame:setAbsPoint(point, x, y)
-    return BlzFrameSetAbsPoint(self:getUd(), point, x, y)
+    return BlzFrameSetAbsPoint(getUd(self), point, x, y)
 end
 
 ---clearAllPoints
 ---@return void
 function Frame:clearAllPoints()
-    return BlzFrameClearAllPoints(self:getUd())
+    return BlzFrameClearAllPoints(getUd(self))
 end
 
 ---setAllPoints
 ---@param relative Frame
 ---@return void
 function Frame:setAllPoints(relative)
-    return BlzFrameSetAllPoints(self:getUd(), relative:getUd())
+    return BlzFrameSetAllPoints(getUd(self), getUd(relative))
 end
 
 ---setVisible
 ---@param visible boolean
 ---@return void
 function Frame:setVisible(visible)
-    return BlzFrameSetVisible(self:getUd(), visible)
+    return BlzFrameSetVisible(getUd(self), visible)
 end
 
 ---isVisible
 ---@return boolean
 function Frame:isVisible()
-    return BlzFrameIsVisible(self:getUd())
+    return BlzFrameIsVisible(getUd(self))
 end
 
 ---getName
 ---@return string
 function Frame:getName()
-    return BlzFrameGetName(self:getUd())
+    return BlzFrameGetName(getUd(self))
 end
 
 ---click
 ---@return void
 function Frame:click()
-    return BlzFrameClick(self:getUd())
+    return BlzFrameClick(getUd(self))
 end
 
 ---setText
 ---@param text string
 ---@return void
 function Frame:setText(text)
-    return BlzFrameSetText(self:getUd(), text)
+    return BlzFrameSetText(getUd(self), text)
 end
 
 ---getText
 ---@return string
 function Frame:getText()
-    return BlzFrameGetText(self:getUd())
+    return BlzFrameGetText(getUd(self))
 end
 
 ---setTextSizeLimit
 ---@param size integer
 ---@return void
 function Frame:setTextSizeLimit(size)
-    return BlzFrameSetTextSizeLimit(self:getUd(), size)
+    return BlzFrameSetTextSizeLimit(getUd(self), size)
 end
 
 ---getTextSizeLimit
 ---@return integer
 function Frame:getTextSizeLimit()
-    return BlzFrameGetTextSizeLimit(self:getUd())
+    return BlzFrameGetTextSizeLimit(getUd(self))
 end
 
 ---setTextColor
 ---@param color integer
 ---@return void
 function Frame:setTextColor(color)
-    return BlzFrameSetTextColor(self:getUd(), color)
+    return BlzFrameSetTextColor(getUd(self), color)
 end
 
 ---setFocus
 ---@param flag boolean
 ---@return void
 function Frame:setFocus(flag)
-    return BlzFrameSetFocus(self:getUd(), flag)
+    return BlzFrameSetFocus(getUd(self), flag)
 end
 
 ---setModel
@@ -145,33 +145,33 @@ end
 ---@param cameraIndex integer
 ---@return void
 function Frame:setModel(modelFile, cameraIndex)
-    return BlzFrameSetModel(self:getUd(), modelFile, cameraIndex)
+    return BlzFrameSetModel(getUd(self), modelFile, cameraIndex)
 end
 
 ---setEnable
 ---@param enabled boolean
 ---@return void
 function Frame:setEnable(enabled)
-    return BlzFrameSetEnable(self:getUd(), enabled)
+    return BlzFrameSetEnable(getUd(self), enabled)
 end
 
 ---getEnable
 ---@return boolean
 function Frame:getEnable()
-    return BlzFrameGetEnable(self:getUd())
+    return BlzFrameGetEnable(getUd(self))
 end
 
 ---setAlpha
 ---@param alpha integer
 ---@return void
 function Frame:setAlpha(alpha)
-    return BlzFrameSetAlpha(self:getUd(), alpha)
+    return BlzFrameSetAlpha(getUd(self), alpha)
 end
 
 ---getAlpha
 ---@return integer
 function Frame:getAlpha()
-    return BlzFrameGetAlpha(self:getUd())
+    return BlzFrameGetAlpha(getUd(self))
 end
 
 ---setSpriteAnimate
@@ -179,7 +179,7 @@ end
 ---@param flags integer
 ---@return void
 function Frame:setSpriteAnimate(primaryProp, flags)
-    return BlzFrameSetSpriteAnimate(self:getUd(), primaryProp, flags)
+    return BlzFrameSetSpriteAnimate(getUd(self), primaryProp, flags)
 end
 
 ---setTexture
@@ -188,41 +188,41 @@ end
 ---@param blend boolean
 ---@return void
 function Frame:setTexture(texFile, flag, blend)
-    return BlzFrameSetTexture(self:getUd(), texFile, flag, blend)
+    return BlzFrameSetTexture(getUd(self), texFile, flag, blend)
 end
 
 ---setScale
 ---@param scale float
 ---@return void
 function Frame:setScale(scale)
-    return BlzFrameSetScale(self:getUd(), scale)
+    return BlzFrameSetScale(getUd(self), scale)
 end
 
 ---setTooltip
 ---@param tooltip Frame
 ---@return void
 function Frame:setTooltip(tooltip)
-    return BlzFrameSetTooltip(self:getUd(), tooltip:getUd())
+    return BlzFrameSetTooltip(getUd(self), getUd(tooltip))
 end
 
 ---cageMouse
 ---@param enable boolean
 ---@return void
 function Frame:cageMouse(enable)
-    return BlzFrameCageMouse(self:getUd(), enable)
+    return BlzFrameCageMouse(getUd(self), enable)
 end
 
 ---setValue
 ---@param value float
 ---@return void
 function Frame:setValue(value)
-    return BlzFrameSetValue(self:getUd(), value)
+    return BlzFrameSetValue(getUd(self), value)
 end
 
 ---getValue
 ---@return float
 function Frame:getValue()
-    return BlzFrameGetValue(self:getUd())
+    return BlzFrameGetValue(getUd(self))
 end
 
 ---setMinMaxValue
@@ -230,14 +230,14 @@ end
 ---@param maxValue float
 ---@return void
 function Frame:setMinMaxValue(minValue, maxValue)
-    return BlzFrameSetMinMaxValue(self:getUd(), minValue, maxValue)
+    return BlzFrameSetMinMaxValue(getUd(self), minValue, maxValue)
 end
 
 ---setStepSize
 ---@param stepSize float
 ---@return void
 function Frame:setStepSize(stepSize)
-    return BlzFrameSetStepSize(self:getUd(), stepSize)
+    return BlzFrameSetStepSize(getUd(self), stepSize)
 end
 
 ---setSize
@@ -245,46 +245,46 @@ end
 ---@param height float
 ---@return void
 function Frame:setSize(width, height)
-    return BlzFrameSetSize(self:getUd(), width, height)
+    return BlzFrameSetSize(getUd(self), width, height)
 end
 
 ---setVertexColor
 ---@param color integer
 ---@return void
 function Frame:setVertexColor(color)
-    return BlzFrameSetVertexColor(self:getUd(), color)
+    return BlzFrameSetVertexColor(getUd(self), color)
 end
 
 ---setLevel
 ---@param level integer
 ---@return void
 function Frame:setLevel(level)
-    return BlzFrameSetLevel(self:getUd(), level)
+    return BlzFrameSetLevel(getUd(self), level)
 end
 
 ---setParent
 ---@param parent Frame
 ---@return void
 function Frame:setParent(parent)
-    return BlzFrameSetParent(self:getUd(), parent:getUd())
+    return BlzFrameSetParent(getUd(self), getUd(parent))
 end
 
 ---getParent
 ---@return Frame
 function Frame:getParent()
-    return Frame:fromUd(BlzFrameGetParent(self:getUd()))
+    return Frame:fromUd(BlzFrameGetParent(getUd(self)))
 end
 
 ---getHeight
 ---@return float
 function Frame:getHeight()
-    return BlzFrameGetHeight(self:getUd())
+    return BlzFrameGetHeight(getUd(self))
 end
 
 ---getWidth
 ---@return float
 function Frame:getWidth()
-    return BlzFrameGetWidth(self:getUd())
+    return BlzFrameGetWidth(getUd(self))
 end
 
 ---setFont
@@ -293,7 +293,7 @@ end
 ---@param flags integer
 ---@return void
 function Frame:setFont(fileName, height, flags)
-    return BlzFrameSetFont(self:getUd(), fileName, height, flags)
+    return BlzFrameSetFont(getUd(self), fileName, height, flags)
 end
 
 ---setTextAlignment
@@ -301,5 +301,5 @@ end
 ---@param horz TextAlignType
 ---@return void
 function Frame:setTextAlignment(vert, horz)
-    return BlzFrameSetTextAlignment(self:getUd(), vert, horz)
+    return BlzFrameSetTextAlignment(getUd(self), vert, horz)
 end

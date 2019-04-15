@@ -23,7 +23,7 @@ end
 ---destroy
 ---@return void
 function Filter:destroy()
-    return DestroyFilter(self:getUd())
+    return DestroyFilter(getUd(self))
 end
 --[[generate end]]
 

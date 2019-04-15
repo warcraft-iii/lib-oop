@@ -24,38 +24,38 @@ end
 ---destroy
 ---@return void
 function Ubersplat:destroy()
-    return DestroyUbersplat(self:getUd())
+    return DestroyUbersplat(getUd(self))
 end
 
 ---reset
 ---@return void
 function Ubersplat:reset()
-    return ResetUbersplat(self:getUd())
+    return ResetUbersplat(getUd(self))
 end
 
 ---finish
 ---@return void
 function Ubersplat:finish()
-    return FinishUbersplat(self:getUd())
+    return FinishUbersplat(getUd(self))
 end
 
 ---show
 ---@param flag boolean
 ---@return void
 function Ubersplat:show(flag)
-    return ShowUbersplat(self:getUd(), flag)
+    return ShowUbersplat(getUd(self), flag)
 end
 
 ---setRender
 ---@param flag boolean
 ---@return void
 function Ubersplat:setRender(flag)
-    return SetUbersplatRender(self:getUd(), flag)
+    return SetUbersplatRender(getUd(self), flag)
 end
 
 ---setRenderAlways
 ---@param flag boolean
 ---@return void
 function Ubersplat:setRenderAlways(flag)
-    return SetUbersplatRenderAlways(self:getUd(), flag)
+    return SetUbersplatRenderAlways(getUd(self), flag)
 end

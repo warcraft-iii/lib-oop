@@ -15,7 +15,7 @@ end
 ---destroy
 ---@return void
 function Timer:destroy()
-    return DestroyTimer(self:getUd())
+    return DestroyTimer(getUd(self))
 end
 
 ---start
@@ -24,35 +24,35 @@ end
 ---@param handlerFunc function
 ---@return void
 function Timer:start(timeout, periodic, handlerFunc)
-    return TimerStart(self:getUd(), timeout, periodic, handlerFunc)
+    return TimerStart(getUd(self), timeout, periodic, handlerFunc)
 end
 
 ---getElapsed
 ---@return float
 function Timer:getElapsed()
-    return TimerGetElapsed(self:getUd())
+    return TimerGetElapsed(getUd(self))
 end
 
 ---getRemaining
 ---@return float
 function Timer:getRemaining()
-    return TimerGetRemaining(self:getUd())
+    return TimerGetRemaining(getUd(self))
 end
 
 ---getTimeout
 ---@return float
 function Timer:getTimeout()
-    return TimerGetTimeout(self:getUd())
+    return TimerGetTimeout(getUd(self))
 end
 
 ---pause
 ---@return void
 function Timer:pause()
-    return PauseTimer(self:getUd())
+    return PauseTimer(getUd(self))
 end
 
 ---resume
 ---@return void
 function Timer:resume()
-    return ResumeTimer(self:getUd())
+    return ResumeTimer(getUd(self))
 end

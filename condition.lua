@@ -17,5 +17,5 @@ end
 ---destroy
 ---@return void
 function Condition:destroy()
-    return DestroyCondition(self:getUd())
+    return DestroyCondition(getUd(self))
 end

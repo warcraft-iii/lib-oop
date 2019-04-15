@@ -18,14 +18,14 @@ end
 ---@param duration float
 ---@return void
 function CameraSetup:setField(field, value, duration)
-    return CameraSetupSetField(self:getUd(), field, value, duration)
+    return CameraSetupSetField(getUd(self), field, value, duration)
 end
 
 ---getField
 ---@param field CameraField
 ---@return float
 function CameraSetup:getField(field)
-    return CameraSetupGetField(self:getUd(), field)
+    return CameraSetupGetField(getUd(self), field)
 end
 
 ---setDestPosition
@@ -34,25 +34,25 @@ end
 ---@param duration float
 ---@return void
 function CameraSetup:setDestPosition(x, y, duration)
-    return CameraSetupSetDestPosition(self:getUd(), x, y, duration)
+    return CameraSetupSetDestPosition(getUd(self), x, y, duration)
 end
 
 ---getDestPositionLoc
 ---@return Location
 function CameraSetup:getDestPositionLoc()
-    return Location:fromUd(CameraSetupGetDestPositionLoc(self:getUd()))
+    return Location:fromUd(CameraSetupGetDestPositionLoc(getUd(self)))
 end
 
 ---getDestPositionX
 ---@return float
 function CameraSetup:getDestPositionX()
-    return CameraSetupGetDestPositionX(self:getUd())
+    return CameraSetupGetDestPositionX(getUd(self))
 end
 
 ---getDestPositionY
 ---@return float
 function CameraSetup:getDestPositionY()
-    return CameraSetupGetDestPositionY(self:getUd())
+    return CameraSetupGetDestPositionY(getUd(self))
 end
 
 ---apply
@@ -60,14 +60,14 @@ end
 ---@param panTimed boolean
 ---@return void
 function CameraSetup:apply(doPan, panTimed)
-    return CameraSetupApply(self:getUd(), doPan, panTimed)
+    return CameraSetupApply(getUd(self), doPan, panTimed)
 end
 
 ---applyWithZ
 ---@param zDestOffset float
 ---@return void
 function CameraSetup:applyWithZ(zDestOffset)
-    return CameraSetupApplyWithZ(self:getUd(), zDestOffset)
+    return CameraSetupApplyWithZ(getUd(self), zDestOffset)
 end
 
 ---applyForceDuration
@@ -75,7 +75,7 @@ end
 ---@param forceDuration float
 ---@return void
 function CameraSetup:applyForceDuration(doPan, forceDuration)
-    return CameraSetupApplyForceDuration(self:getUd(), doPan, forceDuration)
+    return CameraSetupApplyForceDuration(getUd(self), doPan, forceDuration)
 end
 
 ---applyForceDurationWithZ
@@ -83,7 +83,7 @@ end
 ---@param forceDuration float
 ---@return void
 function CameraSetup:applyForceDurationWithZ(zDestOffset, forceDuration)
-    return CameraSetupApplyForceDurationWithZ(self:getUd(), zDestOffset, forceDuration)
+    return CameraSetupApplyForceDurationWithZ(getUd(self), zDestOffset, forceDuration)
 end
 
 ---applyForceDurationSmooth
@@ -94,5 +94,5 @@ end
 ---@param smoothFactor float
 ---@return void
 function CameraSetup:applyForceDurationSmooth(doPan, forcedDuration, easeInDuration, easeOutDuration, smoothFactor)
-    return BlzCameraSetupApplyForceDurationSmooth(self:getUd(), doPan, forcedDuration, easeInDuration, easeOutDuration, smoothFactor)
+    return BlzCameraSetupApplyForceDurationSmooth(getUd(self), doPan, forcedDuration, easeInDuration, easeOutDuration, smoothFactor)
 end

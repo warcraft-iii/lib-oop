@@ -15,21 +15,21 @@ end
 ---remove
 ---@return void
 function Region:remove()
-    return RemoveRegion(self:getUd())
+    return RemoveRegion(getUd(self))
 end
 
 ---addRect
 ---@param r Rect
 ---@return void
 function Region:addRect(r)
-    return RegionAddRect(self:getUd(), r:getUd())
+    return RegionAddRect(getUd(self), getUd(r))
 end
 
 ---clearRect
 ---@param r Rect
 ---@return void
 function Region:clearRect(r)
-    return RegionClearRect(self:getUd(), r:getUd())
+    return RegionClearRect(getUd(self), getUd(r))
 end
 
 ---addCell
@@ -37,14 +37,14 @@ end
 ---@param y float
 ---@return void
 function Region:addCell(x, y)
-    return RegionAddCell(self:getUd(), x, y)
+    return RegionAddCell(getUd(self), x, y)
 end
 
 ---addCellAtLoc
 ---@param loc Location
 ---@return void
 function Region:addCellAtLoc(loc)
-    return RegionAddCellAtLoc(self:getUd(), loc:getUd())
+    return RegionAddCellAtLoc(getUd(self), getUd(loc))
 end
 
 ---clearCell
@@ -52,21 +52,21 @@ end
 ---@param y float
 ---@return void
 function Region:clearCell(x, y)
-    return RegionClearCell(self:getUd(), x, y)
+    return RegionClearCell(getUd(self), x, y)
 end
 
 ---clearCellAtLoc
 ---@param loc Location
 ---@return void
 function Region:clearCellAtLoc(loc)
-    return RegionClearCellAtLoc(self:getUd(), loc:getUd())
+    return RegionClearCellAtLoc(getUd(self), getUd(loc))
 end
 
 ---isUnitIn
 ---@param unit Unit
 ---@return boolean
 function Region:isUnitIn(unit)
-    return IsUnitInRegion(self:getUd(), unit:getUd())
+    return IsUnitInRegion(getUd(self), getUd(unit))
 end
 
 ---isPointIn
@@ -74,12 +74,12 @@ end
 ---@param y float
 ---@return boolean
 function Region:isPointIn(x, y)
-    return IsPointInRegion(self:getUd(), x, y)
+    return IsPointInRegion(getUd(self), x, y)
 end
 
 ---isLocationIn
 ---@param loc Location
 ---@return boolean
 function Region:isLocationIn(loc)
-    return IsLocationInRegion(self:getUd(), loc:getUd())
+    return IsLocationInRegion(getUd(self), getUd(loc))
 end

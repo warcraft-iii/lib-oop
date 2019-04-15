@@ -20,7 +20,7 @@ end
 ---@param where Location
 ---@return Effect
 function Effect:addSpecialLoc(modelName, where)
-    return Effect:fromUd(AddSpecialEffectLoc(modelName, where:getUd()))
+    return Effect:fromUd(AddSpecialEffectLoc(modelName, getUd(where)))
 end
 
 ---<static> addSpecialTarget
@@ -29,7 +29,7 @@ end
 ---@param attachPointName string
 ---@return Effect
 function Effect:addSpecialTarget(modelName, targetWidget, attachPointName)
-    return Effect:fromUd(AddSpecialEffectTarget(modelName, targetWidget:getUd(), attachPointName))
+    return Effect:fromUd(AddSpecialEffectTarget(modelName, getUd(targetWidget), attachPointName))
 end
 
 ---<static> addSpell
@@ -48,7 +48,7 @@ end
 ---@param where Location
 ---@return Effect
 function Effect:addSpellLoc(abilityString, t, where)
-    return Effect:fromUd(AddSpellEffectLoc(abilityString, t, where:getUd()))
+    return Effect:fromUd(AddSpellEffectLoc(abilityString, t, getUd(where)))
 end
 
 ---<static> addSpellById
@@ -67,7 +67,7 @@ end
 ---@param where Location
 ---@return Effect
 function Effect:addSpellByIdLoc(abilityId, t, where)
-    return Effect:fromUd(AddSpellEffectByIdLoc(abilityId, t, where:getUd()))
+    return Effect:fromUd(AddSpellEffectByIdLoc(abilityId, t, getUd(where)))
 end
 
 ---<static> addSpellTarget
@@ -77,7 +77,7 @@ end
 ---@param attachPoint string
 ---@return Effect
 function Effect:addSpellTarget(modelName, t, targetWidget, attachPoint)
-    return Effect:fromUd(AddSpellEffectTarget(modelName, t, targetWidget:getUd(), attachPoint))
+    return Effect:fromUd(AddSpellEffectTarget(modelName, t, getUd(targetWidget), attachPoint))
 end
 
 ---<static> addSpellTargetById
@@ -87,20 +87,20 @@ end
 ---@param attachPoint string
 ---@return Effect
 function Effect:addSpellTargetById(abilityId, t, targetWidget, attachPoint)
-    return Effect:fromUd(AddSpellEffectTargetById(abilityId, t, targetWidget:getUd(), attachPoint))
+    return Effect:fromUd(AddSpellEffectTargetById(abilityId, t, getUd(targetWidget), attachPoint))
 end
 
 ---destroy
 ---@return void
 function Effect:destroy()
-    return DestroyEffect(self:getUd())
+    return DestroyEffect(getUd(self))
 end
 
 ---setSpecialColorByPlayer
 ---@param player Player
 ---@return void
 function Effect:setSpecialColorByPlayer(player)
-    return BlzSetSpecialEffectColorByPlayer(self:getUd(), player:getUd())
+    return BlzSetSpecialEffectColorByPlayer(getUd(self), getUd(player))
 end
 
 ---setSpecialColor
@@ -109,21 +109,21 @@ end
 ---@param b integer
 ---@return void
 function Effect:setSpecialColor(r, g, b)
-    return BlzSetSpecialEffectColor(self:getUd(), r, g, b)
+    return BlzSetSpecialEffectColor(getUd(self), r, g, b)
 end
 
 ---setSpecialAlpha
 ---@param alpha integer
 ---@return void
 function Effect:setSpecialAlpha(alpha)
-    return BlzSetSpecialEffectAlpha(self:getUd(), alpha)
+    return BlzSetSpecialEffectAlpha(getUd(self), alpha)
 end
 
 ---setSpecialScale
 ---@param scale float
 ---@return void
 function Effect:setSpecialScale(scale)
-    return BlzSetSpecialEffectScale(self:getUd(), scale)
+    return BlzSetSpecialEffectScale(getUd(self), scale)
 end
 
 ---setSpecialPosition
@@ -132,28 +132,28 @@ end
 ---@param z float
 ---@return void
 function Effect:setSpecialPosition(x, y, z)
-    return BlzSetSpecialEffectPosition(self:getUd(), x, y, z)
+    return BlzSetSpecialEffectPosition(getUd(self), x, y, z)
 end
 
 ---setSpecialHeight
 ---@param height float
 ---@return void
 function Effect:setSpecialHeight(height)
-    return BlzSetSpecialEffectHeight(self:getUd(), height)
+    return BlzSetSpecialEffectHeight(getUd(self), height)
 end
 
 ---setSpecialTimeScale
 ---@param timeScale float
 ---@return void
 function Effect:setSpecialTimeScale(timeScale)
-    return BlzSetSpecialEffectTimeScale(self:getUd(), timeScale)
+    return BlzSetSpecialEffectTimeScale(getUd(self), timeScale)
 end
 
 ---setSpecialTime
 ---@param time float
 ---@return void
 function Effect:setSpecialTime(time)
-    return BlzSetSpecialEffectTime(self:getUd(), time)
+    return BlzSetSpecialEffectTime(getUd(self), time)
 end
 
 ---setSpecialOrientation
@@ -162,101 +162,101 @@ end
 ---@param roll float
 ---@return void
 function Effect:setSpecialOrientation(yaw, pitch, roll)
-    return BlzSetSpecialEffectOrientation(self:getUd(), yaw, pitch, roll)
+    return BlzSetSpecialEffectOrientation(getUd(self), yaw, pitch, roll)
 end
 
 ---setSpecialYaw
 ---@param yaw float
 ---@return void
 function Effect:setSpecialYaw(yaw)
-    return BlzSetSpecialEffectYaw(self:getUd(), yaw)
+    return BlzSetSpecialEffectYaw(getUd(self), yaw)
 end
 
 ---setSpecialPitch
 ---@param pitch float
 ---@return void
 function Effect:setSpecialPitch(pitch)
-    return BlzSetSpecialEffectPitch(self:getUd(), pitch)
+    return BlzSetSpecialEffectPitch(getUd(self), pitch)
 end
 
 ---setSpecialRoll
 ---@param roll float
 ---@return void
 function Effect:setSpecialRoll(roll)
-    return BlzSetSpecialEffectRoll(self:getUd(), roll)
+    return BlzSetSpecialEffectRoll(getUd(self), roll)
 end
 
 ---setSpecialX
 ---@param x float
 ---@return void
 function Effect:setSpecialX(x)
-    return BlzSetSpecialEffectX(self:getUd(), x)
+    return BlzSetSpecialEffectX(getUd(self), x)
 end
 
 ---setSpecialY
 ---@param y float
 ---@return void
 function Effect:setSpecialY(y)
-    return BlzSetSpecialEffectY(self:getUd(), y)
+    return BlzSetSpecialEffectY(getUd(self), y)
 end
 
 ---setSpecialZ
 ---@param z float
 ---@return void
 function Effect:setSpecialZ(z)
-    return BlzSetSpecialEffectZ(self:getUd(), z)
+    return BlzSetSpecialEffectZ(getUd(self), z)
 end
 
 ---setSpecialPositionLoc
 ---@param loc Location
 ---@return void
 function Effect:setSpecialPositionLoc(loc)
-    return BlzSetSpecialEffectPositionLoc(self:getUd(), loc:getUd())
+    return BlzSetSpecialEffectPositionLoc(getUd(self), getUd(loc))
 end
 
 ---getLocalSpecialX
 ---@return float
 function Effect:getLocalSpecialX()
-    return BlzGetLocalSpecialEffectX(self:getUd())
+    return BlzGetLocalSpecialEffectX(getUd(self))
 end
 
 ---getLocalSpecialY
 ---@return float
 function Effect:getLocalSpecialY()
-    return BlzGetLocalSpecialEffectY(self:getUd())
+    return BlzGetLocalSpecialEffectY(getUd(self))
 end
 
 ---getLocalSpecialZ
 ---@return float
 function Effect:getLocalSpecialZ()
-    return BlzGetLocalSpecialEffectZ(self:getUd())
+    return BlzGetLocalSpecialEffectZ(getUd(self))
 end
 
 ---specialClearSubAnimations
 ---@return void
 function Effect:specialClearSubAnimations()
-    return BlzSpecialEffectClearSubAnimations(self:getUd())
+    return BlzSpecialEffectClearSubAnimations(getUd(self))
 end
 
 ---specialRemoveSubAnimation
 ---@param subAnim SubAnimType
 ---@return void
 function Effect:specialRemoveSubAnimation(subAnim)
-    return BlzSpecialEffectRemoveSubAnimation(self:getUd(), subAnim)
+    return BlzSpecialEffectRemoveSubAnimation(getUd(self), subAnim)
 end
 
 ---specialAddSubAnimation
 ---@param subAnim SubAnimType
 ---@return void
 function Effect:specialAddSubAnimation(subAnim)
-    return BlzSpecialEffectAddSubAnimation(self:getUd(), subAnim)
+    return BlzSpecialEffectAddSubAnimation(getUd(self), subAnim)
 end
 
 ---playSpecial
 ---@param anim AnimType
 ---@return void
 function Effect:playSpecial(anim)
-    return BlzPlaySpecialEffect(self:getUd(), anim)
+    return BlzPlaySpecialEffect(getUd(self), anim)
 end
 
 ---playSpecialWithTimeScale
@@ -264,13 +264,13 @@ end
 ---@param timeScale float
 ---@return void
 function Effect:playSpecialWithTimeScale(anim, timeScale)
-    return BlzPlaySpecialEffectWithTimeScale(self:getUd(), anim, timeScale)
+    return BlzPlaySpecialEffectWithTimeScale(getUd(self), anim, timeScale)
 end
 
 ---getSpecialScale
 ---@return float
 function Effect:getSpecialScale()
-    return BlzGetSpecialEffectScale(self:getUd())
+    return BlzGetSpecialEffectScale(getUd(self))
 end
 
 ---setSpecialMatrixScale
@@ -279,11 +279,11 @@ end
 ---@param z float
 ---@return void
 function Effect:setSpecialMatrixScale(x, y, z)
-    return BlzSetSpecialEffectMatrixScale(self:getUd(), x, y, z)
+    return BlzSetSpecialEffectMatrixScale(getUd(self), x, y, z)
 end
 
 ---resetSpecialMatrix
 ---@return void
 function Effect:resetSpecialMatrix()
-    return BlzResetSpecialEffectMatrix(self:getUd())
+    return BlzResetSpecialEffectMatrix(getUd(self))
 end
