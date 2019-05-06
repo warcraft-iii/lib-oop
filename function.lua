@@ -13,10 +13,31 @@
 
 Function = {}
 
+local function safereturn(ok, ...)
+    if ok then
+        return ...
+    end
+    print(...)
+end
+
+local function safecall(f, ...)
+    return safereturn(pcall(f, ...))
+end
+
+function Function:errorable(f)
+    return function(...)
+        return safecall(f, ...)
+    end
+end
+
 local function generateCallbackCreator(cls, method)
     return function(_, callback)
-        return function()
+        local function f()
             return callback(cls:fromUd(method()))
+        end
+
+        return function()
+            return safecall(f)
         end
     end
 end

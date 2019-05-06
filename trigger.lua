@@ -262,6 +262,7 @@ end
 ---@param actionFunc function
 ---@return TriggerAction
 function Trigger:addAction(actionFunc)
+    actionFunc = Function:errorable(actionFunc)
     return TriggerAddAction(getUd(self), actionFunc)
 end
 

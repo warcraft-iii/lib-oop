@@ -17,6 +17,7 @@ local Filter = class('Filter', BoolExpr)
 ---@param func function
 ---@return Filter
 function Filter:create(func)
+    func = Function:errorable(func)
     return Filter:fromUd(orig_Filter(func))
 end
 

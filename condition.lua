@@ -11,6 +11,7 @@ local Condition = class('Condition', BoolExpr)
 ---@param func function
 ---@return Condition
 function Condition:create(func)
+    func = Function:errorable(func)
     return Condition:fromUd(orig_Condition(func))
 end
 

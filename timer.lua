@@ -24,6 +24,7 @@ end
 ---@param handlerFunc function
 ---@return void
 function Timer:start(timeout, periodic, handlerFunc)
+    handlerFunc = Function:errorable(handlerFunc)
     return TimerStart(getUd(self), timeout, periodic, handlerFunc)
 end
 
