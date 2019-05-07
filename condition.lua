@@ -5,7 +5,7 @@
 local orig_Condition = Condition
 
 ---@class Condition : BoolExpr
-local Condition = class('Condition', BoolExpr)
+Condition = class('Condition', BoolExpr)
 
 ---<static> create
 ---@param func function

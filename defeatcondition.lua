@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class DefeatCondition : Agent
-local DefeatCondition = class('DefeatCondition', Agent)
+DefeatCondition = class('DefeatCondition', Agent)
 
 ---<static> create
 ---@return DefeatCondition

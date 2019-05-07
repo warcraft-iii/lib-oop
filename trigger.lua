@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Trigger : Agent
-local Trigger = class('Trigger', Agent)
+Trigger = class('Trigger', Agent)
 
 ---<static> create
 ---@return Trigger

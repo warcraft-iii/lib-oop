@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Item : Widget
-local Item = class('Item', Widget)
+Item = class('Item', Widget)
 
 ---<static> create
 ---@param itemId integer

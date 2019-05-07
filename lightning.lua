@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Lightning : Handle
-local Lightning = class('Lightning', Handle)
+Lightning = class('Lightning', Handle)
 
 ---destroy
 ---@return boolean

@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Dialog : Agent
-local Dialog = class('Dialog', Agent)
+Dialog = class('Dialog', Agent)
 
 ---<static> create
 ---@return Dialog

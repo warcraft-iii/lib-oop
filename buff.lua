@@ -4,4 +4,4 @@
 --------------------------------------
 
 ---@class Buff : Ability
-local Buff = class('Buff', Ability)
+Buff = class('Buff', Ability)

@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Hashtable : Agent
-local Hashtable = class('Hashtable', Agent)
+Hashtable = class('Hashtable', Agent)
 
 ---<static> create
 ---@return Hashtable

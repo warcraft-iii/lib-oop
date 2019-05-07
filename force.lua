@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Force : Agent
-local Force = class('Force', Agent)
+Force = class('Force', Agent)
 
 ---destructor
 ---@return void

@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Effect : Agent
-local Effect = class('Effect', Agent)
+Effect = class('Effect', Agent)
 
 ---<static> addSpecial
 ---@param modelName string

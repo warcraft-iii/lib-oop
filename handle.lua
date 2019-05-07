@@ -4,7 +4,7 @@
 -- @Date   : 4/10/2019 6:43 PM
 
 ---@class Handle: object
-local Handle = class('Handle')
+Handle = class('Handle')
 
 ---inherit
 ---@private

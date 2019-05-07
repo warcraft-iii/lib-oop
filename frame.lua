@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Frame : Handle
-local Frame = class('Frame', Handle)
+Frame = class('Frame', Handle)
 
 ---<static> create
 ---@param name string

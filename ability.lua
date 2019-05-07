@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Ability : Agent
-local Ability = class('Ability', Agent)
+Ability = class('Ability', Agent)
 
 ---getBooleanField
 ---@param field AbilityBooleanField

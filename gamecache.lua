@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class GameCache : Agent
-local GameCache = class('GameCache', Agent)
+GameCache = class('GameCache', Agent)
 
 ---<static> create
 ---@param campaignFile string

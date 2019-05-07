@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Unit : Widget
-local Unit = class('Unit', Widget)
+Unit = class('Unit', Widget)
 
 ---<static> create
 ---@param player Player

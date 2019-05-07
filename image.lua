@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Image : Handle
-local Image = class('Image', Handle)
+Image = class('Image', Handle)
 
 ---<static> create
 ---@param file string

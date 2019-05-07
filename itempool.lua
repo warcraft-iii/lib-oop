@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class ItemPool : Handle
-local ItemPool = class('ItemPool', Handle)
+ItemPool = class('ItemPool', Handle)
 
 ---<static> create
 ---@return ItemPool

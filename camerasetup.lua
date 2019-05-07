@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class CameraSetup : Handle
-local CameraSetup = class('CameraSetup', Handle)
+CameraSetup = class('CameraSetup', Handle)
 
 ---<static> create
 ---@return CameraSetup

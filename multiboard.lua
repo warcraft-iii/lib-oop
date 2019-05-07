@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class MultiBoard : Agent
-local MultiBoard = class('MultiBoard', Agent)
+MultiBoard = class('MultiBoard', Agent)
 
 ---<static> create
 ---@return MultiBoard

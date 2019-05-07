@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Widget : Agent
-local Widget = class('Widget', Agent)
+Widget = class('Widget', Agent)
 
 ---getLife
 ---@return float

@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class WeatherEffect : Handle
-local WeatherEffect = class('WeatherEffect', Handle)
+WeatherEffect = class('WeatherEffect', Handle)
 
 ---remove
 ---@return void

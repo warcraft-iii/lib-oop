@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Destructable : Widget
-local Destructable = class('Destructable', Widget)
+Destructable = class('Destructable', Widget)
 
 ---<static> create
 ---@param objectId integer

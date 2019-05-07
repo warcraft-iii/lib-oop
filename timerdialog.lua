@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class TimerDialog : Agent
-local TimerDialog = class('TimerDialog', Agent)
+TimerDialog = class('TimerDialog', Agent)
 
 ---<static> create
 ---@param t Timer

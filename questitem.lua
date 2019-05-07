@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class QuestItem : Agent
-local QuestItem = class('QuestItem', Agent)
+QuestItem = class('QuestItem', Agent)
 
 ---setDescription
 ---@param description string

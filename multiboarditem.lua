@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class MultiBoardItem : Agent
-local MultiBoardItem = class('MultiBoardItem', Agent)
+MultiBoardItem = class('MultiBoardItem', Agent)
 
 ---release
 ---@return void

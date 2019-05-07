@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class LeaderBoard : Agent
-local LeaderBoard = class('LeaderBoard', Agent)
+LeaderBoard = class('LeaderBoard', Agent)
 
 ---<static> createLeaderboard
 ---@return LeaderBoard

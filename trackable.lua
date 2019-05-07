@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Trackable : Agent
-local Trackable = class('Trackable', Agent)
+Trackable = class('Trackable', Agent)
 
 ---<static> create
 ---@param trackableModelPath string

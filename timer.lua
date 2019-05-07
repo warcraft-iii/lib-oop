@@ -10,7 +10,7 @@
 --------------------------------------
 
 ---@class Timer : Agent
-local Timer = class('Timer', Agent)
+Timer = class('Timer', Agent)
 
 ---<static> create
 ---@return Timer

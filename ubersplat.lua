@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Ubersplat : Handle
-local Ubersplat = class('Ubersplat', Handle)
+Ubersplat = class('Ubersplat', Handle)
 
 ---<static> create
 ---@param x float

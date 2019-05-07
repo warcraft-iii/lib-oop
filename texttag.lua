@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class TextTag : Handle
-local TextTag = class('TextTag', Handle)
+TextTag = class('TextTag', Handle)
 
 ---<static> create
 ---@return TextTag

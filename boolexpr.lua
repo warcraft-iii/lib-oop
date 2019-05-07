@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class BoolExpr : Agent
-local BoolExpr = class('BoolExpr', Agent)
+BoolExpr = class('BoolExpr', Agent)
 
 ---and_
 ---@param operandB BoolExpr

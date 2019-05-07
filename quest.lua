@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Quest : Agent
-local Quest = class('Quest', Agent)
+Quest = class('Quest', Agent)
 
 ---<static> create
 ---@return Quest

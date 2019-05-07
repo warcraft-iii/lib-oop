@@ -4,4 +4,4 @@
 --------------------------------------
 
 ---@class Event : Agent
-local Event = class('Event', Agent)
+Event = class('Event', Agent)

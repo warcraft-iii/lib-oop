@@ -5,7 +5,7 @@
 local orig_Player = Player
 
 ---@class Player : Agent
-local Player = class('Player', Agent)
+Player = class('Player', Agent)
 
 ---<static> get
 ---@param number integer

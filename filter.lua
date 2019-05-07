@@ -11,7 +11,7 @@
 local orig_Filter = Filter
 
 ---@class Filter : BoolExpr
-local Filter = class('Filter', BoolExpr)
+Filter = class('Filter', BoolExpr)
 
 ---<static> create
 ---@param func function

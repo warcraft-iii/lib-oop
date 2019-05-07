@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class TerrainDeform : Handle
-local TerrainDeform = class('TerrainDeform', Handle)
+TerrainDeform = class('TerrainDeform', Handle)
 
 ---<static> crater
 ---@param x float

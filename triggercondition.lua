@@ -4,4 +4,4 @@
 --------------------------------------
 
 ---@class TriggerCondition : Agent
-local TriggerCondition = class('TriggerCondition', Agent)
+TriggerCondition = class('TriggerCondition', Agent)

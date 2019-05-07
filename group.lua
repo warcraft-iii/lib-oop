@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Group : Agent
-local Group = class('Group', Agent)
+Group = class('Group', Agent)
 
 ---destructor
 ---@return void

@@ -4,4 +4,4 @@
 --------------------------------------
 
 ---@class Button : Agent
-local Button = class('Button', Agent)
+Button = class('Button', Agent)

@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Region : Agent
-local Region = class('Region', Agent)
+Region = class('Region', Agent)
 
 ---<static> create
 ---@return Region

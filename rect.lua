@@ -5,7 +5,7 @@
 local orig_Rect = Rect
 
 ---@class Rect : Agent
-local Rect = class('Rect', Agent)
+Rect = class('Rect', Agent)
 
 ---<static> create
 ---@param minX float

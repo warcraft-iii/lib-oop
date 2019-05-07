@@ -5,7 +5,7 @@
 local orig_Location = Location
 
 ---@class Location : Agent
-local Location = class('Location', Agent)
+Location = class('Location', Agent)
 
 ---<static> create
 ---@param x float

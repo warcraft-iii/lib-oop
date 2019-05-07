@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class Sound : Agent
-local Sound = class('Sound', Agent)
+Sound = class('Sound', Agent)
 
 ---<static> create
 ---@param fileName string

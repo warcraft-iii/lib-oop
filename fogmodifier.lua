@@ -4,7 +4,7 @@
 --------------------------------------
 
 ---@class FogModifier : Agent
-local FogModifier = class('FogModifier', Agent)
+FogModifier = class('FogModifier', Agent)
 
 ---<static> createRect
 ---@param forWhichPlayer Player

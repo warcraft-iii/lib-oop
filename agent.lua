@@ -4,4 +4,4 @@
 --------------------------------------
 
 ---@class Agent : Handle
-local Agent = class('Agent', Handle)
+Agent = class('Agent', Handle)
