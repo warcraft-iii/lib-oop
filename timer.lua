@@ -1,3 +1,9 @@
+-- timer.lua
+-- @Author : Dencer (tdaddon@163.com)
+-- @Link   : https://dengsir.github.io
+-- @Date   : 5/7/2019, 12:31:25 AM
+
+--[[generate begin]]
 --------------------------------------
 --   generate by common generator   --
 --    DO NOT WRITE CODE IN HERE     --
@@ -56,4 +62,13 @@ end
 ---@return void
 function Timer:resume()
     return ResumeTimer(getUd(self))
+end
+--[[generate end]]
+
+function Timer:after(n, fun)
+    local timer = Timer:create()
+    timer:start(n, false, function()
+        fun()
+        timer:destroy()
+    end)
 end
