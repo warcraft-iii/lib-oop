@@ -6,10 +6,12 @@
 ---@class Handle: object
 Handle = class('Handle')
 
+local weakMt = {__mode = 'k'}
+
 ---inherit
 ---@private
 function Handle:inherit()
-    self._object = {}
+    self._object = setmetatable({}, weakMt)
 end
 
 ---constructor
@@ -26,7 +28,10 @@ end
 ---@param ud userdata
 ---@return T
 function Handle:fromUd(ud)
-    return self._object[ud] or self:new(ud)
+    if not ud then
+        return
+    end
+    return  self._object[ud] or self:new(ud)
 end
 
 ---getUd
