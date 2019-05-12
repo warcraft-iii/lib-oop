@@ -1,32 +1,4 @@
--- filter.lua
--- @Author : DengSir (tdaddon@163.com)
--- @Link   : https://dengsir.github.io
--- @Date   : 4/10/2019 6:22 PM
-
---[[generate begin]]
---------------------------------------
---   generate by common generator   --
---    DO NOT WRITE CODE IN HERE     --
---------------------------------------
-local orig_Filter = Filter
-
----@class Filter : BoolExpr
-Filter = class('Filter', BoolExpr)
-
----<static> create
----@param func function
----@return Filter
-function Filter:create(func)
-    func = Function:errorable(func)
-    return Filter:fromUd(orig_Filter(func))
-end
-
----destroy
----@return void
-function Filter:destroy()
-    return DestroyFilter(getUd(self))
-end
---[[generate end]]
+local Filter = require('lib.oop.generated.filter')
 
 ---@alias UnitFilter fun(unit: Unit): boolean
 ---@alias PlayerFilter fun(player: Player): boolean
@@ -51,12 +23,14 @@ Filter.createUnitFilter = generateFilterCreator(Unit, GetFilterUnit)
 ---@return Filter
 Filter.createPlayerFilter = generateFilterCreator(Player, GetFilterPlayer)
 
----@createDestructableFilter
+---createDestructableFilter
 ---@param filter DestructableFilter
 ---@return Filter
 Filter.createDestructableFilter = generateFilterCreator(Destructable, GetFilterDestructable)
 
----@createItemFilter
+---createItemFilter
 ---@param filter ItemFilter
 ---@return Filter
 Filter.createItemFilter = generateFilterCreator(Item, GetFilterItem)
+
+return Filter

@@ -52,12 +52,12 @@ Function.createUnitCallback = generateCallbackCreator(Unit, GetEnumUnit)
 ---@return function
 Function.createPlayerCallback = generateCallbackCreator(Player, GetEnumPlayer)
 
----@createDestructableCallback
+---createDestructableCallback
 ---@param filter DestructableCallback
 ---@return function
 Function.createDestructableCallback = generateCallbackCreator(Destructable, GetEnumDestructable)
 
----@createItemCallback
+---createItemCallback
 ---@param filter ItemCallback
 ---@return function
 Function.createItemCallback = generateCallbackCreator(Item, GetEnumItem)

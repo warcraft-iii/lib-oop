@@ -4,7 +4,7 @@
 -- @Date   : 4/10/2019 6:43 PM
 
 ---@class Handle: object
-Handle = class('Handle')
+local Handle = class('Handle')
 
 local weakMt = {__mode = 'k'}
 
@@ -45,3 +45,5 @@ function getUd(obj)
         return obj[0]
     end
 end
+
+return Handle
