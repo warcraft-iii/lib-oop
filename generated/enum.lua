@@ -985,6 +985,7 @@ GameEvent = {
     TournamentFinishSoon = ConvertGameEvent(257), --EVENT_GAME_TOURNAMENT_FINISH_SOON
     TournamentFinishNow = ConvertGameEvent(258), --EVENT_GAME_TOURNAMENT_FINISH_NOW
     Save = ConvertGameEvent(259), --EVENT_GAME_SAVE
+    CustomUiFrame = ConvertGameEvent(310), --EVENT_GAME_CUSTOM_UI_FRAME
 }
 
 ---@class GameSpeed
@@ -1448,6 +1449,10 @@ PlayerEvent = {
     MouseDown = ConvertPlayerEvent(305), --EVENT_PLAYER_MOUSE_DOWN
     MouseUp = ConvertPlayerEvent(306), --EVENT_PLAYER_MOUSE_UP
     MouseMove = ConvertPlayerEvent(307), --EVENT_PLAYER_MOUSE_MOVE
+    SyncData = ConvertPlayerEvent(309), --EVENT_PLAYER_SYNC_DATA
+    Key = ConvertPlayerEvent(311), --EVENT_PLAYER_KEY
+    KeyDown = ConvertPlayerEvent(312), --EVENT_PLAYER_KEY_DOWN
+    KeyUp = ConvertPlayerEvent(313), --EVENT_PLAYER_KEY_UP
 }
 
 ---@class PlayerGameresult
@@ -1554,6 +1559,7 @@ PlayerUnitEvent = {
     UnitUseItem = ConvertPlayerUnitEvent(50), --EVENT_PLAYER_UNIT_USE_ITEM
     UnitLoaded = ConvertPlayerUnitEvent(51), --EVENT_PLAYER_UNIT_LOADED
     UnitDamaged = ConvertPlayerUnitEvent(308), --EVENT_PLAYER_UNIT_DAMAGED
+    UnitDamaging = ConvertPlayerUnitEvent(315), --EVENT_PLAYER_UNIT_DAMAGING
     UnitSell = ConvertPlayerUnitEvent(269), --EVENT_PLAYER_UNIT_SELL
     UnitChangeOwner = ConvertPlayerUnitEvent(270), --EVENT_PLAYER_UNIT_CHANGE_OWNER
     UnitSellItem = ConvertPlayerUnitEvent(271), --EVENT_PLAYER_UNIT_SELL_ITEM
@@ -1742,6 +1748,7 @@ UnitCategory = {
 ---@class UnitEvent
 UnitEvent = {
     Damaged = ConvertUnitEvent(52), --EVENT_UNIT_DAMAGED
+    Damaging = ConvertUnitEvent(314), --EVENT_UNIT_DAMAGING
     Death = ConvertUnitEvent(53), --EVENT_UNIT_DEATH
     Decay = ConvertUnitEvent(54), --EVENT_UNIT_DECAY
     Detected = ConvertUnitEvent(55), --EVENT_UNIT_DETECTED

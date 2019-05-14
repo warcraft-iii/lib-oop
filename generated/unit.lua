@@ -4,56 +4,56 @@ local Native = require('lib.native.native')
 local Unit = class('Unit', assert(require('lib.oop.widget')))
 
 ---<static> create
----@param player Player
----@param unitId integer
+---@param id Player
+---@param unitid integer
 ---@param x float
 ---@param y float
 ---@param face float
 ---@return Unit
-function Unit:create(player, unitId, x, y, face)
-    return Unit:fromUd(Native.CreateUnit(getUd(player), unitId, x, y, face))
+function Unit:create(id, unitid, x, y, face)
+    return Unit:fromUd(Native.CreateUnit(getUd(id), unitid, x, y, face))
 end
 
 ---<static> createByName
 ---@param player Player
----@param unitName string
+---@param unitname string
 ---@param x float
 ---@param y float
 ---@param face float
 ---@return Unit
-function Unit:createByName(player, unitName, x, y, face)
-    return Unit:fromUd(Native.CreateUnitByName(getUd(player), unitName, x, y, face))
+function Unit:createByName(player, unitname, x, y, face)
+    return Unit:fromUd(Native.CreateUnitByName(getUd(player), unitname, x, y, face))
 end
 
 ---<static> createAtLoc
----@param player Player
----@param unitId integer
+---@param id Player
+---@param unitid integer
 ---@param loc Location
 ---@param face float
 ---@return Unit
-function Unit:createAtLoc(player, unitId, loc, face)
-    return Unit:fromUd(Native.CreateUnitAtLoc(getUd(player), unitId, getUd(loc), face))
+function Unit:createAtLoc(id, unitid, loc, face)
+    return Unit:fromUd(Native.CreateUnitAtLoc(getUd(id), unitid, getUd(loc), face))
 end
 
 ---<static> createAtLocByName
----@param player Player
----@param unitName string
+---@param id Player
+---@param unitname string
 ---@param loc Location
 ---@param face float
 ---@return Unit
-function Unit:createAtLocByName(player, unitName, loc, face)
-    return Unit:fromUd(Native.CreateUnitAtLocByName(getUd(player), unitName, getUd(loc), face))
+function Unit:createAtLocByName(id, unitname, loc, face)
+    return Unit:fromUd(Native.CreateUnitAtLocByName(getUd(id), unitname, getUd(loc), face))
 end
 
 ---<static> createCorpse
 ---@param player Player
----@param unitId integer
+---@param unitid integer
 ---@param x float
 ---@param y float
 ---@param face float
 ---@return Unit
-function Unit:createCorpse(player, unitId, x, y, face)
-    return Unit:fromUd(Native.CreateCorpse(getUd(player), unitId, x, y, face))
+function Unit:createCorpse(player, unitid, x, y, face)
+    return Unit:fromUd(Native.CreateCorpse(getUd(player), unitid, x, y, face))
 end
 
 ---<static> createBlightedGoldmine
@@ -472,56 +472,56 @@ function Unit:isSuspendedXP()
 end
 
 ---selectHeroSkill
----@param abilityCode integer
+---@param abilcode integer
 ---@return void
-function Unit:selectHeroSkill(abilityCode)
-    return Native.SelectHeroSkill(getUd(self), abilityCode)
+function Unit:selectHeroSkill(abilcode)
+    return Native.SelectHeroSkill(getUd(self), abilcode)
 end
 
 ---getAbilityLevel
----@param abilityCode integer
+---@param abilcode integer
 ---@return integer
-function Unit:getAbilityLevel(abilityCode)
-    return Native.GetUnitAbilityLevel(getUd(self), abilityCode)
+function Unit:getAbilityLevel(abilcode)
+    return Native.GetUnitAbilityLevel(getUd(self), abilcode)
 end
 
 ---decAbilityLevel
----@param abilityCode integer
+---@param abilcode integer
 ---@return integer
-function Unit:decAbilityLevel(abilityCode)
-    return Native.DecUnitAbilityLevel(getUd(self), abilityCode)
+function Unit:decAbilityLevel(abilcode)
+    return Native.DecUnitAbilityLevel(getUd(self), abilcode)
 end
 
 ---incAbilityLevel
----@param abilityCode integer
+---@param abilcode integer
 ---@return integer
-function Unit:incAbilityLevel(abilityCode)
-    return Native.IncUnitAbilityLevel(getUd(self), abilityCode)
+function Unit:incAbilityLevel(abilcode)
+    return Native.IncUnitAbilityLevel(getUd(self), abilcode)
 end
 
 ---setAbilityLevel
----@param abilityCode integer
+---@param abilcode integer
 ---@param level integer
 ---@return integer
-function Unit:setAbilityLevel(abilityCode, level)
-    return Native.SetUnitAbilityLevel(getUd(self), abilityCode, level)
+function Unit:setAbilityLevel(abilcode, level)
+    return Native.SetUnitAbilityLevel(getUd(self), abilcode, level)
 end
 
 ---reviveHero
 ---@param x float
 ---@param y float
----@param doEyeCandy boolean
+---@param doEyecandy boolean
 ---@return boolean
-function Unit:reviveHero(x, y, doEyeCandy)
-    return Native.ReviveHero(getUd(self), x, y, doEyeCandy)
+function Unit:reviveHero(x, y, doEyecandy)
+    return Native.ReviveHero(getUd(self), x, y, doEyecandy)
 end
 
 ---reviveHeroLoc
 ---@param loc Location
----@param doEyeCandy boolean
+---@param doEyecandy boolean
 ---@return boolean
-function Unit:reviveHeroLoc(loc, doEyeCandy)
-    return Native.ReviveHeroLoc(getUd(self), getUd(loc), doEyeCandy)
+function Unit:reviveHeroLoc(loc, doEyecandy)
+    return Native.ReviveHeroLoc(getUd(self), getUd(loc), doEyecandy)
 end
 
 ---setExploded
@@ -1397,20 +1397,20 @@ function Unit:addIndicator(red, green, blue, alpha)
 end
 
 ---setCameraTargetController
----@param xOffset float
----@param yOffset float
+---@param xoffset float
+---@param yoffset float
 ---@param inheritOrientation boolean
 ---@return void
-function Unit:setCameraTargetController(xOffset, yOffset, inheritOrientation)
-    return Native.SetCameraTargetController(getUd(self), xOffset, yOffset, inheritOrientation)
+function Unit:setCameraTargetController(xoffset, yoffset, inheritOrientation)
+    return Native.SetCameraTargetController(getUd(self), xoffset, yoffset, inheritOrientation)
 end
 
 ---setCameraOrientController
----@param xOffset float
----@param yOffset float
+---@param xoffset float
+---@param yoffset float
 ---@return void
-function Unit:setCameraOrientController(xOffset, yOffset)
-    return Native.SetCameraOrientController(getUd(self), xOffset, yOffset)
+function Unit:setCameraOrientController(xoffset, yoffset)
+    return Native.SetCameraOrientController(getUd(self), xoffset, yoffset)
 end
 
 ---removeGuardPosition
@@ -1539,20 +1539,20 @@ function Unit:setArmor(armorAmount)
 end
 
 ---hideAbility
----@param abilityId integer
+---@param abilId integer
 ---@param flag boolean
 ---@return void
-function Unit:hideAbility(abilityId, flag)
-    return Native.BlzUnitHideAbility(getUd(self), abilityId, flag)
+function Unit:hideAbility(abilId, flag)
+    return Native.BlzUnitHideAbility(getUd(self), abilId, flag)
 end
 
 ---disableAbility
----@param abilityId integer
+---@param abilId integer
 ---@param flag boolean
 ---@param hideUI boolean
 ---@return void
-function Unit:disableAbility(abilityId, flag, hideUI)
-    return Native.BlzUnitDisableAbility(getUd(self), abilityId, flag, hideUI)
+function Unit:disableAbility(abilId, flag, hideUI)
+    return Native.BlzUnitDisableAbility(getUd(self), abilId, flag, hideUI)
 end
 
 ---cancelTimedLife
@@ -1586,51 +1586,51 @@ function Unit:getCollisionSize()
 end
 
 ---setAbilityCooldown
----@param abilityId integer
+---@param abilId integer
 ---@param level integer
 ---@param cooldown float
 ---@return void
-function Unit:setAbilityCooldown(abilityId, level, cooldown)
-    return Native.BlzSetUnitAbilityCooldown(getUd(self), abilityId, level, cooldown)
+function Unit:setAbilityCooldown(abilId, level, cooldown)
+    return Native.BlzSetUnitAbilityCooldown(getUd(self), abilId, level, cooldown)
 end
 
 ---getAbilityCooldown
----@param abilityId integer
+---@param abilId integer
 ---@param level integer
 ---@return float
-function Unit:getAbilityCooldown(abilityId, level)
-    return Native.BlzGetUnitAbilityCooldown(getUd(self), abilityId, level)
+function Unit:getAbilityCooldown(abilId, level)
+    return Native.BlzGetUnitAbilityCooldown(getUd(self), abilId, level)
 end
 
 ---getAbilityCooldownRemaining
----@param abilityId integer
+---@param abilId integer
 ---@return float
-function Unit:getAbilityCooldownRemaining(abilityId)
-    return Native.BlzGetUnitAbilityCooldownRemaining(getUd(self), abilityId)
+function Unit:getAbilityCooldownRemaining(abilId)
+    return Native.BlzGetUnitAbilityCooldownRemaining(getUd(self), abilId)
 end
 
 ---endAbilityCooldown
----@param abilityCode integer
+---@param abilCode integer
 ---@return void
-function Unit:endAbilityCooldown(abilityCode)
-    return Native.BlzEndUnitAbilityCooldown(getUd(self), abilityCode)
+function Unit:endAbilityCooldown(abilCode)
+    return Native.BlzEndUnitAbilityCooldown(getUd(self), abilCode)
 end
 
 ---getAbilityManaCost
----@param abilityId integer
+---@param abilId integer
 ---@param level integer
 ---@return integer
-function Unit:getAbilityManaCost(abilityId, level)
-    return Native.BlzGetUnitAbilityManaCost(getUd(self), abilityId, level)
+function Unit:getAbilityManaCost(abilId, level)
+    return Native.BlzGetUnitAbilityManaCost(getUd(self), abilId, level)
 end
 
 ---setAbilityManaCost
----@param abilityId integer
+---@param abilId integer
 ---@param level integer
 ---@param manaCost integer
 ---@return void
-function Unit:setAbilityManaCost(abilityId, level, manaCost)
-    return Native.BlzSetUnitAbilityManaCost(getUd(self), abilityId, level, manaCost)
+function Unit:setAbilityManaCost(abilId, level, manaCost)
+    return Native.BlzSetUnitAbilityManaCost(getUd(self), abilId, level, manaCost)
 end
 
 ---getLocalZ
@@ -1646,10 +1646,10 @@ function Unit:getZ()
 end
 
 ---getAbility
----@param abilityId integer
+---@param abilId integer
 ---@return Ability
-function Unit:getAbility(abilityId)
-    return Ability:fromUd(Native.BlzGetUnitAbility(getUd(self), abilityId))
+function Unit:getAbility(abilId)
+    return Ability:fromUd(Native.BlzGetUnitAbility(getUd(self), abilId))
 end
 
 ---getAbilityByIndex

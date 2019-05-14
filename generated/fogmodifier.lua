@@ -17,14 +17,14 @@ end
 ---<static> createRadius
 ---@param forWhichPlayer Player
 ---@param state FogState
----@param centerX float
+---@param centerx float
 ---@param centerY float
 ---@param radius float
 ---@param useSharedVision boolean
 ---@param afterUnits boolean
 ---@return FogModifier
-function FogModifier:createRadius(forWhichPlayer, state, centerX, centerY, radius, useSharedVision, afterUnits)
-    return FogModifier:fromUd(Native.CreateFogModifierRadius(getUd(forWhichPlayer), state, centerX, centerY, radius, useSharedVision, afterUnits))
+function FogModifier:createRadius(forWhichPlayer, state, centerx, centerY, radius, useSharedVision, afterUnits)
+    return FogModifier:fromUd(Native.CreateFogModifierRadius(getUd(forWhichPlayer), state, centerx, centerY, radius, useSharedVision, afterUnits))
 end
 
 ---<static> createRadiusLoc

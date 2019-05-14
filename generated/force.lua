@@ -29,6 +29,13 @@ function Force:removePlayer(player)
     return Native.ForceRemovePlayer(getUd(self), getUd(player))
 end
 
+---hasPlayer
+---@param player Player
+---@return boolean
+function Force:hasPlayer(player)
+    return Native.BlzForceHasPlayer(getUd(self), getUd(player))
+end
+
 ---clear
 ---@return void
 function Force:clear()

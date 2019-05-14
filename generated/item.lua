@@ -4,12 +4,12 @@ local Native = require('lib.native.native')
 local Item = class('Item', assert(require('lib.oop.widget')))
 
 ---<static> create
----@param itemId integer
+---@param itemid integer
 ---@param x float
 ---@param y float
 ---@return Item
-function Item:create(itemId, x, y)
-    return Item:fromUd(Native.CreateItem(itemId, x, y))
+function Item:create(itemid, x, y)
+    return Item:fromUd(Native.CreateItem(itemid, x, y))
 end
 
 ---remove
@@ -247,17 +247,17 @@ function Item:getAbilityByIndex(index)
 end
 
 ---getAbility
----@param abilityCode integer
+---@param abilCode integer
 ---@return Ability
-function Item:getAbility(abilityCode)
-    return Ability:fromUd(Native.BlzGetItemAbility(getUd(self), abilityCode))
+function Item:getAbility(abilCode)
+    return Ability:fromUd(Native.BlzGetItemAbility(getUd(self), abilCode))
 end
 
 ---addAbility
----@param abilityCode integer
+---@param abilCode integer
 ---@return boolean
-function Item:addAbility(abilityCode)
-    return Native.BlzItemAddAbility(getUd(self), abilityCode)
+function Item:addAbility(abilCode)
+    return Native.BlzItemAddAbility(getUd(self), abilCode)
 end
 
 ---getBooleanField
@@ -321,10 +321,10 @@ function Item:setStringField(field, value)
 end
 
 ---removeAbility
----@param abilityCode integer
+---@param abilCode integer
 ---@return boolean
-function Item:removeAbility(abilityCode)
-    return Native.BlzItemRemoveAbility(getUd(self), abilityCode)
+function Item:removeAbility(abilCode)
+    return Native.BlzItemRemoveAbility(getUd(self), abilCode)
 end
 
 return Item

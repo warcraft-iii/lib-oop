@@ -67,10 +67,10 @@ end
 ---registerVariableEvent
 ---@param varName string
 ---@param opcode LimitOp
----@param limitVal float
+---@param limitval float
 ---@return Event
-function Trigger:registerVariableEvent(varName, opcode, limitVal)
-    return Event:fromUd(Native.TriggerRegisterVariableEvent(getUd(self), varName, opcode, limitVal))
+function Trigger:registerVariableEvent(varName, opcode, limitval)
+    return Event:fromUd(Native.TriggerRegisterVariableEvent(getUd(self), varName, opcode, limitval))
 end
 
 ---registerTimerEvent
@@ -91,10 +91,10 @@ end
 ---registerGameStateEvent
 ---@param state GameState
 ---@param opcode LimitOp
----@param limitVal float
+---@param limitval float
 ---@return Event
-function Trigger:registerGameStateEvent(state, opcode, limitVal)
-    return Event:fromUd(Native.TriggerRegisterGameStateEvent(getUd(self), state, opcode, limitVal))
+function Trigger:registerGameStateEvent(state, opcode, limitval)
+    return Event:fromUd(Native.TriggerRegisterGameStateEvent(getUd(self), state, opcode, limitval))
 end
 
 ---registerDialogEvent
@@ -177,10 +177,10 @@ end
 ---@param player Player
 ---@param state PlayerState
 ---@param opcode LimitOp
----@param limitVal float
+---@param limitval float
 ---@return Event
-function Trigger:registerPlayerStateEvent(player, state, opcode, limitVal)
-    return Event:fromUd(Native.TriggerRegisterPlayerStateEvent(getUd(self), getUd(player), state, opcode, limitVal))
+function Trigger:registerPlayerStateEvent(player, state, opcode, limitval)
+    return Event:fromUd(Native.TriggerRegisterPlayerStateEvent(getUd(self), getUd(player), state, opcode, limitval))
 end
 
 ---registerPlayerChatEvent
@@ -203,10 +203,10 @@ end
 ---@param unit Unit
 ---@param state UnitState
 ---@param opcode LimitOp
----@param limitVal float
+---@param limitval float
 ---@return Event
-function Trigger:registerUnitStateEvent(unit, state, opcode, limitVal)
-    return Event:fromUd(Native.TriggerRegisterUnitStateEvent(getUd(self), getUd(unit), state, opcode, limitVal))
+function Trigger:registerUnitStateEvent(unit, state, opcode, limitval)
+    return Event:fromUd(Native.TriggerRegisterUnitStateEvent(getUd(self), getUd(unit), state, opcode, limitval))
 end
 
 ---registerUnitEvent

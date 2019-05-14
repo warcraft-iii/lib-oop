@@ -319,50 +319,50 @@ function Player:setHandicapXP(handicap)
 end
 
 ---setTechMaxAllowed
----@param techId integer
+---@param techid integer
 ---@param maximum integer
 ---@return void
-function Player:setTechMaxAllowed(techId, maximum)
-    return Native.SetPlayerTechMaxAllowed(getUd(self), techId, maximum)
+function Player:setTechMaxAllowed(techid, maximum)
+    return Native.SetPlayerTechMaxAllowed(getUd(self), techid, maximum)
 end
 
 ---getTechMaxAllowed
----@param techId integer
+---@param techid integer
 ---@return integer
-function Player:getTechMaxAllowed(techId)
-    return Native.GetPlayerTechMaxAllowed(getUd(self), techId)
+function Player:getTechMaxAllowed(techid)
+    return Native.GetPlayerTechMaxAllowed(getUd(self), techid)
 end
 
 ---addTechResearched
----@param techId integer
+---@param techid integer
 ---@param levels integer
 ---@return void
-function Player:addTechResearched(techId, levels)
-    return Native.AddPlayerTechResearched(getUd(self), techId, levels)
+function Player:addTechResearched(techid, levels)
+    return Native.AddPlayerTechResearched(getUd(self), techid, levels)
 end
 
 ---setTechResearched
----@param techId integer
+---@param techid integer
 ---@param setToLevel integer
 ---@return void
-function Player:setTechResearched(techId, setToLevel)
-    return Native.SetPlayerTechResearched(getUd(self), techId, setToLevel)
+function Player:setTechResearched(techid, setToLevel)
+    return Native.SetPlayerTechResearched(getUd(self), techid, setToLevel)
 end
 
 ---getTechResearched
----@param techId integer
----@param specificOnly boolean
+---@param techid integer
+---@param specificonly boolean
 ---@return boolean
-function Player:getTechResearched(techId, specificOnly)
-    return Native.GetPlayerTechResearched(getUd(self), techId, specificOnly)
+function Player:getTechResearched(techid, specificonly)
+    return Native.GetPlayerTechResearched(getUd(self), techid, specificonly)
 end
 
 ---getTechCount
----@param techId integer
----@param specificOnly boolean
+---@param techid integer
+---@param specificonly boolean
 ---@return integer
-function Player:getTechCount(techId, specificOnly)
-    return Native.GetPlayerTechCount(getUd(self), techId, specificOnly)
+function Player:getTechCount(techid, specificonly)
+    return Native.GetPlayerTechCount(getUd(self), techid, specificonly)
 end
 
 ---setUnitsOwner
@@ -381,11 +381,11 @@ function Player:cripple(toWhichPlayers, flag)
 end
 
 ---setAbilityAvailable
----@param abilityId integer
+---@param abilid integer
 ---@param avail boolean
 ---@return void
-function Player:setAbilityAvailable(abilityId, avail)
-    return Native.SetPlayerAbilityAvailable(getUd(self), abilityId, avail)
+function Player:setAbilityAvailable(abilid, avail)
+    return Native.SetPlayerAbilityAvailable(getUd(self), abilid, avail)
 end
 
 ---setState
@@ -420,13 +420,13 @@ end
 
 ---setFogStateRadius
 ---@param state FogState
----@param centerX float
+---@param centerx float
 ---@param centerY float
 ---@param radius float
 ---@param useSharedVision boolean
 ---@return void
-function Player:setFogStateRadius(state, centerX, centerY, radius, useSharedVision)
-    return Native.SetFogStateRadius(getUd(self), state, centerX, centerY, radius, useSharedVision)
+function Player:setFogStateRadius(state, centerx, centerY, radius, useSharedVision)
+    return Native.SetFogStateRadius(getUd(self), state, centerx, centerY, radius, useSharedVision)
 end
 
 ---setFogStateRadiusLoc
@@ -567,11 +567,11 @@ function Player:removeAllGuardPositions()
 end
 
 ---decTechResearched
----@param techId integer
+---@param techid integer
 ---@param levels integer
 ---@return void
-function Player:decTechResearched(techId, levels)
-    return Native.BlzDecPlayerTechResearched(getUd(self), techId, levels)
+function Player:decTechResearched(techid, levels)
+    return Native.BlzDecPlayerTechResearched(getUd(self), techid, levels)
 end
 
 ---displayChatMessage

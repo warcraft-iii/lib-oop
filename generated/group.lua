@@ -63,12 +63,12 @@ function Group:unitAt(index)
 end
 
 ---enumUnitsOfType
----@param unitName string
+---@param unitname string
 ---@param filter UnitFilter
 ---@return void
-function Group:enumUnitsOfType(unitName, filter)
+function Group:enumUnitsOfType(unitname, filter)
     filter = Filter:createUnitFilter(filter)
-    Native.GroupEnumUnitsOfType(getUd(self), unitName, getUd(filter))
+    Native.GroupEnumUnitsOfType(getUd(self), unitname, getUd(filter))
     filter:destroy()
 end
 
@@ -83,13 +83,13 @@ function Group:enumUnitsOfPlayer(player, filter)
 end
 
 ---enumUnitsOfTypeCounted
----@param unitName string
+---@param unitname string
 ---@param countLimit integer
 ---@param filter UnitFilter
 ---@return void
-function Group:enumUnitsOfTypeCounted(unitName, countLimit, filter)
+function Group:enumUnitsOfTypeCounted(unitname, countLimit, filter)
     filter = Filter:createUnitFilter(filter)
-    Native.GroupEnumUnitsOfTypeCounted(getUd(self), unitName, getUd(filter), countLimit)
+    Native.GroupEnumUnitsOfTypeCounted(getUd(self), unitname, getUd(filter), countLimit)
     filter:destroy()
 end
 

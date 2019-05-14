@@ -51,11 +51,11 @@ function TextTag:setColor(red, green, blue, alpha)
 end
 
 ---setVelocity
----@param xVel float
----@param yVel float
+---@param xvel float
+---@param yvel float
 ---@return void
-function TextTag:setVelocity(xVel, yVel)
-    return Native.SetTextTagVelocity(getUd(self), xVel, yVel)
+function TextTag:setVelocity(xvel, yvel)
+    return Native.SetTextTagVelocity(getUd(self), xvel, yvel)
 end
 
 ---setVisibility

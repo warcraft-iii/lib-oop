@@ -4,19 +4,19 @@ local Native = require('lib.native.native')
 local Destructable = class('Destructable', assert(require('lib.oop.widget')))
 
 ---<static> create
----@param objectId integer
+---@param objectid integer
 ---@param x float
 ---@param y float
 ---@param face float
 ---@param scale float
 ---@param variation integer
 ---@return Destructable
-function Destructable:create(objectId, x, y, face, scale, variation)
-    return Destructable:fromUd(Native.CreateDestructable(objectId, x, y, face, scale, variation))
+function Destructable:create(objectid, x, y, face, scale, variation)
+    return Destructable:fromUd(Native.CreateDestructable(objectid, x, y, face, scale, variation))
 end
 
 ---<static> createZ
----@param objectId integer
+---@param objectid integer
 ---@param x float
 ---@param y float
 ---@param z float
@@ -24,24 +24,24 @@ end
 ---@param scale float
 ---@param variation integer
 ---@return Destructable
-function Destructable:createZ(objectId, x, y, z, face, scale, variation)
-    return Destructable:fromUd(Native.CreateDestructableZ(objectId, x, y, z, face, scale, variation))
+function Destructable:createZ(objectid, x, y, z, face, scale, variation)
+    return Destructable:fromUd(Native.CreateDestructableZ(objectid, x, y, z, face, scale, variation))
 end
 
 ---<static> createDead
----@param objectId integer
+---@param objectid integer
 ---@param x float
 ---@param y float
 ---@param face float
 ---@param scale float
 ---@param variation integer
 ---@return Destructable
-function Destructable:createDead(objectId, x, y, face, scale, variation)
-    return Destructable:fromUd(Native.CreateDeadDestructable(objectId, x, y, face, scale, variation))
+function Destructable:createDead(objectid, x, y, face, scale, variation)
+    return Destructable:fromUd(Native.CreateDeadDestructable(objectid, x, y, face, scale, variation))
 end
 
 ---<static> createDeadZ
----@param objectId integer
+---@param objectid integer
 ---@param x float
 ---@param y float
 ---@param z float
@@ -49,8 +49,8 @@ end
 ---@param scale float
 ---@param variation integer
 ---@return Destructable
-function Destructable:createDeadZ(objectId, x, y, z, face, scale, variation)
-    return Destructable:fromUd(Native.CreateDeadDestructableZ(objectId, x, y, z, face, scale, variation))
+function Destructable:createDeadZ(objectid, x, y, z, face, scale, variation)
+    return Destructable:fromUd(Native.CreateDeadDestructableZ(objectid, x, y, z, face, scale, variation))
 end
 
 ---remove

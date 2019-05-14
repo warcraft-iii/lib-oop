@@ -4,13 +4,13 @@ local Native = require('lib.native.native')
 local Rect = class('Rect', assert(require('lib.oop.agent')))
 
 ---<static> create
----@param minX float
----@param minY float
----@param maxX float
----@param maxY float
+---@param minx float
+---@param miny float
+---@param maxx float
+---@param maxy float
 ---@return Rect
-function Rect:create(minX, minY, maxX, maxY)
-    return Rect:fromUd(Native.Rect(minX, minY, maxX, maxY))
+function Rect:create(minx, miny, maxx, maxy)
+    return Rect:fromUd(Native.Rect(minx, miny, maxx, maxy))
 end
 
 ---<static> fromLoc
@@ -28,13 +28,13 @@ function Rect:remove()
 end
 
 ---set
----@param minX float
----@param minY float
----@param maxX float
----@param maxY float
+---@param minx float
+---@param miny float
+---@param maxx float
+---@param maxy float
 ---@return void
-function Rect:set(minX, minY, maxX, maxY)
-    return Native.SetRect(getUd(self), minX, minY, maxX, maxY)
+function Rect:set(minx, miny, maxx, maxy)
+    return Native.SetRect(getUd(self), minx, miny, maxx, maxy)
 end
 
 ---setFromLoc

@@ -7,38 +7,38 @@ local Sound = class('Sound', assert(require('lib.oop.agent')))
 ---@param fileName string
 ---@param looping boolean
 ---@param is3D boolean
----@param stopWhenOutOfRange boolean
+---@param stopwhenoutofrange boolean
 ---@param fadeInRate integer
 ---@param fadeOutRate integer
 ---@param eaxSetting string
 ---@return Sound
-function Sound:create(fileName, looping, is3D, stopWhenOutOfRange, fadeInRate, fadeOutRate, eaxSetting)
-    return Sound:fromUd(Native.CreateSound(fileName, looping, is3D, stopWhenOutOfRange, fadeInRate, fadeOutRate, eaxSetting))
+function Sound:create(fileName, looping, is3D, stopwhenoutofrange, fadeInRate, fadeOutRate, eaxSetting)
+    return Sound:fromUd(Native.CreateSound(fileName, looping, is3D, stopwhenoutofrange, fadeInRate, fadeOutRate, eaxSetting))
 end
 
 ---<static> createFilenameWithLabel
 ---@param fileName string
 ---@param looping boolean
 ---@param is3D boolean
----@param stopWhenOutOfRange boolean
+---@param stopwhenoutofrange boolean
 ---@param fadeInRate integer
 ---@param fadeOutRate integer
 ---@param SLKEntryName string
 ---@return Sound
-function Sound:createFilenameWithLabel(fileName, looping, is3D, stopWhenOutOfRange, fadeInRate, fadeOutRate, SLKEntryName)
-    return Sound:fromUd(Native.CreateSoundFilenameWithLabel(fileName, looping, is3D, stopWhenOutOfRange, fadeInRate, fadeOutRate, SLKEntryName))
+function Sound:createFilenameWithLabel(fileName, looping, is3D, stopwhenoutofrange, fadeInRate, fadeOutRate, SLKEntryName)
+    return Sound:fromUd(Native.CreateSoundFilenameWithLabel(fileName, looping, is3D, stopwhenoutofrange, fadeInRate, fadeOutRate, SLKEntryName))
 end
 
 ---<static> createFromLabel
 ---@param soundLabel string
 ---@param looping boolean
 ---@param is3D boolean
----@param stopWhenOutOfRange boolean
+---@param stopwhenoutofrange boolean
 ---@param fadeInRate integer
 ---@param fadeOutRate integer
 ---@return Sound
-function Sound:createFromLabel(soundLabel, looping, is3D, stopWhenOutOfRange, fadeInRate, fadeOutRate)
-    return Sound:fromUd(Native.CreateSoundFromLabel(soundLabel, looping, is3D, stopWhenOutOfRange, fadeInRate, fadeOutRate))
+function Sound:createFromLabel(soundLabel, looping, is3D, stopwhenoutofrange, fadeInRate, fadeOutRate)
+    return Sound:fromUd(Native.CreateSoundFromLabel(soundLabel, looping, is3D, stopwhenoutofrange, fadeInRate, fadeOutRate))
 end
 
 ---<static> createMIDI
@@ -93,10 +93,10 @@ function Sound:setPitch(pitch)
 end
 
 ---setPlayPosition
----@param milliSecs integer
+---@param millisecs integer
 ---@return void
-function Sound:setPlayPosition(milliSecs)
-    return Native.SetSoundPlayPosition(getUd(self), milliSecs)
+function Sound:setPlayPosition(millisecs)
+    return Native.SetSoundPlayPosition(getUd(self), millisecs)
 end
 
 ---setDistances
@@ -197,20 +197,20 @@ end
 
 ---registerStacked
 ---@param byPosition boolean
----@param rectWidth float
----@param rectHeight float
+---@param rectwidth float
+---@param rectheight float
 ---@return void
-function Sound:registerStacked(byPosition, rectWidth, rectHeight)
-    return Native.RegisterStackedSound(getUd(self), byPosition, rectWidth, rectHeight)
+function Sound:registerStacked(byPosition, rectwidth, rectheight)
+    return Native.RegisterStackedSound(getUd(self), byPosition, rectwidth, rectheight)
 end
 
 ---unregisterStacked
 ---@param byPosition boolean
----@param rectWidth float
----@param rectHeight float
+---@param rectwidth float
+---@param rectheight float
 ---@return void
-function Sound:unregisterStacked(byPosition, rectWidth, rectHeight)
-    return Native.UnregisterStackedSound(getUd(self), byPosition, rectWidth, rectHeight)
+function Sound:unregisterStacked(byPosition, rectwidth, rectheight)
+    return Native.UnregisterStackedSound(getUd(self), byPosition, rectwidth, rectheight)
 end
 
 return Sound
