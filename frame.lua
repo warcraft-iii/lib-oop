@@ -13,7 +13,7 @@ end
 
 ---clearFocus
 function Frame:clearFocus()
-    return self:setFocus(true)
+    return self:setFocus(false)
 end
 
 return Frame
