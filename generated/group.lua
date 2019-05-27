@@ -1,4 +1,7 @@
 local Native = require('lib.native.native')
+local Unit = require('lib.oop.unit')
+local Filter = require('lib.oop.filter')
+local Function = require('lib.oop.function')
 
 ---@class Group : Agent
 local Group = class('Group', assert(require('lib.oop.agent')))

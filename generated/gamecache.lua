@@ -1,4 +1,5 @@
 local Native = require('lib.native.native')
+local Unit = require('lib.oop.unit')
 
 ---@class GameCache : Agent
 local GameCache = class('GameCache', assert(require('lib.oop.agent')))

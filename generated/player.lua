@@ -1,4 +1,5 @@
 local Native = require('lib.native.native')
+local LeaderBoard = require('lib.oop.leaderboard')
 
 ---@class Player : Agent
 local Player = class('Player', assert(require('lib.oop.agent')))

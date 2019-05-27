@@ -11,7 +11,7 @@
 ---@alias DestructableCallback fun(destructable: Destructable): boolean
 ---@alias ItemCallback fun(item: Item): boolean
 
-Function = {}
+local Function = {}
 
 local function safereturn(ok, ...)
     if ok then
@@ -61,3 +61,5 @@ Function.createDestructableCallback = generateCallbackCreator(Destructable, GetE
 ---@param filter ItemCallback
 ---@return function
 Function.createItemCallback = generateCallbackCreator(Item, GetEnumItem)
+
+return Function

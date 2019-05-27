@@ -1,4 +1,5 @@
 local Native = require('lib.native.native')
+local Function = require('lib.oop.function')
 
 ---@class Timer : Agent
 local Timer = class('Timer', assert(require('lib.oop.agent')))

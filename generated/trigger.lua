@@ -1,4 +1,7 @@
 local Native = require('lib.native.native')
+local Event = require('lib.oop.event')
+local TriggerCondition = require('lib.oop.triggercondition')
+local Function = require('lib.oop.function')
 
 ---@class Trigger : Agent
 local Trigger = class('Trigger', assert(require('lib.oop.agent')))

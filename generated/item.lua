@@ -1,4 +1,6 @@
 local Native = require('lib.native.native')
+local Player = require('lib.oop.player')
+local Ability = require('lib.oop.ability')
 
 ---@class Item : Widget
 local Item = class('Item', assert(require('lib.oop.widget')))

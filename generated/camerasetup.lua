@@ -1,4 +1,5 @@
 local Native = require('lib.native.native')
+local Location = require('lib.oop.location')
 
 ---@class CameraSetup : Handle
 local CameraSetup = class('CameraSetup', assert(require('lib.oop.handle')))

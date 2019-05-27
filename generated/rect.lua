@@ -1,4 +1,7 @@
 local Native = require('lib.native.native')
+local Filter = require('lib.oop.filter')
+local Function = require('lib.oop.function')
+local WeatherEffect = require('lib.oop.weathereffect')
 
 ---@class Rect : Agent
 local Rect = class('Rect', assert(require('lib.oop.agent')))

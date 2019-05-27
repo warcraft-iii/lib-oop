@@ -1,4 +1,5 @@
 local Native = require('lib.native.native')
+local Button = require('lib.oop.button')
 
 ---@class Dialog : Agent
 local Dialog = class('Dialog', assert(require('lib.oop.agent')))

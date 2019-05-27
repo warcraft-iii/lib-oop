@@ -1,4 +1,6 @@
 local Native = require('lib.native.native')
+local Filter = require('lib.oop.filter')
+local Function = require('lib.oop.function')
 
 ---@class Force : Agent
 local Force = class('Force', assert(require('lib.oop.agent')))

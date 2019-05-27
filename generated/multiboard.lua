@@ -1,4 +1,5 @@
 local Native = require('lib.native.native')
+local MultiBoardItem = require('lib.oop.multiboarditem')
 
 ---@class MultiBoard : Agent
 local MultiBoard = class('MultiBoard', assert(require('lib.oop.agent')))

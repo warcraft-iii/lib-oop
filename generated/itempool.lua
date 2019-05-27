@@ -1,4 +1,5 @@
 local Native = require('lib.native.native')
+local Item = require('lib.oop.item')
 
 ---@class ItemPool : Handle
 local ItemPool = class('ItemPool', assert(require('lib.oop.handle')))

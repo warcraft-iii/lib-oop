@@ -1,4 +1,5 @@
 local Native = require('lib.native.native')
+local Unit = require('lib.oop.unit')
 
 ---@class UnitPool : Handle
 local UnitPool = class('UnitPool', assert(require('lib.oop.handle')))

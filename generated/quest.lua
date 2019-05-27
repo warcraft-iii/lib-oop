@@ -1,4 +1,5 @@
 local Native = require('lib.native.native')
+local QuestItem = require('lib.oop.questitem')
 
 ---@class Quest : Agent
 local Quest = class('Quest', assert(require('lib.oop.agent')))

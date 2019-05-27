@@ -3,6 +3,14 @@ local Native = require('lib.native.native')
 ---@class Frame : Handle
 local Frame = class('Frame', assert(require('lib.oop.handle')))
 
+---<static> getOrigin
+---@param frameType OriginFrameType
+---@param index integer
+---@return Frame
+function Frame:getOrigin(frameType, index)
+    return Frame:fromUd(Native.BlzGetOriginFrame(frameType, index))
+end
+
 ---<static> create
 ---@param name string
 ---@param owner Frame
@@ -31,6 +39,14 @@ end
 ---@return Frame
 function Frame:createByType(typeName, name, owner, inherits, createContext)
     return Frame:fromUd(Native.BlzCreateFrameByType(typeName, name, getUd(owner), inherits, createContext))
+end
+
+---<static> getByName
+---@param name string
+---@param createContext integer
+---@return Frame
+function Frame:getByName(name, createContext)
+    return Frame:fromUd(Native.BlzGetFrameByName(name, createContext))
 end
 
 ---destroy
