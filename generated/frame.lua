@@ -126,6 +126,13 @@ function Frame:getText()
     return Native.BlzFrameGetText(getUd(self))
 end
 
+---addText
+---@param text string
+---@return void
+function Frame:addText(text)
+    return Native.BlzFrameAddText(getUd(self), text)
+end
+
 ---setTextSizeLimit
 ---@param size integer
 ---@return void
