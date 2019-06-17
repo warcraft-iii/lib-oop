@@ -1,4 +1,5 @@
 local Native = require('lib.native.native')
+local Function = require('lib.oop.function')
 
 ---@class Filter : BoolExpr
 local Filter = class('Filter', assert(require('lib.oop.boolexpr')))

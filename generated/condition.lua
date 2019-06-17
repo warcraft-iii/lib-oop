@@ -1,4 +1,5 @@
 local Native = require('lib.native.native')
+local Function = require('lib.oop.function')
 
 ---@class Condition : BoolExpr
 local Condition = class('Condition', assert(require('lib.oop.boolexpr')))

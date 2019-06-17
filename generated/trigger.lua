@@ -12,6 +12,33 @@ function Trigger:create()
     return Trigger:fromUd(Native.CreateTrigger())
 end
 
+---<static> sleepAction
+---@param timeout float
+---@return void
+function Trigger:sleepAction(timeout)
+    return Native.TriggerSleepAction(timeout)
+end
+
+---<static> waitForSound
+---@param s Sound
+---@param offset float
+---@return void
+function Trigger:waitForSound(s, offset)
+    return Native.TriggerWaitForSound(getUd(s), offset)
+end
+
+---<static> syncStart
+---@return void
+function Trigger:syncStart()
+    return Native.TriggerSyncStart()
+end
+
+---<static> syncReady
+---@return void
+function Trigger:syncReady()
+    return Native.TriggerSyncReady()
+end
+
 ---destroy
 ---@return void
 function Trigger:destroy()

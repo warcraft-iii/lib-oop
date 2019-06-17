@@ -50,13 +50,6 @@ function Sound:createMIDI(soundLabel, fadeInRate, fadeOutRate)
     return Sound:fromUd(Native.CreateMIDISound(soundLabel, fadeInRate, fadeOutRate))
 end
 
----triggerWaitFor
----@param offset float
----@return void
-function Sound:triggerWaitFor(offset)
-    return Native.TriggerWaitForSound(getUd(self), offset)
-end
-
 ---setParamsFromLabel
 ---@param soundLabel string
 ---@return void
