@@ -6,6 +6,13 @@ local WeatherEffect = require('lib.oop.weathereffect')
 ---@class Rect : Agent
 local Rect = class('Rect', assert(require('lib.oop.agent')))
 
+---- compact same name native function
+local mt = table.shallowcopy(getmetatable(Rect))
+mt.__call = function(_, ...)
+    return Native.Rect(...)
+end
+setmetatable(Rect, mt)
+
 ---<static> create
 ---@param minx float
 ---@param miny float
@@ -106,8 +113,8 @@ end
 function Rect:enumDestructablesIn(filter, actionFunc)
     filter = Filter:createDestructableFilter(filter)
     actionFunc = Function:createDestructableCallback(actionFunc)
-    Native.EnumDestructablesInRect(getUd(self), getUd(filter), actionFunc)
-    filter:destroy()
+    Native.EnumDestructablesInRect(getUd(self), filter, actionFunc)
+    if filter then filter:destroy() end
 end
 
 ---enumItemsIn
@@ -117,8 +124,8 @@ end
 function Rect:enumItemsIn(filter, actionFunc)
     filter = Filter:createItemFilter(filter)
     actionFunc = Function:createItemCallback(actionFunc)
-    Native.EnumItemsInRect(getUd(self), getUd(filter), actionFunc)
-    filter:destroy()
+    Native.EnumItemsInRect(getUd(self), filter, actionFunc)
+    if filter then filter:destroy() end
 end
 
 ---addWeatherEffect

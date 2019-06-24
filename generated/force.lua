@@ -49,8 +49,8 @@ end
 ---@return void
 function Force:enumPlayers(filter)
     filter = Filter:createPlayerFilter(filter)
-    Native.ForceEnumPlayers(getUd(self), getUd(filter))
-    filter:destroy()
+    Native.ForceEnumPlayers(getUd(self), filter)
+    if filter then filter:destroy() end
 end
 
 ---enumPlayersCounted
@@ -59,8 +59,8 @@ end
 ---@return void
 function Force:enumPlayersCounted(countLimit, filter)
     filter = Filter:createPlayerFilter(filter)
-    Native.ForceEnumPlayersCounted(getUd(self), getUd(filter), countLimit)
-    filter:destroy()
+    Native.ForceEnumPlayersCounted(getUd(self), filter, countLimit)
+    if filter then filter:destroy() end
 end
 
 ---enumAllies
@@ -69,8 +69,8 @@ end
 ---@return void
 function Force:enumAllies(player, filter)
     filter = Filter:createPlayerFilter(filter)
-    Native.ForceEnumAllies(getUd(self), getUd(player), getUd(filter))
-    filter:destroy()
+    Native.ForceEnumAllies(getUd(self), getUd(player), filter)
+    if filter then filter:destroy() end
 end
 
 ---enumEnemies
@@ -79,8 +79,8 @@ end
 ---@return void
 function Force:enumEnemies(player, filter)
     filter = Filter:createPlayerFilter(filter)
-    Native.ForceEnumEnemies(getUd(self), getUd(player), getUd(filter))
-    filter:destroy()
+    Native.ForceEnumEnemies(getUd(self), getUd(player), filter)
+    if filter then filter:destroy() end
 end
 
 ---forEach

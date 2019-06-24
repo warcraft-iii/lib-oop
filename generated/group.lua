@@ -71,8 +71,8 @@ end
 ---@return void
 function Group:enumUnitsOfType(unitname, filter)
     filter = Filter:createUnitFilter(filter)
-    Native.GroupEnumUnitsOfType(getUd(self), unitname, getUd(filter))
-    filter:destroy()
+    Native.GroupEnumUnitsOfType(getUd(self), unitname, filter)
+    if filter then filter:destroy() end
 end
 
 ---enumUnitsOfPlayer
@@ -81,8 +81,8 @@ end
 ---@return void
 function Group:enumUnitsOfPlayer(player, filter)
     filter = Filter:createUnitFilter(filter)
-    Native.GroupEnumUnitsOfPlayer(getUd(self), getUd(player), getUd(filter))
-    filter:destroy()
+    Native.GroupEnumUnitsOfPlayer(getUd(self), getUd(player), filter)
+    if filter then filter:destroy() end
 end
 
 ---enumUnitsOfTypeCounted
@@ -92,8 +92,8 @@ end
 ---@return void
 function Group:enumUnitsOfTypeCounted(unitname, countLimit, filter)
     filter = Filter:createUnitFilter(filter)
-    Native.GroupEnumUnitsOfTypeCounted(getUd(self), unitname, getUd(filter), countLimit)
-    filter:destroy()
+    Native.GroupEnumUnitsOfTypeCounted(getUd(self), unitname, filter, countLimit)
+    if filter then filter:destroy() end
 end
 
 ---enumUnitsInRect
@@ -102,8 +102,8 @@ end
 ---@return void
 function Group:enumUnitsInRect(r, filter)
     filter = Filter:createUnitFilter(filter)
-    Native.GroupEnumUnitsInRect(getUd(self), getUd(r), getUd(filter))
-    filter:destroy()
+    Native.GroupEnumUnitsInRect(getUd(self), getUd(r), filter)
+    if filter then filter:destroy() end
 end
 
 ---enumUnitsInRectCounted
@@ -113,8 +113,8 @@ end
 ---@return void
 function Group:enumUnitsInRectCounted(r, countLimit, filter)
     filter = Filter:createUnitFilter(filter)
-    Native.GroupEnumUnitsInRectCounted(getUd(self), getUd(r), getUd(filter), countLimit)
-    filter:destroy()
+    Native.GroupEnumUnitsInRectCounted(getUd(self), getUd(r), filter, countLimit)
+    if filter then filter:destroy() end
 end
 
 ---enumUnitsInRange
@@ -125,8 +125,8 @@ end
 ---@return void
 function Group:enumUnitsInRange(x, y, radius, filter)
     filter = Filter:createUnitFilter(filter)
-    Native.GroupEnumUnitsInRange(getUd(self), x, y, radius, getUd(filter))
-    filter:destroy()
+    Native.GroupEnumUnitsInRange(getUd(self), x, y, radius, filter)
+    if filter then filter:destroy() end
 end
 
 ---enumUnitsInRangeOfLoc
@@ -136,8 +136,8 @@ end
 ---@return void
 function Group:enumUnitsInRangeOfLoc(loc, radius, filter)
     filter = Filter:createUnitFilter(filter)
-    Native.GroupEnumUnitsInRangeOfLoc(getUd(self), getUd(loc), radius, getUd(filter))
-    filter:destroy()
+    Native.GroupEnumUnitsInRangeOfLoc(getUd(self), getUd(loc), radius, filter)
+    if filter then filter:destroy() end
 end
 
 ---enumUnitsInRangeCounted
@@ -149,8 +149,8 @@ end
 ---@return void
 function Group:enumUnitsInRangeCounted(x, y, radius, countLimit, filter)
     filter = Filter:createUnitFilter(filter)
-    Native.GroupEnumUnitsInRangeCounted(getUd(self), x, y, radius, getUd(filter), countLimit)
-    filter:destroy()
+    Native.GroupEnumUnitsInRangeCounted(getUd(self), x, y, radius, filter, countLimit)
+    if filter then filter:destroy() end
 end
 
 ---enumUnitsInRangeOfLocCounted
@@ -161,8 +161,8 @@ end
 ---@return void
 function Group:enumUnitsInRangeOfLocCounted(loc, radius, countLimit, filter)
     filter = Filter:createUnitFilter(filter)
-    Native.GroupEnumUnitsInRangeOfLocCounted(getUd(self), getUd(loc), radius, getUd(filter), countLimit)
-    filter:destroy()
+    Native.GroupEnumUnitsInRangeOfLocCounted(getUd(self), getUd(loc), radius, filter, countLimit)
+    if filter then filter:destroy() end
 end
 
 ---enumUnitsSelected
@@ -171,8 +171,8 @@ end
 ---@return void
 function Group:enumUnitsSelected(player, filter)
     filter = Filter:createUnitFilter(filter)
-    Native.GroupEnumUnitsSelected(getUd(self), getUd(player), getUd(filter))
-    filter:destroy()
+    Native.GroupEnumUnitsSelected(getUd(self), getUd(player), filter)
+    if filter then filter:destroy() end
 end
 
 ---immediateOrder
