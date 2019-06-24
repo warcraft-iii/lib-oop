@@ -7,6 +7,10 @@ local Filter = require('lib.oop.generated.filter')
 
 local function generateFilterCreator(cls, method)
     return function(_, filter)
+        if not filter then
+            return
+        end
+
         return Filter:create(function()
             return filter(cls:fromUd(method()))
         end)

@@ -25,6 +25,9 @@ local function safecall(f, ...)
 end
 
 function Function:errorable(f)
+    if not f then
+        return
+    end
     return function(...)
         return safecall(f, ...)
     end
@@ -32,6 +35,10 @@ end
 
 local function generateCallbackCreator(cls, method)
     return function(_, callback)
+        if not callback then
+            return
+        end
+
         local function f()
             return callback(cls:fromUd(method()))
         end
