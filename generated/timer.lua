@@ -1,5 +1,4 @@
 local Native = require('lib.native.native')
-local Function = require('lib.oop.function')
 
 ---@class Timer : Agent
 local Timer = class('Timer', assert(require('lib.oop.agent')))
@@ -14,16 +13,6 @@ end
 ---@return void
 function Timer:destroy()
     return Native.DestroyTimer(getUd(self))
-end
-
----start
----@param timeout float
----@param periodic boolean
----@param handlerFunc function
----@return void
-function Timer:start(timeout, periodic, handlerFunc)
-    handlerFunc = Function:errorable(handlerFunc)
-    return Native.TimerStart(getUd(self), timeout, periodic, handlerFunc)
 end
 
 ---getElapsed
