@@ -1,4 +1,5 @@
 local Player = require('lib.oop.generated.player')
+local PlayerState = require('lib.enum.playerstate')
 
 ---adjustState
 ---@param state PlayerState
