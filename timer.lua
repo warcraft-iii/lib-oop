@@ -8,7 +8,7 @@ local Function = require('lib.oop.function')
 ---@return Timer
 function Timer:after(duration, func)
     local timer = Timer:create()
-    Native.TimerStart(getUd(self), duration, false, Function:errorable(function()
+    Native.TimerStart(timer:getUd(), duration, false, Function:errorable(function()
         func()
         timer:destroy()
     end))
