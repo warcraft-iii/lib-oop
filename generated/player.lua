@@ -4,6 +4,13 @@ local LeaderBoard = require('lib.oop.leaderboard')
 ---@class Player : Agent
 local Player = class('Player', assert(require('lib.oop.agent')))
 
+---- compact same name native function
+local mt = table.shallowcopy(getmetatable(Player))
+mt.__call = function(_, ...)
+    return Native.Player(...)
+end
+setmetatable(Player, mt)
+
 ---<static> get
 ---@param number integer
 ---@return Player

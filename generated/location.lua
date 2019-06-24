@@ -3,6 +3,13 @@ local Native = require('lib.native.native')
 ---@class Location : Agent
 local Location = class('Location', assert(require('lib.oop.agent')))
 
+---- compact same name native function
+local mt = table.shallowcopy(getmetatable(Location))
+mt.__call = function(_, ...)
+    return Native.Location(...)
+end
+setmetatable(Location, mt)
+
 ---<static> create
 ---@param x float
 ---@param y float

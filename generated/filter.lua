@@ -4,6 +4,13 @@ local Function = require('lib.oop.function')
 ---@class Filter : BoolExpr
 local Filter = class('Filter', assert(require('lib.oop.boolexpr')))
 
+---- compact same name native function
+local mt = table.shallowcopy(getmetatable(Filter))
+mt.__call = function(_, ...)
+    return Native.Filter(...)
+end
+setmetatable(Filter, mt)
+
 ---<static> create
 ---@param func function
 ---@return Filter
