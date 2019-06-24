@@ -11,3 +11,5 @@ end
 function Unit:isAlive()
     return not self:isDead()
 end
+
+return Unit
