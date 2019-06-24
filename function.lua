@@ -6,10 +6,10 @@
 --[[generate begin]]
 --[[generate end]]
 
----@alias UnitCallback fun(unit: Unit): boolean
----@alias PlayerCallback fun(player: Player): boolean
----@alias DestructableCallback fun(destructable: Destructable): boolean
----@alias ItemCallback fun(item: Item): boolean
+---@alias UnitCallback fun(unit: Unit): void
+---@alias PlayerCallback fun(player: Player): void
+---@alias DestructableCallback fun(destructable: Destructable): void
+---@alias ItemCallback fun(item: Item): void
 
 local Function = {}
 
