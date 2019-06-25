@@ -6,15 +6,22 @@ local PlayerState = require('lib.enum.playerstate')
 ---@param delta integer
 ---@return void
 function Player:adjustState(state, delta)
+    if delta > 0 then
+        if state == PlayerState.ResourceGold then
+            self:adjustState(PlayerState.GoldGathered, delta)
+        elseif state == PlayerState.ResourceLumber then
+            self:adjustState(PlayerState.LumberGathered, delta)
+        end
+    end
     return self:setState(state, self:getState(state) + delta)
 end
 
 function Player:adjustGold(delta)
-    return self:adjustState(PlayerState.GoldGathered, delta)
+    return self:adjustState(PlayerState.ResourceGold, delta)
 end
 
 function Player:adjustLumber(delta)
-    return self:adjustState(PlayerState.LumberGathered, delta)
+    return self:adjustState(PlayerState.ResourceLumber, delta)
 end
 
 return Player
