@@ -1,6 +1,7 @@
 local Native = require('lib.native.native')
 local Event = require('lib.oop.event')
 local TriggerCondition = require('lib.oop.triggercondition')
+local Native.Condition(%1) = require('lib.oop.native.condition(%1)')
 local Function = require('lib.oop.function')
 
 ---@class Trigger : Agent
@@ -266,10 +267,11 @@ function Trigger:registerUnitInRange(unit, range, filter)
 end
 
 ---addCondition
----@param condition BoolExpr
+---@param condition function
 ---@return TriggerCondition
 function Trigger:addCondition(condition)
-    return TriggerCondition:fromUd(Native.TriggerAddCondition(getUd(self), getUd(condition)))
+    condition = Native.Condition(condition)
+    return TriggerCondition:fromUd(Native.TriggerAddCondition(getUd(self), condition))
 end
 
 ---removeCondition
