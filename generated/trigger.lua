@@ -1,7 +1,6 @@
 local Native = require('lib.native.native')
 local Event = require('lib.oop.event')
 local TriggerCondition = require('lib.oop.triggercondition')
-local Native.Condition(%1) = require('lib.oop.native.condition(%1)')
 local Function = require('lib.oop.function')
 
 ---@class Trigger : Agent
